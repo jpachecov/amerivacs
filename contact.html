@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LeBrand</title>
+
+    <link rel="shortcut icon" type="image/png" href="img/logo_menu.png"/>
+
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="init_lang('index')">
+
+
+
+    <div class='content'>
+      <div class='form-container container nopadding'>
+
+        <img  class='col-md-12 nopadding' src="img/contact/image_000.png" alt="">
+        
+        <div class="form-contact col-md-6 col-sm-12 col-xs-12" style='background-color: rgba(255,255,255,.7)'>
+          <span>CONTACT US </span>
+          <label class="cph10">Name:</label>
+
+          <input name="nombre" type="text" id="nombre" class="form-control box">
+          <p id="error_nombre"></p>
+          <label class="cph11">E-mail:</label>
+          <input style='background-color: rgba(255,255,255,255)' name="correo" type="email" id="correo"  class="form-control box" value="">
+          <label class="cph11">Telephone:</label>
+          <input style='background-color: rgba(255,255,255,255)' name="correo" type="email" id="correo"  class="form-control box" value="">
+          <p id="error_correo"></p>
+          <label class="cph12">Message:</label>
+
+          <textarea style='background-color: rgba(255,255,255,1)' name="mensaje" cols="40" rows="5"  class="form-control box" id = "comentario"></textarea>
+          <p id="error_mensaje"></p>
+          <button id="boton_form"  onclick="valida_datos();">
+            <p  class="cph13">SEND</p>
+          </button>
+        </div>
+        
+      </div>  
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

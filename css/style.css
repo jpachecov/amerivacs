@@ -1,0 +1,358 @@
+@font-face {
+font-family: 'menu';
+font-style: normal;
+font-weight: bolder;
+
+src: url(tipos/futura/FuturaStd-Medium.otf);
+}
+
+.font1{
+	font-family: 'menu';
+}
+
+body{
+	width: 80%;
+	margin: auto;
+}
+html{
+	background-color: gray;
+}
+
+.header{
+	width: 100%;
+	height: auto;
+	background-color: white;
+}
+
+.logo_container{
+	height: auto;
+	margin-left: 5%;
+	padding-top: 7.5%;
+}
+
+.logo_up{
+	display: block;
+	width: 100%;
+}
+
+
+.content{
+	padding: 0%;
+}
+
+.content img {
+	width: 100%;
+}
+
+.frase{
+	width: 60%;
+	margin: auto;
+	margin-top: 5%;
+}
+
+.1-txt{
+
+}
+
+.texto{
+	width: 60%;
+	margin: auto;
+	margin-top: 7.5%;
+	margin-bottom: 7.5%;
+}
+.red-txt{
+	display: inline-block;
+	width: auto;
+	color: #b11d23;
+	font-size: 22px;
+	font-weight: bold;
+}
+.norm-txt{
+	display: inline-block;
+	width: auto;
+	font-size: 18px;
+}
+.texto span{
+	display: block;
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.texto span h3{
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+.menu{
+	padding-right: 0%;
+	margin-top: 0%;
+	padding-bottom: 2%;
+
+}
+.menu div{
+	float: right;
+	display: inline-block;
+
+	text-align: center;
+}
+.menu div span{
+	
+	font-size: 15px;
+
+	cursor: pointer;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-left: 0%;
+    margin-right: -1%;
+    font-family: 'menu', sans-serif;
+}
+
+.menu span:hover{
+	color: #ed1248;
+}
+
+.raya-derecha{
+	border-right: solid black 1px !important;
+	padding: 0.3% 1% 0.3% 1%;
+}
+
+
+.footer{
+	width: 100%;
+	background-color:#0A1346;
+	color: white;
+}
+.info_foot{
+	display: inline-block;
+	/*width: 55%;*/
+	border-right: solid 2px;
+	margin-top: 4%;
+	padding-left: 4%;
+
+}
+.info_foot p{
+font-family: 'menu', sans-serif;
+	margin: 0%;
+}
+
+.info_foot span{
+	display: block;
+	font-family: 'menu', sans-serif;
+	margin-bottom: 4%;
+}
+
+.submenu{
+	/*width: 39%;*/
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 4%;
+}
+
+.submenu span{
+	display: inline-block;
+	width: 24%;
+	text-align: center;
+	font-family: 'menu', sans-serif;
+}
+
+.foot-img{
+	/*width: 15%;*/
+	display: inline-block;
+	padding-top: 5%;
+	padding-top: 4%;
+    padding-bottom: 4%;
+    margin-left: 4%;
+}
+
+.foot-img img{
+	width: 25%;
+}
+
+
+.galery{
+	width: 100%;
+	display: block;
+	height: auto;
+	padding: 0%;
+}
+.galery div{
+	padding: 0%;
+}
+
+
+/**
+** CONTACT
+**/
+
+.form-container{
+	position: relative;
+	width: 100%;
+}
+
+.form-container img{
+	display: block;
+	width: 100%;
+
+}
+.form-contact{
+	top: 0%;
+	left: 0%;
+	z-index: 5;
+	position: absolute;
+	/*width: 45%;*/
+	height: 100%;
+	margin-left: 5%;
+	margin-right: 30%;
+	background-color: white;
+	opacity: 0.8;
+	padding: 5% 5% 5% 5%;
+}
+
+
+
+/*Formulario*/
+.form-contact label, .form-contact input, .form-contact textarea{
+	display: block;
+	width: 100%;
+	resize: none;
+}
+.form-contact input{
+	color:black;
+}
+.form-contact{
+	padding-bottom: 0%;
+}
+.footer-black{
+	background: black;
+	color: white;
+	text-align: center;
+}
+.footer-black a{
+	color:white;
+	text-decoration: none;
+}
+.footer-black a:hover{
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+.footer-black .center-div{
+	width: 30%;
+	margin: 1% auto;
+}
+.footer-black span{
+	padding: 10px;
+}
+
+.box{
+	border-radius: 0%;
+}
+
+.form-contact > label{
+	margin-top: 5%;
+	font-weight: bold !important;
+}
+
+#area_texto{
+	height: 130px;
+}
+
+form-control{
+    border: none;
+    border-bottom: 1px solid #333;
+}
+button p {
+  margin:0;
+}
+button{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	padding: 2px 30px;
+  	background-color: black;
+  	border: none;
+  	border-radius: 4px;
+	color:white;
+  	cursor:pointer;
+    	margin-bottom: 30px;
+}
+textarea{
+	height: 95px !important;
+}
+
+#boton_form{
+	float: right;
+	font-size: 20px;
+	border-radius: 0%;
+	border: solid 1px;
+	background-color: #0A1346;
+}
+
+#boton_form:hover{
+	float: right;
+	font-size: 20px;
+	border-radius: 0%;
+	border: solid 1px;
+	background-color: white;
+	color: black;
+	opacity: 0.8;
+}
+
+#color_text{
+
+	color: black;
+}
+
+.form-contact span {
+	color:#0A1346;
+	font-size: 2.4em;
+}
+
+/***
+ABOUT US
+
+**/
+
+.nopadding{
+	padding: 0%;
+}
+
+.message_amerivacs{
+	padding-left: 7%;
+	padding-right: 5%;
+}
+.mensa{
+	padding-left: 7%;
+	margin-top: 5%;
+	margin-bottom:3%;
+}
+.message_amerivacs p{
+	text-align: justify;
+	padding-bottom: 5%;
+}
+
+
+
+
+.r-top{
+	border-top: solid 1px;
+}
+.r-bottom{
+	border-bottom: solid 1px;
+}
+
+.r-right{
+	border-right: solid 1px;
+}
+
+.r-left{
+	border-left: solid 1px;
+}
+
+
+
+.trian{
+	color: #ed1248;
+	padding: 0%;
+	font-size: 11px !important;
+}
