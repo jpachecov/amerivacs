@@ -22,6 +22,7 @@ html{
 	width: 100%;
 	height: auto;
 	background-color: white;
+	padding: 0%;
 }
 
 .logo_container{
@@ -49,28 +50,28 @@ html{
 	margin: auto;
 	margin-top: 5%;
 }
-
+ 
 .1-txt{
 
 }
 
 .texto{
-	width: 60%;
 	margin: auto;
-	margin-top: 7.5%;
-	margin-bottom: 7.5%;
 }
 .red-txt{
 	display: inline-block;
-	width: auto;
 	color: #b11d23;
 	font-size: 22px;
 	font-weight: bold;
+	padding: 0%;
+	margin: 0%;
 }
 .norm-txt{
 	display: inline-block;
-	width: auto;
+	
 	font-size: 18px;
+	padding: 0%;
+	margin: 0%;
 }
 .texto span{
 	display: block;
@@ -355,4 +356,140 @@ ABOUT US
 	color: #ed1248;
 	padding: 0%;
 	font-size: 11px !important;
+}
+
+
+
+
+
+.slide-animate-container {
+  position:relative;
+  background:white;
+  overflow:hidden;
+}
+
+
+.lista-productos{
+	background-color: #EAEAEA;
+}
+.producto-menu{
+	
+	text-align: center;
+	height: 80px;
+	padding: 5%;
+
+}
+.producto-menu:hover{
+	color: white;
+	background-color: #ed1248;
+	cursor: pointer;
+}
+.producto-menu span{
+	position: absolute;
+	left: 30%;
+	top: 38%;	 
+	font-family: "menu", sans-serif;
+	font-size: 18px;
+
+}
+
+.bor-d{
+	border-right: solid 1px gray;
+	
+}
+
+.ren{
+	border-top: solid 1px black;
+}
+.ren2{
+border-bottom: solid 1px black;	
+	margin-right: 5%;
+}
+
+
+.prod_name {
+	display: inline-block;
+    vertical-align: middle;
+    float: none;
+	padding: 0%;
+	padding-left:3%;
+}
+.prod_name span{
+	font-size: 80px;
+	color: #243c74;
+}
+
+.prod_des {
+	display: inline-block;
+    vertical-align: middle;
+    float: none;
+	border-left: solid 1px #243c74;
+}
+
+.prod_des span{
+	font-size: 15px;
+	color: #243c74;	
+	font-weight: bolder;
+}
+
+.justif {
+	text-align: justify;
+}
+
+.list{
+	list-style: none;
+	padding-left: 0%;
+	border-bottom: solid 1px black;
+	padding-bottom: 5%;
+}
+
+li:before {
+/*
+    content: "• ";
+    color: #243c74; /* or whatever color you prefer */
+    content: "";
+    line-height: 1em;
+    width: .4em;
+    height: .4em;
+    background-color: #243c74;
+    float: left;
+    margin: .40em .40em 0;
+    border-radius: 100%;
+
+}
+
+.tab-name{
+	font-size: 20px;
+	font-weight: bolder;
+	font-family: 'menu', sans-serif;
+	color: #ed1248;
+}
+
+.blue-c{
+	color:#243c74;
+	font-weight: bolder;
+}
+
+.mb-1{
+	margin-bottom: 3%;
+}
+
+.tabla-p{
+	margin-top: 3%;
+}
+
+.txt-r{
+	text-align: right;
+}
+
+.mb-2{
+	margin-bottom: 1%;
+}
+
+.bord-l{
+	border-left: solid 1px #dbdbda;
+}
+
+.bord-t{
+	border-top: solid 1px #dbdbda;	
 }
