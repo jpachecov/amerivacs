@@ -11,9 +11,15 @@ src: url(tipos/futura/FuturaStd-Medium.otf);
 }
 
 body{
-	width: 80%;
-	margin: auto;
+display: block;
+    margin: 0px auto;
+    max-width: 1175px;
+    overflow-x: hidden;
+
 }
+
+
+
 html{
 	background-color: gray;
 }
