@@ -1,4 +1,35 @@
-var app = angular.module('amerivacs', ['ngSanitize']);
+var app = angular.module('amerivacs', ['ngSanitize','ngAnimate']);
+/*
+app.animation('.animation',[function(){
+	return {
+		enter: function(elem, f){
+			console.log(elem);
+			$(elem).velocity({
+				opacity: 1,
+			},{
+				duration:1000,
+				oncomplete: function(){
+					f();
+				}
+			});
+		},
+		move: function(elem, f){
+			f();
+		},
+		leave: function(elem, f){
+			$(elem).velocity({
+				opacity: 0,
+			},{
+				duration:1000,
+				oncomplete: function(){
+					f();
+				}
+			});
+		}
+	}
+}])
+*/
+
 app.controller('controlador', function($scope,$sce) {
 
 	console.log('controlador');

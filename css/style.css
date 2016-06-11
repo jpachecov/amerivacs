@@ -425,6 +425,8 @@ border-bottom: solid 1px black;
     vertical-align: middle;
     float: none;
 	border-left: solid 1px #243c74;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
 .prod_des span{
@@ -533,3 +535,67 @@ li:before {
 	color: white;
 	font-family: 'menu',sans-serif;
 }
+
+
+
+/** Animaciones **/
+
+/*
+.animate-enter, 
+.animate-leave
+{ 
+  -webkit-transition: 2s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -moz-transition: 2s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -ms-transition: 2s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -o-transition: 2s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: 2s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  position: relative;
+  display: block;
+} 
+ 
+.animate-enter.animate-enter-active, 
+.animate-leave {
+  opacity: 1;
+  top: 0;
+  height: 30px;
+}
+ 
+.animate-leave.animate-leave-active,
+.animate-enter {
+  opacity: 0;
+  top: -50px;
+  height: 0px;
+}
+
+*/
+
+
+.animation {
+  -webkit-transition: 1s cubic-bezier(.17,.67,.83,.67) all;
+  -moz-transition: 1s cubic-bezier(.17,.67,.83,.67) all;
+  -ms-transition: 1s cubic-bezier(.17,.67,.83,.67) all;
+  -o-transition: 1s cubic-bezier(.17,.67,.83,.67) all;
+  transition: 1s cubic-bezier(.17,.67,.83,.67) all;
+}
+
+
+.animation.ng-enter {
+  opacity: 0;
+/*transform: translateX(0%);*/
+}
+
+.animation.ng-leave {
+  opacity: 1;
+/*  transform: translateX(200%);*/
+}
+
+.animation.ng-enter.ng-enter-active {
+  opacity: 1;
+/*  	transform: translateX(200%);*/
+}
+
+.animation.ng-leave.ng-leave-active {
+  opacity: 0;
+/*  	transform: translateX(0%);*/
+}
+
