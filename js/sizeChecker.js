@@ -1,4 +1,4 @@
-		if($(window).width() < 650){
+		if($(window).width() < 900){
 			$('.menu').css('margin-top','8%');
 			$('.menu').css('margin-bottom','8%');
 		} else {
@@ -15,7 +15,7 @@ $(document).ready(function(){
 			$('#formu').css('position','absolute');
 		}
 
-		if($(window).width() < 650){
+		if($(window).width() < 900){
 			$('.menu').css('margin-top','8%');
 			$('.menu').css('margin-bottom','8%');
 		} else {

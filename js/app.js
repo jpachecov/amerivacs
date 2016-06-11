@@ -50,11 +50,35 @@ app.controller('controlador', function($scope,$sce) {
 		'options':
 			[['20"','25"','30"','35"','50"'],[
 				{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
-										'20"':'$275.00',
-										'25"':'$375.00',
-										'30"':'$700.00',
-										'35"':'$900.00',
-										'50"':'Not available',																														
+										'20"':'$275',
+										'25"':'$375',
+										'30"':'$700',
+										'35"':'$900',
+										'50"':'N.A',																														
+											}
+				},
+				{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
+										'20"':'$275',
+										'25"':'$375',
+										'30"':'$700',
+										'35"':'$900',
+										'50"':'N.A',																														
+											}
+				},
+				{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
+										'20"':'$275',
+										'25"':'$375',
+										'30"':'$700',
+										'35"':'$900',
+										'50"':'N.A',																														
+											}
+				},
+				{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
+										'20"':'$275',
+										'25"':'$375',
+										'30"':'$700',
+										'35"':'$900',
+										'50"':'N.A',																														
 											}
 				},
 				{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
@@ -62,31 +86,7 @@ app.controller('controlador', function($scope,$sce) {
 										'25"':'$375.00',
 										'30"':'$700.00',
 										'35"':'$900.00',
-										'50"':'Not available',																														
-											}
-				},
-				{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
-										'20"':'$275.00',
-										'25"':'$375.00',
-										'30"':'$700.00',
-										'35"':'$900.00',
-										'50"':'Not available',																														
-											}
-				},
-				{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
-										'20"':'$275.00',
-										'25"':'$375.00',
-										'30"':'$700.00',
-										'35"':'$900.00',
-										'50"':'Not available',																														
-											}
-				},
-				{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
-										'20"':'$275.00',
-										'25"':'$375.00',
-										'30"':'$700.00',
-										'35"':'$900.00',
-										'50"':'Not available',																														
+										'50"':'N.A',																														
 											}
 				},
 			]]

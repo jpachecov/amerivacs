@@ -6,8 +6,8 @@
 	</div>
 </div>
 <div class='content container col-md-12' style='padding-left:5%; margin-top:4%; padding-bottom:5%'>
-	<div class='row'>
-		<div class='col-md-7'>
+	<div class='col-md-12 col-sm-12 nopadding'>
+		<div class='col-md-7 col-sm-9 nopadding'>
 			<div class='prod_name col-md-5'>
 				<span>{{producto.name}}</span>
 			</div>
@@ -29,14 +29,14 @@
 					<span class='tab-name'>Pricing</span>
 				</div>
 				<div class='col-md-12 nopadding'>
-					<span class='col-md-4 nopadding blue-c mb-2'>Model</span>
-					<span class='col-md-5 nopadding blue-c mb-2'>Seal size</span>
-					<span class='col-md-2 nopadding blue-c mb-2'>Price</span>
+					<span class='col-md-4 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Model</span>
+					<span class='col-md-5 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Seal size</span>
+					<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Price</span>
 				</div>
-				<div class='col-md-12 ren nopadding' ng-repeat='x in producto.models'>
-					<span class='col-md-4 nopadding'><strong>{{x.id}}</strong></span>
-					<span class='col-md-5 nopadding'>{{x.size}}</span>
-					<span class='col-md-2 nopadding'>{{x.price}}</span>
+				<div class='col-md-12 col-sm-12 col-xs-12 ren nopadding' ng-repeat='x in producto.models'>
+					<span class='col-md-4 col-sm-4 col-xs-3 nopadding'><strong>{{x.id}}</strong></span>
+					<span class='col-md-5 col-sm-4 col-xs-5 nopadding'>{{x.size}}</span>
+					<span class='col-md-2 col-sm-4 col-xs-3 nopadding'>{{x.price}}</span>
 				</div>
 			</div>
 		</div>
@@ -47,8 +47,8 @@
 	</div>
 
 	<!--  TABLE SPECIFICATIONS -->
-	<div class='col-md-12 tabla-p'>
-		<div class='col-md-12 nopadding mb-1'>
+	<div class='col-md-12 col-xs-12 col-sm-12 tabla-p'>
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
 			<span class='tab-name'>Specifications</span>
 		</div>
 		<div class='ren2 col-md-5 nopadding' ng-repeat='sp in producto.specs'>
@@ -66,29 +66,29 @@
 		<!-- titulos tabla -->
 		<div class='col-md-12 nopadding'>
 			<div class='col-md-12 mb-2 nopadding'>
-				<span class='tab-name'>Option</span>
+				<span class='tab-name'>Options</span>
 			</div>
 			<div class='col-md-12 ren2 nopadding'>
-				<div class='col-md-1 nopadding'>
+				<div class='col-md-1 col-xs-12 nopadding'>
 					<span class='blue-c'>Option</span>
 				</div>			
-				<div class='col-md-4 bord-l' style='margin-bottom:3%;'>
+				<div class='col-md-5 col-xs-12 col-sm-6 col-xs-12 bord-l' style='margin-bottom:3%;'>
 					<span></span>
 				</div>				
-				<div class='col-md-1 blue-c bord-l' ng-repeat='x in producto.options[0]'>
+				<div class='col-md-1 col-sm-2 col-xs-2 blue-c bord-l' ng-repeat='x in producto.options[0]'>
 					<span class=''>{{x}}</span>
 				</div>
 			</div>
 		</div>
 
-		<div class='col-md-12 nopadding bord-t' ng-repeat='op in producto.options[1]'>
-			<div class='col-md-1 nopadding' style='padding:1%'>
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t' ng-repeat='op in producto.options[1]'>
+			<div class='col-md-2 col-sm-4 col-xs-4 nopadding' style='padding:1%'>
 				<span><strong>{{op.op}}</strong></span>
 			</div>
 			<div class='col-md-4' style='padding:1%'>
 				<span>{{op.des}}</span>
 			</div>
-			<div class='col-md-1' ng-repeat='y in op.prices'>
+			<div class='col-md-1 col-xs-2' ng-repeat='y in op.prices'>
 				<span>{{y}}</span>
 			</div>			
 		</div>
