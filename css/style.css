@@ -417,6 +417,7 @@ border-bottom: solid 1px black;
 .prod_name span{
 	font-size: 80px;
 	color: #243c74;
+	font-family: 'menu', sans-serif;
 }
 
 .prod_des {
@@ -430,6 +431,7 @@ border-bottom: solid 1px black;
 	font-size: 15px;
 	color: #243c74;	
 	font-weight: bolder;
+	font-family: 'menu', sans-serif;
 }
 
 .justif {
@@ -492,4 +494,42 @@ li:before {
 
 .bord-t{
 	border-top: solid 1px #dbdbda;	
+}
+
+.boton-compara{
+	display: inline-block;
+	width: 33%;
+	height: 100%;
+	background-color: #233f8b;
+}
+.boton-carrito{
+	display: inline-block;
+	width: 33%;
+	height: 100%;
+	background-color: #d12a27;
+}
+.boton-compara:hover{
+	cursor: pointer;
+}
+.boton-carrito:hover{
+	cursor: pointer;
+}
+.boton-carrito span{
+	display: block;
+	text-align: center;
+	line-height: 100%;
+	padding: 3%;
+	color: white;
+	font-size: 13px;
+	font-family: 'menu',sans-serif;
+}
+.boton-compara span{
+		font-size: 13px;
+	display: block;
+	text-align: center;
+	width: 100%;
+	line-height: 100%;
+	padding: 3%;
+	color: white;
+	font-family: 'menu',sans-serif;
 }
