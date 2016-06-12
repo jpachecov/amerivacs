@@ -7,7 +7,7 @@ src: url(tipos/futura/FuturaStd-Medium.otf);
 }
 
 .font1{
-	font-family: 'menu';
+	font-family: 'menu', sans-serif;
 }
 
 body{
@@ -605,3 +605,57 @@ li:before {
 /*  	transform: translateX(0%);*/
 }
 
+
+.nomargin{
+	margin: 0%;
+}
+
+
+/***   SECCION DE PRODUCTOS   */
+
+
+.productos .cont-1{
+	background-image: url(../img/products/imagen_000.png);
+	background-size: cover;
+}
+
+.productos div {
+	float:right;
+}
+
+.float-l{
+	float:left;
+}
+.float-r{
+	float: right;
+}
+.blue-2{
+	color: #1378c7;
+}
+
+.back-white{
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(255, 255, 255);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.back-white2{
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(225, 226, 233);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(225, 226, 233, 0.7);
+}
+
+.our-txt{
+	font-weight: bolder;
+	font-size: 3em;
+}
+
+.txt-r{
+	text-align: right;
+}
+
+.boton:hover{
+	cursor: pointer;
+}
