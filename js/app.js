@@ -130,6 +130,34 @@ app.controller('controlador', function($scope,$sce) {
 	
 	$scope.producto = p;
 
+	$scope.garantias = [
+		{'nombre':'SAFETY',
+		'descrip':'<strong>Our sealers</strong> simply will not seal or heat until \
+					the jaws have <strong>fully closed.</strong>',
+		'src':'img/products/safety_icon_000.png'},
+
+
+
+		{'nombre':'PERFORMANCE',
+		'descrip':'Clearly evident in both <strong>speed of operation</strong> \
+					and <strong>uncompromised seal integrity.</strong>',
+		'src':'img/products/performance_icon_000.png'},
+
+		{'nombre':'QUALITY',
+		'descrip':'In <strong>every component</strong> from the housing, to the \
+					no-nonsense <strong>intuitive controls<strong>, to the <strong>superior \
+					grade</strong> electrical and mechanical devices.',
+		'src':'img/products/quality_icon_000.png'},
+
+		{'nombre':'INTUITIVE',
+		'descrip':'Our sealers are straightforward and easy to \
+					operate by anybody.',
+		'src':'img/products/intuitive_icon_000.png'},
+	]
+
+	for i in $s
+
+	console.log($scope.garantias)
 	$scope.loadPage = function(page){
 		switch(page){
 			case 'home':
