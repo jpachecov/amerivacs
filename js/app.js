@@ -155,7 +155,6 @@ app.controller('controlador', function($scope,$sce) {
 		'src':'img/products/intuitive_icon_000.png'},
 	]
 
-	for i in $s
 
 	console.log($scope.garantias)
 	$scope.loadPage = function(page){
