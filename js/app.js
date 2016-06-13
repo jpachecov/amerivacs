@@ -159,7 +159,10 @@ app.controller('controlador', function($scope,$sce) {
 
 				break;
 			case 'products':
-				$scope.currentPage = "producto.html";
+				$scope.currentPage = "productos.html";
+				break;
+			case 'all-products':
+				$scope.currentPage = 'producto.html';
 				break;
 		}
 	}
