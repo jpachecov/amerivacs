@@ -39,10 +39,14 @@ html{
 }
 
 .header{
-	width: 100%;
+	
 	height: auto;
 	background-color: white;
 	padding: 0%;
+/*	position: fixed;*/
+	z-index: 10;
+	width: 100%;
+/*	max-width: 1175px;*/
 }
 
 .logo_container{
@@ -378,7 +382,11 @@ ABOUT US
 	font-size: 11px !important;
 }
 
-
+.rojito{
+	color: #ed1248;
+	font-family: 'menu', sans-serif;
+	font-weight: bolder;
+}
 
 
 
@@ -699,6 +707,11 @@ li:before {
 	font-weight: bolder;
 	font-family: 'menu', sans-serif;
 }
+.azul-2{
+		font-size: 13px;
+	color: #243c74;	
+	font-family: 'menu', sans-serif;	
+}
 
 .descrip-2{
 	font-size: 1.2em;
@@ -730,6 +743,9 @@ li:before {
 .icono{
 	padding: 0%;
 }
+.icono span{
+	font-size: 1.5em !important;
+}
 
 .categ{
 	display: inline;
@@ -753,3 +769,18 @@ li:before {
 }
 
 
+
+.producto3 > span{
+	font-size: 0.85em;
+}
+.producto3 > h1{
+	font-size: 1.4em;
+	margin:0%;
+}
+.producto3 > p{
+	font-size: 0.91em;
+}
+
+.cursor{
+	cursor: pointer;
+}

@@ -150,10 +150,46 @@ app.controller('controlador', function($scope,$sce) {
 		'src':'img/products/quality_icon_000.png'},
 
 		{'nombre':'INTUITIVE',
-		'descrip':'Our sealers are straightforward and easy to \
-					operate by anybody.',
+		'descrip':'Our sealers are <strong>straightforward</strong> and <strong>easy to \
+					operate</strong> by anybody.',
 		'src':'img/products/intuitive_icon_000.png'},
 	]
+
+	$scope.vaccum_sealers = [
+		{
+			'nombre' : 'AVN',
+			'descrip' : 'RETRACTABLE NOZZLE VACUUM SEALER WITH GAS PURGE',
+			'resumen_p' : 'Foot pedal activated gas-flush vacuum packaging at its \
+							finest. The AVN’s 1/4\” wide sealing element delivers a \
+							leak-proof seal. CE available <br><br> Features five seal lengths (20\” 25\” 30\” 35\” 50\”)',
+			'img' : 'img/products/imagen_CAVN_000.png'
+		},
+		{
+			'nombre' : 'AVN',
+			'descrip' : 'RETRACTABLE NOZZLE VACUUM SEALER WITH GAS PURGE',
+			'resumen_p' : 'Foot pedal activated gas-flush vacuum packaging at its \
+							finest. The AVN’s 1/4\” wide sealing element delivers a \
+							leak-proof seal. CE available <br><br> Features five seal lengths (20\” 25\” 30\” 35\” 50\”)',
+			'img' : 'img/products/imagen_CAVN_000.png'
+		},
+		{
+			'nombre' : 'AVN',
+			'descrip' : 'RETRACTABLE NOZZLE VACUUM SEALER WITH GAS PURGE',
+			'resumen_p' : 'Foot pedal activated gas-flush vacuum packaging at its \
+							finest. The AVN’s 1/4\” wide sealing element delivers a \
+							leak-proof seal. CE available <br><br> Features five seal lengths (20\” 25\” 30\” 35\” 50\”)',
+			'img' : 'img/products/imagen_CAVN_000.png'
+		},
+		{
+			'nombre' : 'AVN',
+			'descrip' : 'RETRACTABLE NOZZLE VACUUM SEALER WITH GAS PURGE',
+			'resumen_p' : 'Foot pedal activated gas-flush vacuum packaging at its \
+							finest. The AVN’s 1/4\” wide sealing element delivers a \
+							leak-proof seal. CE available <br><br> Features five seal lengths (20\” 25\” 30\” 35\” 50\”)',
+			'img' : 'img/products/imagen_CAVN_000.png'
+		},
+	];
+
 
 
 	console.log($scope.garantias)

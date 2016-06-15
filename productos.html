@@ -75,27 +75,34 @@
 	</div>
 
 	<!-- MENU CATEGORIAS PRODUCTOS -->
-	<div class='col-md-12 nopadding nomargin lista-productos'>
-		<div class='menu-cat col-md-2 r-right float-l nopadding'>
+	<div class='col-md-12 col-sm-12 col-xs-12 nopadding nomargin lista-productos'>
+		<div class='menu-cat col-md-2 r-right float-l nopadding cursor'>
 			<span class='azul-1 '>RETRACTABLE NOZZLE</span>
 		</div>
-		<div class='menu-cat col-md-2 r-right nopadding'>
+		<div class='menu-cat col-md-2 r-right nopadding cursor'>
 			<span class='azul-1'>CHAMBERS SEALERS</span>
 		</div>
-		<div class='menu-cat col-md-2 r-right nopadding'>
+		<div class='menu-cat col-md-2 r-right nopadding cursor'>
 			<span class='azul-1'>IMPULSE SEALER</span>
 		</div>
-		<div class='menu-cat col-md-2 r-right nopadding'>
+		<div class='menu-cat col-md-2 r-right nopadding cursor'>
 			<span class='azul-1 '>ACCESORIES</span>
 		</div>
-		<div class='menu-cat col-md-2 nopadding'>
+		<div class='menu-cat col-md-2 nopadding cursor'>
 			<span class='azul-1'>PARTS</span>
 		</div>
 
 	</div>
 
 	<!-- PRODUCTOS POR CATEGORIA -->
-	<div class='col-md-12 col-sm-12 col-xs-12'>
+	<div class='col-md-12 col-sm-12 col-xs-12' style='padding-top:3%; padding-bottom:3%;'>
+		<div class='col-md-4 col-sm-6 col-xs-6 float-l producto3' ng-repeat='m in vaccum_sealers' style='padding-left:3%; padding-right:3%'>
+			<img ng-src="{{m.img}}" alt="" class='col-md-12 col-sm-12 col-xs-12 nopadding'>
+			<h1 class='col-md-12 col-sm-12 col-xs-12 azul-1 nopadding' >{{m.nombre}}</h1>
+			<span class='col-md-12 col-sm-12 col-xs-12 azul-2 r-bottom nopadding' >{{m.descrip}}</span>
+			<p class='col-md-12 col-sm-12 col-xs-12 nopadding justif' ng-bind-html='m.resumen_p' ></p>
+			<a class='col-md-12 col-sm-12 col-xs-12 rojito nopadding' >More information <span class='trian'>&#x25BC</span> </a>
+		</div>
 		
 	</div>
 </div>
