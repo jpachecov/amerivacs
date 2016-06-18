@@ -924,3 +924,16 @@ li:before {
 .hov4:hover{
 	color:gray;
 }
+
+.selector-1{
+	background-image: url(../img/compare/background_000.png);
+	background-size: cover;
+}
+.selector-2{
+	background-image: url(../img/compare/background_000.png);
+	background-size: cover;	
+}
+.selector-3{
+	background-image: url(../img/compare/background_000.png);
+	background-size: cover;
+}
