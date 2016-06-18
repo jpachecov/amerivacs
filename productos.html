@@ -4,11 +4,11 @@
 	<div class='cont-1 col-md-12 col-sm-12 col-xs-12' style='padding-left:4%'>
 		
 		<!-- Columna para los botones -->
-		<div class='col-md-3 col-xs-12 col-sm-12'>
-			<div class='boton-compare boton col-md-7 col-sm-6 col-xs-6  r-bottom back-white2 nopadding txt-c'  style='float:left'>
+		<div class='col-md-3 col-xs-12 col-sm-12' style='padding:0%'>
+			<div class='hover-2 boton col-md-7 col-sm-6 col-xs-6  r-bottom back-white2 nopadding txt-c'  style='float:left'>
 				<span class='font1'>Compare</span>
 			</div>
-			<div class='boton-selector boton col-md-7 col-sm-6 col-xs-6 back-white2 nopadding txt-c' style='float:left'>
+			<div class='hover-2 boton col-md-7 col-sm-6 col-xs-6 back-white2 nopadding txt-c' style='float:left'>
 				<span class='font1'>Cyber Selector</span>
 			</div>			
 		</div>
@@ -25,10 +25,13 @@
 				<br><br>
 				<strong>All our sealers carry a 2-year limited warranty that cover both parts and labor.</strong>
 			</p>
-			<span class='col-md-12 col-sm-12 col-xs-12 blue-2 font1 txt-r boton bold' style='margin-top:3%'>Learn more...</span>
+			<span class='col-md-12 col-sm-12 col-xs-12 blue-2 font1 txt-r boton bold' style='margin-top:3%; font-size:1.5em;'>Learn more...</span>
 			<!-- botton -->
-			<div class='col-md-12 col-sm-12 col-xs-12 margin-1 nopadding'>
-				<img class='col-md-4 col-sm-4 col-xs-8 boton' ng-click="loadPage('all-products')" src="img/products/boton_000.png">
+			<div class='col-md-12 col-sm-12 col-xs-12 margin-1 nopadding efectoH-2'>
+				<figure class='col-md-12'>
+					<img class='col-md-4 col-sm-4 col-xs-8 boton' ng-click="loadPage('all-products')" src="img/products/boton_000.png">
+					
+				</figure>
 			</div>
 		</div>
 
@@ -59,7 +62,7 @@
 		</div>
 
 		<span class='col-md-12 col-sm-12 col-xs-12 azul-1' style='font-size:1.5em; margin-right:5%; margin-bottom:3%;'> PROTECTING YOUR INVESTMENT</span>
-		<ul class='col-md-12 col-sm-12 col-xs-12'>
+		<ul class='col-md-12 col-sm-12 col-xs-12 nodot nopadding'>
 			<li class='col-md-5 col-sm-6 col-xs-12 fs-2'>Starting at $2,500 for a 20" Vacuum sealer with gas purge.</li>
 			<li class='col-md-5 col-sm-6 col-xs-12 fs-2'>Starting at $2,500 for a 20" Vacuum sealer with gas purge.</li>
 			<li class='col-md-5 col-sm-6 col-xs-12 fs-2'>Starting at $2,500 for a 20" Vacuum sealer with gas purge.</li>
@@ -70,25 +73,25 @@
 	</div>
 
 	<!-- IMAGEN EN MEDIO -->
-	<div classs='col-md-12 col-sm-12 col-xs-12 nopadding nomargin'>
+	<div class='col-md-12 col-sm-12 col-xs-12 nopadding nomargin efectoH-3' style='margin-top:3%'>
 		<img src="img/products/imagen_001.png" class='col-md-12 col-md-12 col-xs-12 nopadding' alt="">
 	</div>
 
 	<!-- MENU CATEGORIAS PRODUCTOS -->
 	<div class='col-md-12 col-sm-12 col-xs-12 nopadding nomargin lista-productos'>
-		<div class='menu-cat col-md-2 r-right float-l nopadding cursor'>
+		<div class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d float-l nopadding cursor'>
 			<span class='azul-1 '>RETRACTABLE NOZZLE</span>
 		</div>
-		<div class='menu-cat col-md-2 r-right nopadding cursor'>
+		<div class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor'>
 			<span class='azul-1'>CHAMBERS SEALERS</span>
 		</div>
-		<div class='menu-cat col-md-2 r-right nopadding cursor'>
+		<div class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor'>
 			<span class='azul-1'>IMPULSE SEALER</span>
 		</div>
-		<div class='menu-cat col-md-2 r-right nopadding cursor'>
+		<div class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor'>
 			<span class='azul-1 '>ACCESORIES</span>
 		</div>
-		<div class='menu-cat col-md-2 nopadding cursor'>
+		<div class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor'>
 			<span class='azul-1'>PARTS</span>
 		</div>
 
@@ -99,9 +102,9 @@
 		<div class='col-md-4 col-sm-6 col-xs-6 float-l producto3' ng-repeat='m in vaccum_sealers' style='padding-left:3%; padding-right:3%'>
 			<img ng-src="{{m.img}}" alt="" class='col-md-12 col-sm-12 col-xs-12 nopadding'>
 			<h1 class='col-md-12 col-sm-12 col-xs-12 azul-1 nopadding' >{{m.nombre}}</h1>
-			<span class='col-md-12 col-sm-12 col-xs-12 azul-2 r-bottom nopadding' >{{m.descrip}}</span>
+			<span class='col-md-12 col-sm-12 col-xs-12 azul-2 r-bottom-2 nopadding' >{{m.descrip}}</span>
 			<p class='col-md-12 col-sm-12 col-xs-12 nopadding justif' ng-bind-html='m.resumen_p' ></p>
-			<a class='col-md-12 col-sm-12 col-xs-12 rojito nopadding' >More information <span class='trian'>&#x25BC</span> </a>
+			<a class='col-md-12 col-sm-12 col-xs-12 rojito nopadding cursor' >More information <span class='trian'>&#x25BC</span> </a>
 		</div>
 		
 	</div>
