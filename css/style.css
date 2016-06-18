@@ -861,7 +861,8 @@ li:before {
 
 .hover-2:hover{
 	background-color: white;
-	color: black;
+	color: #ed1248;
+	border: black !important;
 }
 .hover-2{
 	padding: 3%;
