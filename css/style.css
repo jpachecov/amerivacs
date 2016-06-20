@@ -160,12 +160,14 @@ html{
 .info_foot p{
 font-family: 'menu', sans-serif;
 	margin: 0%;
+	letter-spacing: 1px;
 }
 
 .info_foot span{
 	display: block;
 	font-family: 'menu', sans-serif;
 	margin-bottom: 4%;
+	letter-spacing: 1px;
 }
 
 .submenu{
@@ -180,6 +182,8 @@ font-family: 'menu', sans-serif;
 	width: 24%;
 	text-align: center;
 	font-family: 'menu', sans-serif;
+	letter-spacing: 1px;
+
 }
 
 .foot-img{
