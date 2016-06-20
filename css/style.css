@@ -1037,11 +1037,9 @@ li:before {
 	margin: 3% 0px;
 	margin-bottom: 8%
 }
-.row span{
+.rw-1 span{
 
-	padding: 7%;
-	padding-top: 4%;
-	padding-bottom: 4%;
+
 }
 .selector-3 img{
 	display: block;
@@ -1061,6 +1059,10 @@ li:before {
 	font-size: 1.4em;
 	color: #243c74;
 	letter-spacing: 2px;
+
+	padding: 7%;
+	padding-top: 4%;
+	padding-bottom: 4%;
 }
 
 .espacio-arriba{
@@ -1078,4 +1080,28 @@ li:before {
 .ans-no{
 	float: left;
 	margin-left:12%; 
+}
+
+.selected-vac{
+	background-image: url(../img/selector/background-resultado_000.png);
+	background-size: cover;
+	height: auto;
+}
+
+.selected-vac span{
+	display: block;
+	text-align: center;
+	font-family: 'menu', sans-serif;
+	letter-spacing: 2px;
+}
+.esp-a{
+	font-size: 2em;
+}
+.selected-v{
+	font-size: 2.3em;
+}
+
+.selected-vac .row{
+	padding-top: 5%;
+	padding-bottom: 5%;
 }
