@@ -537,6 +537,9 @@ li:before {
 .bord-t{
 	border-top: solid 1px #dbdbda;	
 }
+.bor-b{
+	border-bottom: solid 1px black;
+}
 
 .boton-compara{
 	display: inline-block;
@@ -552,6 +555,23 @@ li:before {
 	background-color: #d12a27;
 	float: left;
 }
+
+.boton-carrito2{
+	display: inline-block;
+	height: auto;
+	background-color: #d12a27;
+
+}
+.boton-carrito2 span{
+	display: block;
+	text-align: center;
+	line-height: 100%;
+	padding: 3%;
+	color: white;
+	font-size: 13px;
+	font-family: 'menu',sans-serif;
+}
+
 .boton-compara:hover{
 	cursor: pointer;
 }
@@ -1104,4 +1124,22 @@ li:before {
 .selected-vac .row{
 	padding-top: 5%;
 	padding-bottom: 5%;
+}
+
+.compare{
+	background-image: url(../img/compare/compare_photo.png);
+	background-size: cover;
+	padding-left: 8%;
+}
+.compare span{
+	margin-top: 1%;
+	margin-bottom: 2%;
+	font-size: 3em;
+	letter-spacing: 2px;
+}
+.compare p{
+	font-size: 1.2em;
+	letter-spacing: 1px;
+	margin-bottom: 5%;
+	line-height: 1.2em;
 }
