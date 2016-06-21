@@ -404,7 +404,7 @@ ABOUT US
 .slide-animate-container {
   position:relative;
   background:white;
-  overflow:hidden;
+  overflow-x:hidden;
 }
 
 
@@ -416,19 +416,34 @@ ABOUT US
 .producto-menu{
 	
 	text-align: center;
-	height: 80px;
-	padding: 5%;
+	height: 115px;
+
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 
 }
 .producto-menu:hover{
 	color: white;
 	background-color: #ed1248;
 	cursor: pointer;
+
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+
 }
+
+
 .producto-menu span{
-	position: absolute;
-	left: 30%;
-	top: 38%;	 
+    display: block;
+    width: 100%;
+    line-height: 115px;
+    height: 100%;
 	font-family: "menu", sans-serif;
 	font-size: 18px;
 
@@ -794,6 +809,24 @@ li:before {
 	padding-top: 1%;
 	padding-bottom:1%;
 
+
+
+		-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+
+}
+
+.menu-cat:hover{
+		-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+
 }
 
 .menu-cat span{
@@ -801,6 +834,7 @@ li:before {
 	line-height: 6rem;
 
 }
+
 
 
 
