@@ -843,7 +843,7 @@ li:before {
 	transition: .3s ease-in-out;
 }
 .efectoH img:hover {
-
+	
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
 	-webkit-filter: blur(0px);
@@ -851,6 +851,124 @@ li:before {
 
 
 }
+
+
+.efe-sel {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+.efe-sel:hover {
+	background-color: #243c74;
+	-webkit-transform: scale(1.08);
+	transform: scale(1.08);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	border-radius: 0px;
+
+}
+
+.efe-sel:hover span{
+
+
+	color: white;
+	-webkit-transform: scale(1.08);
+	transform: scale(1.08);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+
+	-webkit-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
+}
+
+
+.scale{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: 1.5s ease-in-out;
+	transition: 1.5s ease-in-out;
+}
+.scale:hover{
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+
+
+
+.efe-sel-2 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	-webkit-transition: .4s ease-in-out;
+	transition: .4s ease-in-out;
+}
+.efe-sel-2:hover {
+	background-color: #243c74;
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+
+	border-radius: 0px;
+}
+
+.efe-sel-2:hover span{
+
+
+	color: white;
+	-webkit-transform: scale(1.02);
+	transform: scale(1.02);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+
+
+.efe-sel-3 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	-webkit-transition: .4s ease-in-out;
+	transition: .4s ease-in-out;
+}
+.efe-sel-3:hover {
+	background-color: #243c74;
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	border-radius: 0px;
+
+}
+
+.efe-sel-3:hover span{
+
+
+	color: white;
+	-webkit-transform: scale(1.02);
+	transform: scale(1.02);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+
+
+
+
+
+
 
 .galery div{
 	overflow: hidden;
