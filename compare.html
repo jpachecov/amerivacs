@@ -18,29 +18,29 @@
 	
 	<!-- OPCIONES -->
 	<div class='nopadding' style='margin:0%'>
-		<div class='lista-productos col-md-12 col-xs-12 col-sm-12 nopadding'>
-		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d' ng-repeat='x in productos'>
+		<div class='lista-productos menucito1 col-md-12 col-xs-12 col-sm-12 nopadding'>
+		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d' ng-repeat='x in productos' id='{{x.name}}' ng-click='getProduct_1(x.name)'>
 		      <span>{{x.name}}</span>
 		    </div>
 		</div>
 	</div>
 
-	<!-- CONTENEDOR DE UN PRODUCTO -->
+	<!-- CONTENEDOR DEN PRODUCTO -->
 	<div class=' col-md-12' style='padding:8%;'>
 		<div class='col-md-12 col-sm-12 nopadding'>
 			<div class='col-md-12 col-sm-12 col-xs-12'>
 				<div class='col-md-12 col-sm-9 col-xs-12 nopadding'>
 					<div class='prod_name col-md-5'>
-						<span>{{producto.name}}</span>
+						<span>{{producto_1.name}}</span>
 					</div>
 					<div class='prod_des col-md-6'>
-						<span>{{producto.subtitulo}}</span>
+						<span>{{producto_1.subtitulo}}</span>
 					</div>				
 				</div>
 
 			</div>
 			<div class='col-md-12 col-sm-12 col-xs-12 bor-b' style='padding-bottom:8%'>
-				<img src="img/products/imagen_AVS_000.png" ng-src='' class="col-md-12 col-sm-12 col-xs-12">
+				<img src="{{producto_1.src}}" ng-src='' class="col-md-12 col-sm-12 col-xs-12">
 			</div>
 
 			<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
@@ -56,7 +56,7 @@
 							<span class='col-md-6 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Seal size</span>
 							<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Price</span>
 						</div>
-						<div class='col-md-12 col-sm-12 col-xs-12 ren nopadding' ng-repeat='x in producto.models'>
+						<div class='col-md-12 col-sm-12 col-xs-12 ren nopadding' ng-repeat='x in producto_1.models'>
 							<span class='col-md-4 col-sm-4 col-xs-3 nopadding'><strong>{{x.id}}</strong></span>
 							<span class='col-md-6 col-sm-4 col-xs-5 nopadding'>{{x.size}}</span>
 							<span class='col-md-2 col-sm-4 col-xs-3 nopadding'>{{x.price}}</span>
@@ -85,8 +85,8 @@
 	
 	<!-- OPCIONES -->
 	<div class='nopadding' style='margin:0%'>
-		<div class='lista-productos col-md-12 col-xs-12 col-sm-12 nopadding'>
-		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d' ng-repeat='x in productos'>
+		<div class='lista-productos menucito2 col-md-12 col-xs-12 col-sm-12 nopadding'>
+		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d' ng-repeat='x in productos' id='{{x.name}}' ng-click='getProduct_2(x.name)'>
 		      <span>{{x.name}}</span>
 		    </div>
 		</div>
@@ -98,16 +98,16 @@
 			<div class='col-md-12 col-sm-12 col-xs-12'>
 				<div class='col-md-12 col-sm-9 col-xs-12 nopadding'>
 					<div class='prod_name col-md-5'>
-						<span>{{producto.name}}</span>
+						<span>{{producto_2.name}}</span>
 					</div>
 					<div class='prod_des col-md-6'>
-						<span>{{producto.subtitulo}}</span>
+						<span>{{producto_2.subtitulo}}</span>
 					</div>				
 				</div>
 
 			</div>
 			<div class='col-md-12 col-sm-12 col-xs-12 bor-b' style='padding-bottom:8%'>
-				<img src="img/products/imagen_AVS_000.png" ng-src='' class="col-md-12 col-sm-12 col-xs-12">
+				<img src="{{producto_2.src}}" ng-src='' class="col-md-12 col-sm-12 col-xs-12">
 			</div>
 
 			<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
@@ -123,7 +123,7 @@
 							<span class='col-md-6 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Seal size</span>
 							<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Price</span>
 						</div>
-						<div class='col-md-12 col-sm-12 col-xs-12 ren nopadding' ng-repeat='x in producto.models'>
+						<div class='col-md-12 col-sm-12 col-xs-12 ren nopadding' ng-repeat='x in producto_2.models'>
 							<span class='col-md-4 col-sm-4 col-xs-3 nopadding'><strong>{{x.id}}</strong></span>
 							<span class='col-md-6 col-sm-4 col-xs-5 nopadding'>{{x.size}}</span>
 							<span class='col-md-2 col-sm-4 col-xs-3 nopadding'>{{x.price}}</span>
