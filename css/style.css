@@ -1299,3 +1299,8 @@ li:before {
 	margin-bottom: 5%;
 	line-height: 1.2em;
 }
+
+.seleccion {
+	color: white;
+	background-color: #ed1248;	
+}

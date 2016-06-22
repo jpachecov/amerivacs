@@ -1,6 +1,6 @@
 <div class='container nopadding' style='margin:0%; width:100%'>
 	<div class='lista-productos col-md-12 col-xs-12 col-sm-12 nopadding'>
-	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' ng-repeat='x in productos'>
+	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' ng-repeat='x in productos' id='{{x.name}}' ng-click='getProduct(x.name)'>
 	      <span>{{x.name}}</span>
 	    </div>
 	</div>
