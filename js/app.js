@@ -1048,7 +1048,7 @@ app.controller('controlador', function($scope,$sce) {
 	];
 
 
-	$scope.currentPage = "contact.html";
+	$scope.currentPage = "productos.html";
 	//$scope.productos = [{'name':'AVN'},{'name':'AVS'},{'name':'CAVN'},{'name':'CAVS'},{'name':'AVC'},{'name':'AVCG'},{'name':'AVP'},{'name':'PARTS'}]
 	
 
@@ -1195,6 +1195,15 @@ app.controller('controlador', function($scope,$sce) {
 		}
 	];
 
+	$scope.toProduct = function(name){
+
+		$scope.getProduct(name);
+		//$scope.loadPage('products');
+		$scope.currentPage = 'producto.html';
+
+		console.log('toProduct ' + name);
+	}
+
 	$scope.getCat = function(name){
 		console.log('click cat');
 		if(name == 'retractable nozzle'){
@@ -1244,6 +1253,7 @@ app.controller('controlador', function($scope,$sce) {
 	}
 
 	$scope.loadPage = function(page){
+		console.log('loadPage');
 		switch(page){
 			case 'home':				
 				$scope.currentPage = "home.html";

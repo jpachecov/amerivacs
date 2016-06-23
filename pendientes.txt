@@ -2,9 +2,7 @@ COntacto
 --Error en el mail
 
 Productos
--- iconos
--- class seleccion en menu de cats
--- redireccion en seleccion de caja de prod
+
 -- Faltan dos titulos ahi en retractable nozzle
 
 

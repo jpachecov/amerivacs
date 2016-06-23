@@ -1,4 +1,4 @@
-	<div class='container nopadding nomargin productos'>
+<div class='container nopadding nomargin productos'>
 	
 	<!--  PRIMER OUR VACUUM SEALERS -->
 	<div class='cont-1 col-md-12 col-sm-12 col-xs-12' style='padding-left:4%'>
@@ -105,7 +105,7 @@
 			<h1 class='col-md-12 col-sm-12 col-xs-12 azul-1 nopadding' >{{m.nombre}}</h1>
 			<span class='col-md-12 col-sm-12 col-xs-12 azul-2 r-bottom-2 nopadding' >{{m.descrip}}</span>
 			<p class='col-md-12 col-sm-12 col-xs-12 nopadding justif' ng-bind-html='m.resumen_p' ></p>
-			<a class='col-md-12 col-sm-12 col-xs-12 rojito nopadding cursor' >More information <span class='trian'>&#x25BC</span> </a>
+			<a class='col-md-12 col-sm-12 col-xs-12 rojito nopadding cursor' ng-click='toProduct(m.nombre)'>More information <span class='trian'>&#x25BC</span> </a>
 		</div>
 		
 	</div>
