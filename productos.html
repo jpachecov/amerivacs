@@ -78,20 +78,20 @@
 	</div>
 
 	<!-- MENU CATEGORIAS PRODUCTOS -->
-	<div class='col-md-12 col-sm-12 col-xs-12 nopadding nomargin lista-productos'>
-		<div class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d float-l nopadding cursor' ng-click='getCat("retractable nozzle")'>
+	<div class='col-md-12 col-sm-12 col-xs-12 nopadding nomargin lista-productos categs'>
+		<div id='rn' class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d float-l nopadding cursor' ng-click='getCat("retractable nozzle")'>
 			<span class='azul-1 '>RETRACTABLE NOZZLE</span>
 		</div>
-		<div class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor' ng-click='getCat("chamber sealers")'>
+		<div id='cs' class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor' ng-click='getCat("chamber sealers")'>
 			<span class='azul-1'>CHAMBERS SEALERS</span>
 		</div>
-		<div class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor' ng-click='getCat("impulse sealer")'>
+		<div id='is' class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor' ng-click='getCat("impulse sealer")'>
 			<span class='azul-1'>IMPULSE SEALER</span>
 		</div>
-		<div class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor' ng-click='getCat("accesories")'>
+		<div id='acc' class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor' ng-click='getCat("accesories")'>
 			<span class='azul-1 '>ACCESORIES</span>
 		</div>
-		<div class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor' ng-click='getCat("parts")'>
+		<div id='pa' class='menu-cat col-md-2 col-sm-6 col-xs-4 bor-d nopadding cursor' ng-click='getCat("parts")'>
 			<span class='azul-1'>PARTS</span>
 		</div>
 
@@ -99,7 +99,7 @@
 
 	<!-- PRODUCTOS POR CATEGORIA -->
 	<div class='col-md-12 col-sm-12 col-xs-12' style='padding-top:3%; padding-bottom:3%;'>
-		<div class='col-md-4 col-sm-6 col-xs-6 float-l producto3' ng-repeat='m in vaccum_sealers' style='padding-left:3%; padding-right:3%'>
+		<div class='col-md-4 col-sm-6 col-xs-6 float-l producto3' ng-repeat='m in categoria' style='padding-left:3%; padding-right:3%'>
 			<img ng-src="{{m.img}}" alt="" class='col-md-12 col-sm-12 col-xs-12 nopadding'>
 			<h1 class='col-md-12 col-sm-12 col-xs-12 azul-1 nopadding' >{{m.nombre}}</h1>
 			<span class='col-md-12 col-sm-12 col-xs-12 azul-2 r-bottom-2 nopadding' >{{m.descrip}}</span>

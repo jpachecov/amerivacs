@@ -1048,7 +1048,7 @@ app.controller('controlador', function($scope,$sce) {
 	];
 
 
-	$scope.currentPage = "home.html";
+	$scope.currentPage = "productos.html";
 	//$scope.productos = [{'name':'AVN'},{'name':'AVS'},{'name':'CAVN'},{'name':'CAVS'},{'name':'AVC'},{'name':'AVCG'},{'name':'AVP'},{'name':'PARTS'}]
 	
 
@@ -1092,30 +1092,139 @@ app.controller('controlador', function($scope,$sce) {
 			'img' : 'img/products/imagen_CAVN_000.png'
 		},
 		{
-			'nombre' : 'AVN',
-			'descrip' : 'RETRACTABLE NOZZLE VACUUM SEALER WITH GAS PURGE',
-			'resumen_p' : 'Foot pedal activated gas-flush vacuum packaging at its \
-							finest. The AVN’s 1/4\” wide sealing element delivers a \
-							leak-proof seal. CE available <br><br> Features five seal lengths (20\” 25\” 30\” 35\” 50\”)',
-			'img' : 'img/products/imagen_CAVN_000.png'
-		},
-		{
-			'nombre' : 'AVN',
-			'descrip' : 'RETRACTABLE NOZZLE VACUUM SEALER WITH GAS PURGE',
-			'resumen_p' : 'Foot pedal activated gas-flush vacuum packaging at its \
-							finest. The AVN’s 1/4\” wide sealing element delivers a \
-							leak-proof seal. CE available <br><br> Features five seal lengths (20\” 25\” 30\” 35\” 50\”)',
-			'img' : 'img/products/imagen_CAVN_000.png'
-		},
-		{
-			'nombre' : 'AVN',
-			'descrip' : 'RETRACTABLE NOZZLE VACUUM SEALER WITH GAS PURGE',
-			'resumen_p' : 'Foot pedal activated gas-flush vacuum packaging at its \
-							finest. The AVN’s 1/4\” wide sealing element delivers a \
-							leak-proof seal. CE available <br><br> Features five seal lengths (20\” 25\” 30\” 35\” 50\”)',
+			'nombre' : 'AVS',
+			'descrip' : 'RETRACTABLE NOZZLE VACUUM SEALER',
+			'resumen_p' : 'Offered in our most popular 20” seal length, the AVS \
+							combines the same quality and design integrity exhibited \
+							in the AVN without the gas-flush feature. \
+							The AVS is the choice sealer for the widest range of all \
+							our clientele. CE available',
 			'img' : 'img/products/imagen_CAVN_000.png'
 		},
 	];
+
+
+	$scope.sc_vaccum_sealers = [
+		{
+			'nombre' : 'CAVN',
+			'descrip' : 'RETRACTABLE NOZZLE VACUUM SEALER WITH GAS PURGE',
+			'resumen_p' : 'The CAVN eliminates the need for additional equipment. \
+							Completely self-contained, is ready to perform \
+							out of the box, while reducing equipment requirements. \
+							Available in 20” and 30” and can be custom configured \
+							to meet CE Certification requirements.', 
+			'img' : 'img/products/imagen_CAVN_000.png'
+		},
+		{
+			'nombre' : 'CAVS',
+			'descrip' : 'RETRACTABLE NOZZLE VACUUM SEALER',
+			'resumen_p' : 'The CAVS eliminates the need for additional equipment. \
+							Completely self-contained, is ready to perform out of \
+							the box, while reducing equipment requirements. \
+							Available in 20” and 30” and can be custom configured \
+							to meet CE Certification requirements.',
+			'img' : 'img/products/imagen_CAVN_000.png'
+		},
+	];
+
+	$scope.impulse_sealers = [
+		{
+			'nombre' : 'AVP',
+			'descrip' : 'PNEUMATIC IMPULSE SEALER',
+			'resumen_p' : 'The AVP series was designed for heavy-duty applications. \
+							The most evident feature of the AVP is its lack of \
+							visible controls. Form follows function providing an \
+							expansive clear work surface to hold product ready to \
+							be sealed. <br> \
+							The AVP is still lightweight enough (29lbs) to be moved \
+							effortlessly in your facility.', 
+			'img' : 'img/products/imagen_CAVN_000.png'
+		}
+	];
+
+	$scope.chamber_sealers = [
+		{
+			'nombre' : 'AVC',
+			'descrip' : 'CHAMBER VACUUM SEALER',
+			'resumen_p' : '	The AVC is hand assembled using top grade materials \
+							and components. The AVC is compressed air driven, \
+							eliminating any concern regarding noise, vibration or \
+							heat generation. <br>\
+							One button touch sealing, preset vacuum controls and \
+							a large 22"x22"x4" stainless steel vacuum chamber \
+							best define this no nonsense workhorse. ', 
+			'img' : 'img/products/imagen_CAVN_000.png'
+		},
+		{
+			'nombre' : 'AVCG',
+			'descrip' : 'CHAMBER VACUUM SEALER WITH GAS PURGE',
+			'resumen_p' : 'The AVCG combines the same quality and design \
+							integrity exhibited in the AVC, but with the gas-flush feature. \
+							It’s so versatile, you can adjust the level of vacuum \
+							that your product needs without worrying about adjusting \
+							vacuum timers for every package. <br> \
+							No need to worry about adjusting vacuum timers for\
+							every package.',
+			'img' : 'img/products/imagen_CAVN_000.png'
+		},
+	];
+
+	$scope.accesories = [
+		{
+			'nombre' : 'ACCESORIES',
+			'descrip' : '',
+			'resumen_p' : '', 
+			'img' : ''
+		}
+	];
+
+
+	$scope.parts = [
+		{
+			'nombre' : 'PARTS',
+			'descrip' : '',
+			'resumen_p' : '', 
+			'img' : ''
+		}
+	];
+
+	$scope.getCat = function(name){
+		console.log('click cat');
+		if(name == 'retractable nozzle'){
+			$scope.categoria = [];
+			$scope.vaccum_sealers.forEach(function(e){
+				$scope.categoria.push(e);
+			});
+			$scope.sc_vaccum_sealers.forEach(function(e){
+				$scope.categoria.push(e);
+			});
+
+
+			$('.categs .seleccion').removeClass('seleccion');
+			$('.categs #rn').addClass('seleccion');
+		}
+		if(name == 'chamber sealers'){
+			$scope.categoria = $scope.chamber_sealers;
+			$('.categs .seleccion').removeClass('seleccion');
+			$('.categs #cs').addClass('seleccion');
+		}
+		if(name == 'impulse sealer'){
+			$scope.categoria = $scope.impulse_sealers;
+			$('.categs .seleccion').removeClass('seleccion');
+			$('.categs #is').addClass('seleccion');
+		}
+		if(name == 'accesories'){
+			$scope.categoria = $scope.accesories;
+			$('.categs .seleccion').removeClass('seleccion');
+			$('.categs #acc').addClass('seleccion');
+		}
+		if(name == 'parts'){
+			$scope.categoria = $scope.parts;
+			$('.categs .seleccion').removeClass('seleccion');
+			$('.categs #pa').addClass('seleccion');
+		}
+	}
+
 
 	$scope.getProduct = function(name){
 		$scope.productos.forEach(function(e){
@@ -2393,4 +2502,3 @@ function inTransition(i){
 
 	}
 }
-
