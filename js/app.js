@@ -1048,12 +1048,19 @@ app.controller('controlador', function($scope,$sce) {
 	];
 
 
-	$scope.currentPage = "home.html";
+	$scope.currentPage = "productos.html";
 	//$scope.productos = [{'name':'AVN'},{'name':'AVS'},{'name':'CAVN'},{'name':'CAVS'},{'name':'AVC'},{'name':'AVCG'},{'name':'AVP'},{'name':'PARTS'}]
 	
 
 
-	$scope.amerivacs_includes = ["2-year limited warranty","1-week trial period","Clean room compatible","100% maintenance free Venturi vacuum pumps","Intuitive design","Extensive safety features","Engineer direct technical support","Rust treated and powder coated steel chassis","Industry leading performance"];
+	$scope.amerivacs_includes = [
+	"2-year limited warranty",
+	"1-week trial period",
+	"Clean room compatible",
+	"100% maintenance free Venturi vacuum pumps",
+	"Intuitive design","Extensive safety features",
+	"Engineer direct technical support","Rust treated and powder coated steel chassis",
+	"Industry leading performance"];
 	
 
 
