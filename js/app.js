@@ -8,7 +8,7 @@ app.controller('controlador', function($scope,$sce) {
 $scope.$on('$stateChangeSuccess', function() {
    document.body.scrollTop = document.documentElement.scrollTop = 0;
 });
-
+	$scope.isVacuum = true;
 	$scope.productos = 
 	[
 		{
@@ -1250,6 +1250,12 @@ $scope.$on('$stateChangeSuccess', function() {
 	$scope.getProduct = function(name){
 		$scope.productos.forEach(function(e){
 			if(e.name == name){
+				if(e.name == 'PARTS'){
+					$scope.isVacuum = false;
+				} else {
+					$scope.isVacuum = true;
+				}
+				
 				$scope.producto = e;
 				$('.seleccion').removeClass('seleccion');
 				$('#' + name).addClass('seleccion');

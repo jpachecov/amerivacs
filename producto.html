@@ -16,7 +16,7 @@
 					<span>{{producto.subtitulo}}</span>
 				</div>				
 			</div>
-			<div class='col-md-5 col-sm-6 col-xs-12' style='text-align:right; margin-top:2%; margin-bottom:6%'>
+			<div class='col-md-5 col-sm-6 col-xs-12' style='text-align:right; margin-top:2%; margin-bottom:6%' ng-show='isVacuum'>
 				<div class='boton-compara '>
 					<span class=''>Compare with other products</span>
 				</div>
@@ -25,7 +25,7 @@
 				</div>				
 			</div>
 		</div>
-		<div class='col-md-7 col-sm-9 nopadding'>
+		<div class='col-md-7 col-sm-9 nopadding' ng-show='isVacuum'>
 
 
 				
@@ -38,6 +38,8 @@
 				</ul>
 
 			</div>	
+
+
 			<!-- PRICING TABLE -->
 			<div class='pricing_table col-md-11 tabla-p'>
 				<div class='col-md-12 nopadding mb-1'>
@@ -63,7 +65,7 @@
 	</div>
 
 	<!--  TABLE SPECIFICATIONS -->
-	<div class='col-md-12 col-xs-12 col-sm-12 tabla-p'>
+	<div class='col-md-12 col-xs-12 col-sm-12 tabla-p' ng-show='isVacuum'>
 		<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
 			<span class='tab-name'>Specifications</span>
 		</div>

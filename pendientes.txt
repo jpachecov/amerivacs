@@ -8,7 +8,6 @@ Productos
 
 Compare
 -- Icono en el titulo
--- Botones shopping cart y hover
 
 Lista de Todos los Productos
 -- Tabla de PARTS no esta hecha
