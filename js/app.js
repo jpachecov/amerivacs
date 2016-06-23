@@ -4,10 +4,6 @@ var app = angular.module('amerivacs', ['ngSanitize','ngAnimate']);
 
 app.controller('controlador', function($scope,$sce) {
 
-
-$scope.$on('$stateChangeSuccess', function() {
-   document.body.scrollTop = document.documentElement.scrollTop = 0;
-});
 	$scope.isVacuum = true;
 	$scope.productos = 
 	[
@@ -1247,6 +1243,11 @@ $scope.$on('$stateChangeSuccess', function() {
 	}
 
 
+
+	$scope.toCompare = function(name){
+		$scope.loadPage('compare');
+	}
+
 	$scope.getProduct = function(name){
 		$scope.productos.forEach(function(e){
 			if(e.name == name){
@@ -1255,7 +1256,7 @@ $scope.$on('$stateChangeSuccess', function() {
 				} else {
 					$scope.isVacuum = true;
 				}
-				
+
 				$scope.producto = e;
 				$('.seleccion').removeClass('seleccion');
 				$('#' + name).addClass('seleccion');
@@ -1303,6 +1304,8 @@ $scope.$on('$stateChangeSuccess', function() {
 	}
 
 	$scope.getProduct('AVN');
+
+
 });
 
 app.controller('compare', function($scope){

@@ -10,7 +10,6 @@ Compare
 -- Icono en el titulo
 
 Lista de Todos los Productos
--- Tabla de PARTS no esta hecha
 -- Faltan imagenes a los productos
 -- corregir contenido de tablas
 -- Boton de comparar con otros productos
