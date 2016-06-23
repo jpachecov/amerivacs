@@ -1,6 +1,3 @@
-Footer
--- Botones de ciber y compare
-
 COntacto
 --Error en el mail
 

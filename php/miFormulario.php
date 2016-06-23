@@ -1,5 +1,5 @@
 <?php
-$para      = 'jeanpierre@ciencias.unam.mx';
+$para      = 'la.parte.imaginaria@gmail.com';
 $titulo    = '[Mensaje de pagina web]';
 $mensaje   = $_POST['mensaje'];
 $texto = str_replace("\n.", "\n..", $mensaje);
@@ -12,13 +12,14 @@ $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 $respuesta = array();
 
-if(validateUsername($nombre) && validateMsn($texto) && validateEmail($correo)){
-    mail($para, $titulo,  $mensaje_completo , $cabeceras);
-    $respuesta["success"] = true;
-} else {
-    $respuesta["success"] = false;
-    $respuesta["mssg"] = "Datos inválidos";
-}
+//if(validateUsername($nombre) && validateMsn($texto) && validateEmail($correo)){
+    if( mail($para, $titulo,  $mensaje_completo, $cabeceras) ){
+        $respuesta["success"] = true;
+    } else {
+        $respuesta["success"] = false;
+        $respuesta['todo'] = [$para, $titulo,  $mensaje_completo , $cabeceras];
+    }
+
 
 echo (json_encode($respuesta));
 

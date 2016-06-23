@@ -1048,7 +1048,7 @@ app.controller('controlador', function($scope,$sce) {
 	];
 
 
-	$scope.currentPage = "productos.html";
+	$scope.currentPage = "contact.html";
 	//$scope.productos = [{'name':'AVN'},{'name':'AVS'},{'name':'CAVN'},{'name':'CAVS'},{'name':'AVC'},{'name':'AVCG'},{'name':'AVP'},{'name':'PARTS'}]
 	
 
