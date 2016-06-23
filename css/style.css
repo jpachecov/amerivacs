@@ -179,10 +179,11 @@ font-family: 'menu', sans-serif;
 
 .submenu span{
 	display: inline-block;
-	width: 24%;
+	/*width: 24%;*/
 	text-align: center;
 	font-family: 'menu', sans-serif;
 	letter-spacing: 1px;
+	padding: 0%;
 
 }
 
@@ -739,7 +740,7 @@ li:before {
 }
 
 .texto-1{
-	font-size: 1.4em;
+	font-size: 1.1em;
 }
 .bold{
 	font-weight: bolder;

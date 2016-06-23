@@ -1,0 +1,32 @@
+Footer
+-- Botones de ciber y compare
+
+COntacto
+--Error en el mail
+
+Productos
+-- iconos
+-- class seleccion en menu de cats
+-- redireccion en seleccion de caja de prod
+-- Faltan dos titulos ahi en retractable nozzle
+
+
+Compare
+-- Icono en el titulo
+-- Botones shopping cart y hover
+
+Lista de Todos los Productos
+-- Tabla de PARTS no esta hecha
+-- Faltan imagenes a los productos
+-- corregir contenido de tablas
+-- Boton de comparar con otros productos
+
+
+Selector
+-- Hacer que filtre los productos
+-- adaptativas
+
+-- HACER UNA BASE DE DATOS BIEN
+-- HACER FUNCIONAR SHOPPING CART
+
+
