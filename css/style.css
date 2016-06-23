@@ -467,7 +467,7 @@ border-bottom: solid 1px black;
 	display: inline-block;
     vertical-align: middle;
     float: none;
-	padding: 0%;
+	padding: 2%;
 	padding-left:3%;
 }
 .prod_name span{
@@ -808,7 +808,7 @@ li:before {
 	text-align: center;
 	padding-top: 1%;
 	padding-bottom:1%;
-
+	
 
 
 		-webkit-transform: scale(1);
@@ -832,6 +832,7 @@ li:before {
 .menu-cat span{
 	width: 100%;
 	line-height: 6rem;
+	font-weight: bolder;
 
 }
 
