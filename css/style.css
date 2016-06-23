@@ -564,22 +564,47 @@ li:before {
 .boton-compara{
 	display: inline-block;
 	width: 33%;
-	height: 100%;
+	height: 40px;
 	background-color: #233f8b;
 	float: left;
+	margin: 0.2%;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
 }
 .boton-carrito{
 	display: inline-block;
 	width: 33%;
-	height: 100%;
+	height: 40px;
+	margin: 0.2%;
 	background-color: #d12a27;
 	float: left;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.boton-carrito:hover{
+	background-color: #ed1248;
+}
+
+
+.boton-carrito:hover span{
+}
+.boton-compara:hover{
+	background-color: #ed1248;
+}
+
+.boton-carrito2:hover{
+	background-color: #ed1248;
 }
 
 .boton-carrito2{
 	display: inline-block;
-	height: auto;
+	height: 40px;
 	background-color: #d12a27;
+		-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
 
 }
 .boton-carrito2 span{
@@ -932,6 +957,15 @@ li:before {
 	transform: scale(1.1);
 }
 
+.scale2{
+	-webkit-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
+}
+.scale2:hover{
+/*	-webkit-transform: scale(1.1);*/
+/*	transform: scale(1.1);*/
+font-size: 1.2em;
+}
 
 
 

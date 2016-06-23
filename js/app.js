@@ -1,7 +1,13 @@
 var app = angular.module('amerivacs', ['ngSanitize','ngAnimate']);
 
 
+
 app.controller('controlador', function($scope,$sce) {
+
+
+$scope.$on('$stateChangeSuccess', function() {
+   document.body.scrollTop = document.documentElement.scrollTop = 0;
+});
 
 	$scope.productos = 
 	[
@@ -1048,7 +1054,7 @@ app.controller('controlador', function($scope,$sce) {
 	];
 
 
-	$scope.currentPage = "productos.html";
+	$scope.currentPage = "producto.html";
 	//$scope.productos = [{'name':'AVN'},{'name':'AVS'},{'name':'CAVN'},{'name':'CAVS'},{'name':'AVC'},{'name':'AVCG'},{'name':'AVP'},{'name':'PARTS'}]
 	
 
@@ -1198,8 +1204,7 @@ app.controller('controlador', function($scope,$sce) {
 	$scope.toProduct = function(name){
 
 		$scope.getProduct(name);
-		//$scope.loadPage('products');
-		$scope.currentPage = 'producto.html';
+		$scope.loadPage('all-products');
 
 		console.log('toProduct ' + name);
 	}
@@ -1251,9 +1256,16 @@ app.controller('controlador', function($scope,$sce) {
 			}
 		});
 	}
+	$scope.animaScroll = function(){
+
+		$(window).scrollTop('0px');
+	}
 
 	$scope.loadPage = function(page){
 		console.log('loadPage');
+
+		$scope.animaScroll();
+
 		switch(page){
 			case 'home':				
 				$scope.currentPage = "home.html";
