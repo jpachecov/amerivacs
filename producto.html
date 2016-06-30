@@ -117,7 +117,7 @@
 
 <!-- NUEVA VERSION -->
 
-	<div class='col-md-12 tabla-p' style='display:table'>
+	<div class='col-md-12 tabla-p' style='display:table' ng-show="isVacuum">
 		<div class='col-md-12 nopadding'>
 			<div class='col-md-12 mb-2 nopadding'>
 				<span class='tab-name'>Options</span>
@@ -144,6 +144,43 @@
 			</div>
 			<div class='col-md-1 col-xs-2' ng-repeat='y in op.prices'>
 				<span>{{y}}</span>
+			</div>			
+		</div>
+		
+	</div>
+
+
+	<div class='partes col-md-12 tabla-p' style='display:table' ng-show="!isVacuum">
+		<div class='col-md-12 nopadding'>
+			<div class='col-md-12 mb-2 nopadding'>
+				<span class='tab-name'>Parts</span>
+			</div>
+			<div class='col-md-12 ren2 nopadding'>
+				<div class='col-md-1 col-xs-12 nopadding'>
+					<span class='blue-c'>Part</span>
+				</div>			
+				<div class='col-md-5 col-xs-12 col-sm-6 col-xs-12 bord-l' style='margin-bottom:3%;'>
+					<span></span>
+				</div>				
+				<!--
+				<div class='col-md-1 col-sm-2 col-xs-2 blue-c bord-l' ng-repeat='x in producto.options[0]'>
+					<span class=''>{{x}}</span>
+				</div>-->
+			</div>
+		</div>
+
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon' ng-repeat='part in partes'>
+			<div class='col-md-3 col-sm-3 col-xs-3 nopadding'>
+				<span><strong>{{part.id}}</strong></span>
+			</div>
+			<div class='col-md-3 col-sm-3 col-xs-3'>
+				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.desc}}</span>
+			</div>
+			<div class='col-md-3 col-sm-3 col-xs-3'>
+				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.size}}</span>
+			</div>
+			<div class='col-md-3 col-sm-3 col-xs-3'>
+				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.price}}</span>
 			</div>			
 		</div>
 		

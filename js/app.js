@@ -1049,7 +1049,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 
 	$scope.isVacuum = true;
-	$scope.currentPage = "compare.html";
+	$scope.currentPage = "producto.html";
 	$scope.amerivacs_includes = [
 							"2-year limited warranty",
 							"1-week trial period",
@@ -1182,14 +1182,13 @@ app.controller('controlador', function($scope,$sce, $http) {
 		}
 	];
 
-	$scope.parts = [
+	$scope.parts = 
 		{
-			'nombre' : 'PARTS',
-			'descrip' : '',
+			'name' : 'PARTS',
+			'subtitulo' : 'Replacement Parts',
 			'resumen_p' : '', 
 			'img' : ''
-		}
-	];
+		};
 
 	$scope.toProduct = function(name){
 
@@ -1249,6 +1248,22 @@ app.controller('controlador', function($scope,$sce, $http) {
 			$scope.isVacuum = false;
 
 			// Obtemeos las partes
+			$scope.producto = $scope.parts;
+
+			var request = $http({
+		    method: "POST",
+		    url: "/amerivacss/php/parts.php",
+		    data: {
+		    	'name': name,
+		    },
+			});
+
+			request.success(function(data){
+				console.log(JSON.parse(data));
+				console.log('jean');
+				$scope.partes = JSON.parse(data)['modelos'];
+				
+			});
 
 
 		} else {
@@ -1341,6 +1356,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 		}
 	}
 	$scope.producto = {};
+	$scope.partes = [];
 	$scope.getProduct('AVN');
 
 

@@ -1343,3 +1343,16 @@ font-size: 1.2em;
 .seleccion span{
 	color: white;
 }
+
+.partes span{
+	display: block;
+	height: auto;
+}
+
+.reenglon{
+	height: 50px; 
+}
+.reenglon div{
+	height: 100%;
+	vertical-align: top;
+}
