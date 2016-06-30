@@ -1042,6 +1042,12 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 
 			]],
+		},
+
+		{
+			'name':'OPTIONS',
+			'subtitulo':'Accesories for vacuum sealers',
+			'parrafo':'',
 		}
 
 	];
@@ -1246,9 +1252,11 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 		if(name == 'PARTS'){
 			$scope.isVacuum = false;
+			$scope.isParts = true;
+			$scope.isOptions = false;
 
 			// Obtemeos las partes
-			$scope.producto = $scope.parts;
+			$scope.producto = {'name':'PARTS','subtitulo':'Replacement Parts'};//= $scope.parts;
 
 			var request = $http({
 		    method: "POST",
@@ -1262,12 +1270,41 @@ app.controller('controlador', function($scope,$sce, $http) {
 				console.log(JSON.parse(data));
 				console.log('jean');
 				$scope.partes = JSON.parse(data)['modelos'];
-				
+
+			});
+
+			console.log('EEEE');
+		}
+		if(name == 'OPTIONS'){
+
+
+			$scope.isVacuum = false;
+			$scope.isParts = false;
+			$scope.isOptions = true;
+
+			// Obtemeos las partes
+			$scope.producto = {'name':'OPTIONS','subtitulo':'Accesories for vacuum sealers'};//= $scope.parts;
+
+			var request = $http({
+		    method: "POST",
+		    url: "/amerivacss/php/options.php",
+		    data: {
+		    	'name': name,
+		    },
+			});
+
+			request.success(function(data){
+				console.log(JSON.parse(data));
+				console.log('jean');
+				$scope.opciones = JSON.parse(data)['modelos'];
+
 			});
 
 
 		} else {
 			$scope.isVacuum = true;
+			$scope.isOptions = false;
+			$scope.isParts = false;
 
 			var request = $http({
 		    method: "POST",
@@ -1285,15 +1322,6 @@ app.controller('controlador', function($scope,$sce, $http) {
 		    },
 			});
 
-[['20"','25"','30"','35"','50"'],[
-					{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
-											'20"':'$275',
-											'25"':'$375',
-											'30"':'$700',
-											'35"':'$900',
-											'50"':'N.A',																														
-												}
-					}]];
 
 			request2.success(function (data) {
 				console.log(JSON.parse(data));
@@ -1396,6 +1424,7 @@ app.controller('compare', function($scope, $http){
 				var obj = JSON.parse(data);
 				$scope.producto_1['name'] = obj['name'];
 				$scope.producto_1['subtitulo'] = obj['subtitulo'];
+				//$scope.producto_1['src'] = obj['src'];
 
 			});
 				$('.menucito1 .seleccion').removeClass('seleccion');

@@ -150,42 +150,77 @@
 	</div>
 
 
-	<div class='partes col-md-12 tabla-p' style='display:table' ng-show="!isVacuum">
+	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isParts">
 		<div class='col-md-12 nopadding'>
-			<div class='col-md-12 mb-2 nopadding'>
-				<span class='tab-name'>Parts</span>
+
+			<div class='col-md-3 col-sm-3 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name'>Part</span>
 			</div>
-			<div class='col-md-12 ren2 nopadding'>
-				<div class='col-md-1 col-xs-12 nopadding'>
-					<span class='blue-c'>Part</span>
-				</div>			
-				<div class='col-md-5 col-xs-12 col-sm-6 col-xs-12 bord-l' style='margin-bottom:3%;'>
-					<span></span>
-				</div>				
-				<!--
-				<div class='col-md-1 col-sm-2 col-xs-2 blue-c bord-l' ng-repeat='x in producto.options[0]'>
-					<span class=''>{{x}}</span>
-				</div>-->
+
+			<div class='col-md-4 col-sm-4 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name'>Info</span>
 			</div>
+
+			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name' style ='padding-left:5%'>Size</span>
+			</div>
+			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name'>Price</span>
+			</div>		
 		</div>
 
 		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon' ng-repeat='part in partes'>
 			<div class='col-md-3 col-sm-3 col-xs-3 nopadding'>
 				<span><strong>{{part.id}}</strong></span>
 			</div>
-			<div class='col-md-3 col-sm-3 col-xs-3'>
+			<div class='col-md-4 col-sm-4 col-xs-4'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.desc}}</span>
 			</div>
-			<div class='col-md-3 col-sm-3 col-xs-3'>
+			<div class='col-md-2 col-sm-2 col-xs-2'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.size}}</span>
 			</div>
-			<div class='col-md-3 col-sm-3 col-xs-3'>
+			<div class='col-md-2 col-sm-2 col-xs-2'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.price}}</span>
 			</div>			
 		</div>
 		
 	</div>
 
+	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isOptions">
+		<div class='col-md-12 nopadding'>
+
+			<div class='col-md-3 col-sm-3 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name'>Option</span>
+			</div>
+
+			<div class='col-md-4 col-sm-4 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name'>Info</span>
+			</div>
+
+			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name' style ='padding-left:5%'>Size</span>
+			</div>
+			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name'>Price</span>
+			</div>		
+		</div>
+
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon' ng-repeat='part in opciones'>
+			<div class='col-md-3 col-sm-3 col-xs-3 nopadding'>
+				<span><strong>{{part.id}}</strong></span>
+			</div>
+			<div class='col-md-4 col-sm-4 col-xs-4'>
+				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.desc}}</span>
+			</div>
+			<div class='col-md-2 col-sm-2 col-xs-2'>
+				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.size}}</span>
+			</div>
+			<div class='col-md-2 col-sm-2 col-xs-2'>
+				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.price}}</span>
+			</div>			
+		</div>
+		
+	</div>
 
 
 
