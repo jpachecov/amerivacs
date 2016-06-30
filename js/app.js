@@ -2,7 +2,7 @@ var app = angular.module('amerivacs', ['ngSanitize','ngAnimate']);
 
 
 
-app.controller('controlador', function($scope,$sce) {
+app.controller('controlador', function($scope,$sce, $http) {
 
 	$scope.isVacuum = true;
 	$scope.productos = 
@@ -49,7 +49,6 @@ app.controller('controlador', function($scope,$sce) {
 					{'spec':'UNIT SIZE (IN)', 'val':'(25",33",38",43",64")L x 10"W x 7"H'},
 					{'spec':'APPROXIMATE UNIT WEIGHT (lb)', 'val':'33, 40, 54, 59, 86'},
 					{'spec':'APPROXIMATE SHIP WEIGHT (lb)', 'val':'40, 45, 60, 70,106'},
-
 				],
 			'options':
 				[['20"','25"','30"','35"','50"'],[
@@ -1112,7 +1111,6 @@ app.controller('controlador', function($scope,$sce) {
 		},
 	];
 
-
 	$scope.sc_vaccum_sealers = [
 		{
 			'nombre' : 'CAVN',
@@ -1187,7 +1185,6 @@ app.controller('controlador', function($scope,$sce) {
 		}
 	];
 
-
 	$scope.parts = [
 		{
 			'nombre' : 'PARTS',
@@ -1249,20 +1246,64 @@ app.controller('controlador', function($scope,$sce) {
 	}
 
 	$scope.getProduct = function(name){
-		$scope.productos.forEach(function(e){
-			if(e.name == name){
-				if(e.name == 'PARTS'){
-					$scope.isVacuum = false;
-				} else {
-					$scope.isVacuum = true;
-				}
 
-				$scope.producto = e;
-				$('.seleccion').removeClass('seleccion');
-				$('#' + name).addClass('seleccion');
-			}
-		});
-	}
+
+		if(name == 'PARTS'){
+			$scope.isVacuum = false;
+
+			// Obtemeos las partes
+
+
+		} else {
+			$scope.isVacuum = true;
+
+			var request = $http({
+		    method: "POST",
+		    url: "/amerivacss/php/producto.php",
+		    data: {
+		    	'name': name,
+		    },
+			});
+
+			var request2 = $http({
+		    method: "POST",
+		    url: "/amerivacss/php/modelo_prod.php",
+		    data: {
+		    	'name': name,
+		    },
+			});
+
+[['20"','25"','30"','35"','50"'],[
+					{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
+											'20"':'$275',
+											'25"':'$375',
+											'30"':'$700',
+											'35"':'$900',
+											'50"':'N.A',																														
+												}
+					}]];
+
+			request2.success(function (data) {
+				console.log(JSON.parse(data));
+				$scope.producto['models'] = JSON.parse(data)['modelos'];
+			});
+
+			request.success(function (data) {
+				var obj = JSON.parse(data);
+				$scope.producto['name'] = obj['name'];
+				$scope.producto['subtitulo'] = obj['subtitulo'];
+				$scope.producto['parrafo'] = obj['parrafo'];
+				console.log($scope.producto);
+
+			});
+
+		}
+
+
+			$('.seleccion').removeClass('seleccion');
+			$('#' + name).addClass('seleccion');
+
+}
 	$scope.animaScroll = function(){
 
 		$(window).scrollTop('0px');
@@ -1302,13 +1343,13 @@ app.controller('controlador', function($scope,$sce) {
 				break;
 		}
 	}
-
+	$scope.producto = {};
 	$scope.getProduct('AVN');
 
 
 });
 
-app.controller('compare', function($scope){
+app.controller('compare', function($scope, $http){
 
 
 	$scope.productos = 
@@ -2297,39 +2338,80 @@ app.controller('compare', function($scope){
 
 	];
 
-//img/products/imagen_AVS_000.png
-
 	$scope.getProduct_1 = function(name){
-		$scope.productos.forEach(function(e){
-			if(e.name == name){
-				$scope.producto_1 = e;
+
+
+
+
+			var request = $http({
+		    method: "POST",
+		    url: "/amerivacss/php/producto.php",
+		    data: {
+		    	'name': name,
+		    },
+			});
+
+			var request2 = $http({
+		    method: "POST",
+		    url: "/amerivacss/php/modelo_prod.php",
+		    data: {
+		    	'name': name,
+		    },
+			});
+
+
+			request2.success(function (data) {
+				console.log(JSON.parse(data));
+				$scope.producto_1['models'] = JSON.parse(data)['modelos'];
+			});
+
+			request.success(function (data) {
+				var obj = JSON.parse(data);
+				$scope.producto_1['name'] = obj['name'];
+				$scope.producto_1['subtitulo'] = obj['subtitulo'];
+
+			});
 				$('.menucito1 .seleccion').removeClass('seleccion');
 				$('.menucito1 #' + name).addClass('seleccion');
-				//return e;
-			}
-		});
+		
 	}
 
 	$scope.getProduct_2 = function(name){
-		$scope.productos.forEach(function(e){
-			if(e.name == name){
-				$scope.producto_2 = e;
+
+			var request = $http({
+		    method: "POST",
+		    url: "/amerivacss/php/producto.php",
+		    data: {
+		    	'name': name,
+		    },
+			});
+
+			var request2 = $http({
+		    method: "POST",
+		    url: "/amerivacss/php/options.php",
+		    data: {
+		    	'name': name,
+		    },
+			});
+
+
+			request2.success(function (data) {
+				$scope.producto_2['models'] = JSON.parse(data)['modelos'];
+			});
+
+			request.success(function (data) {
+				var obj = JSON.parse(data);
+				$scope.producto_2['name'] = obj['name'];
+				$scope.producto_2['subtitulo'] = obj['subtitulo'];
+
+			});
 				$('.menucito2 .seleccion').removeClass('seleccion');
 				$('.menucito2 #' + name).addClass('seleccion');
-				//return e;
-			}
-		});
 	}
 
 
-	//$scope.producto_1 = {};
-	//$scope.producto_2 = {};
-	//$scope.producto_1 = $scope.productos[0];
-	//$scope.producto_2 = $scope.productos[0];
-
-	//getProduct_1('AVN');
-	//getProduct_2('AVN');
-
+	$scope.producto_1 = {};
+	$scope.producto_2 = {};
 
 });
 
