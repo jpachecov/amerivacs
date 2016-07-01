@@ -1267,13 +1267,14 @@ app.controller('controlador', function($scope,$sce, $http) {
 			});
 
 			request.success(function(data){
-				console.log(JSON.parse(data));
-				console.log('jean');
-				$scope.partes = JSON.parse(data)['modelos'];
+				console.log('PAUL');
+				//console.log(data);
+				//$scope.partes = {};
+				//console.log(JSON.parse(data));
+				//console.log('jean');
+				//$scope.partes = JSON.parse(data)['modelos'];
 
 			});
-
-			console.log('EEEE');
 		}
 		if(name == 'OPTIONS'){
 
@@ -1329,11 +1330,12 @@ app.controller('controlador', function($scope,$sce, $http) {
 			});
 
 			request.success(function (data) {
-				var obj = JSON.parse(data);
+				var obj = data;//JSON.parse(data);
 				$scope.producto['name'] = obj['name'];
 				$scope.producto['subtitulo'] = obj['subtitulo'];
 				$scope.producto['parrafo'] = obj['parrafo'];
-				console.log($scope.producto);
+				console.log(data);
+				//console.log(data);
 
 			});
 
@@ -1416,15 +1418,17 @@ app.controller('compare', function($scope, $http){
 
 
 			request2.success(function (data) {
+				console.log("aqi");
 				console.log(JSON.parse(data));
 				$scope.producto_1['models'] = JSON.parse(data)['modelos'];
 			});
 
 			request.success(function (data) {
-				var obj = JSON.parse(data);
+				//console.log(data);
+				var obj = data;//JSON.parse(data);
 				$scope.producto_1['name'] = obj['name'];
 				$scope.producto_1['subtitulo'] = obj['subtitulo'];
-				//$scope.producto_1['src'] = obj['src'];
+				$scope.producto_1['src'] = obj['src'];
 
 			});
 				$('.menucito1 .seleccion').removeClass('seleccion');
@@ -1457,7 +1461,8 @@ app.controller('compare', function($scope, $http){
 			});
 
 			requestt.success(function (data) {
-				var obj = JSON.parse(data);
+				//console.log(data);
+				var obj = data;//JSON.parse(data);
 				$scope.producto_2['name'] = obj['name'];
 				$scope.producto_2['subtitulo'] = obj['subtitulo'];
 

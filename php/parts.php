@@ -25,8 +25,10 @@ $query = "select A.id_prod, A.nombre, A.subti, precios.medida, precios.cost, A.c
 
 		$prod = '{"modelos":'.$lista.'}';
 
-	    header('Content-Type: application/json');
-	    echo json_encode($prod);
+	    //header('Content-Type: text/html; charset=utf-8');
+	    echo "JP";
+	    //echo $lista;
+	    //echo json_encode($prod);
 	};
 	$res->free();
 	$conn->close();
