@@ -1363,3 +1363,9 @@ font-size: 1.2em;
 	padding-top: 2%;
 	padding-bottom: 3%;
 }
+.rengl{
+	height: 30px;
+}
+.rengl span{
+	line-height: 30px;
+}

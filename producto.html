@@ -41,19 +41,20 @@
 
 
 			<!-- PRICING TABLE -->
-			<div class='pricing_table col-md-11 tabla-p'>
+			<div class='pricing_table col-md-9 tabla-p'>
 				<div class='col-md-12 nopadding mb-1'>
 					<span class='tab-name'>Pricing</span>
 				</div>
-				<div class='col-md-12 nopadding'>
+				<div class='col-md-12 nopadding rengl'>
 					<span class='col-md-4 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Model</span>
-					<span class='col-md-5 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Seal size</span>
-					<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Price</span>
+					<span class='col-md-4 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Seal size</span>
+					<span class='col-md-4 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Price</span>
 				</div>
-				<div class='col-md-12 col-sm-12 col-xs-12 ren nopadding' ng-repeat='x in producto.models'>
-					<span class='col-md-4 col-sm-4 col-xs-3 nopadding'><strong>{{x.id}}</strong></span>
-					<span class='col-md-5 col-sm-4 col-xs-5 nopadding'>{{x.size}}</span>
-					<span class='col-md-2 col-sm-4 col-xs-3 nopadding'>{{x.price}}</span>
+				<div class='col-md-12 col-sm-12 col-xs-12 ren rengl nopadding' ng-repeat='x in producto.models'>
+					<span class='col-md-4 col-sm-4 col-xs-4 nopadding'><strong>{{x.id}}</strong></span>
+					<span class='col-md-4 col-sm-4 col-xs-4 nopadding'>{{x.size}}</span>
+					<span class='col-md-4 col-sm-4 col-xs-4 nopadding'>{{x.price}}</span>
+					<!-- BOTON DE AGREGAR AL CARRITO-->
 				</div>
 			</div>
 		</div>
@@ -126,19 +127,19 @@
 				<div class='col-md-1 col-xs-12 nopadding'>
 					<span class='blue-c'>Option</span>
 				</div>			
-				<div class='col-md-5 col-xs-12 col-sm-6 col-xs-12 bord-l' style='margin-bottom:3%;'>
-					<span></span>
+				<div class='col-md-5 col-xs-2 col-sm-6 col-xs-12 bord-l' style='margin-bottom:3%; text-align:center;'>
+					<span class='blue-c'>Info</span>
 				</div>				
 				<div class='col-md-1 col-sm-2 col-xs-2 blue-c bord-l' ng-repeat='x in producto.options[0]'>
 					<span class=''>{{x}}</span>
 				</div>
 			</div>
 		</div>
-		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t' ng-repeat='op in producto.options[1]'>
-			<div class='col-md-2 col-sm-4 col-xs-4 nopadding' style='padding:1%'>
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t rengl' ng-repeat='op in producto.options[1]'>
+			<div class='col-md-2 col-sm-4 col-xs-4 nopadding'>
 				<span><strong>{{op.op}}</strong></span>
 			</div>
-			<div class='col-md-4' style='padding:1%'>
+			<div class='col-md-4 col-sm-4 col-xs-3'>
 				<span>{{op.des}}</span>
 			</div>
 			<div class='col-md-1 col-xs-2' ng-repeat='y in op.prices'>
@@ -152,7 +153,7 @@
 	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isParts">
 		
 		<label class='search col-md-3 col-sm-3-col-xs-3'>Search: <input ng-model="searchText_2"></label>
-		<div class='col-md-12 nopadding'>
+		<div class='col-md-12 nopadding rengl'>
 
 			<div class='col-md-3 col-sm-3 col-xs-3 mb-2 nopadding'>
 				<span class='tab-name'>Part</span>
@@ -170,7 +171,7 @@
 			</div>		
 		</div>
 
-		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon' ng-repeat='part in partes | filter: searchText_2'>
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon rengl' ng-repeat='part in partes | filter: searchText_2'>
 			<div class='col-md-3 col-sm-3 col-xs-3 nopadding'>
 				<span><strong>{{part.id}}</strong></span>
 			</div>
@@ -189,7 +190,7 @@
 
 	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isOptions">
 		<label class='search col-md-3 col-sm-3-col-xs-3'>Search: <input ng-model="searchText"></label>
-		<div class='col-md-12 nopadding'>
+		<div class='col-md-12 nopadding rengl'>
 
 			<div class='col-md-3 col-sm-3 col-xs-3 mb-2 nopadding'>
 				<span class='tab-name'>Option</span>
@@ -207,7 +208,7 @@
 			</div>		
 		</div>
 
-		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon' ng-repeat='part in opciones | filter:searchText '>
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t rengl' ng-repeat='part in opciones | filter:searchText '>
 			<div class='col-md-3 col-sm-3 col-xs-3 nopadding'>
 				<span><strong>{{part.id}}</strong></span>
 			</div>
