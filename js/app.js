@@ -3,6 +3,8 @@ var app = angular.module('amerivacs', ['ngSanitize','ngAnimate']);
 
 
 app.controller('controlador', function($scope,$sce, $http) {
+	$scope.searchText;
+	$scope.searchText_2;
 	$scope.productos = 
 	[
 		{
@@ -1055,7 +1057,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 
 	$scope.isVacuum = true;
-	$scope.currentPage = "compare.html";
+	$scope.currentPage = "producto.html";
 	$scope.amerivacs_includes = [
 							"2-year limited warranty",
 							"1-week trial period",
@@ -1417,14 +1419,18 @@ app.controller('controlador', function($scope,$sce, $http) {
 			});
 
 			request.success(function(data){
+				//console.log(data);
 				//console.log(JSON.parse(data));
 				//console.log('jean');
-				$scope.opciones = JSON.parse(data)['modelos'];
+				//$scope.opciones = JSON.parse(data)['modelos'];
+				$scope.opciones = data['modelos'];
 
 			});
 
 
 		} else {
+
+			$scope.producto['src'] = 'img/products/imagen_'+name+'_000.png';
 			$scope.isVacuum = true;
 			$scope.isOptions = false;
 			$scope.isParts = false;
@@ -1457,6 +1463,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 				$scope.producto['subtitulo'] = obj['subtitulo'];
 				$scope.producto['parrafo'] = obj['parrafo'];
 				$scope.producto['options'] = $scope.ops;
+
 				console.log(data);
 				//console.log(data);
 
@@ -2503,6 +2510,7 @@ app.controller('compare', function($scope, $http){
 	$scope.selected_1 = false;
 	$scope.selected_2 = false;
 	$scope.getProduct_1 = function(name){
+			$scope.producto_1['src'] = 'img/products/imagen_'+name+'_000.png';
 
 			$scope.selected_1 = true;
 
@@ -2535,7 +2543,7 @@ app.controller('compare', function($scope, $http){
 				var obj = data;//JSON.parse(data);
 				$scope.producto_1['name'] = obj['name'];
 				$scope.producto_1['subtitulo'] = obj['subtitulo'];
-				$scope.producto_1['src'] = obj['src'];
+				//$scope.producto_1['src'] = obj['src'];
 
 			});
 				$('.menucito1 .seleccion').removeClass('seleccion');
@@ -2544,6 +2552,7 @@ app.controller('compare', function($scope, $http){
 	}
 
 	$scope.getProduct_2 = function(name){
+			$scope.producto_2['src'] = 'img/products/imagen_'+name+'_000.png';
 			$scope.selected_2 = true;
 			var requestt = $http({
 		    method: "POST",

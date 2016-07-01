@@ -1357,3 +1357,9 @@ font-size: 1.2em;
 	vertical-align: top;
 
 }
+.search{
+	padding: 5%;
+	padding-left: 0%;
+	padding-top: 2%;
+	padding-bottom: 3%;
+}

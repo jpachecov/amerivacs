@@ -12,10 +12,10 @@ $query = "select A.id_prod, A.nombre, A.subti, precios.medida, precios.cost, A.c
 	    $i = 0;
 	    while($row = $res->fetch_assoc()){
 	    	if($i == mysqli_num_rows($res) - 1){
-		    	$lista = $lista.'{"id":"'. $row["nombre"].'-'.$row['medida'].'", "size":"'.$row["medida"].'\\" ", "price":"$'. $row["cost"].'"}';
+		    	$lista = $lista.'{"subti":"'.$row['subti'].'", "id":"'. $row["nombre"].'-'.$row['medida'].'", "size":"'.$row["medida"].'\\" ", "price":"$'. $row["cost"].'"}';
 
 	    	} else {
-	    		$lista = $lista.'{"id":"'. $row["nombre"].'-'.$row['medida'].'", "size":"'.$row["medida"].'\\" ", "price":"$'. $row["cost"].'"},';
+	    		$lista = $lista.'{"subti":"'.$row['subti'].'", "id":"'. $row["nombre"].'-'.$row['medida'].'", "size":"'.$row["medida"].'\\" ", "price":"$'. $row["cost"].'"},';
 
 	    	}
 

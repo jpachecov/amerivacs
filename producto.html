@@ -59,7 +59,7 @@
 		</div>
 		<!-- imagenes y botonres -->
 		<div class='col-md-5 col-sm-12 col-xs-12'>
-
+			<img src="{{producto.src}}">
 		</div>
 		
 	</div>
@@ -134,7 +134,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t' ng-repeat='op in producto.options[1]'>
 			<div class='col-md-2 col-sm-4 col-xs-4 nopadding' style='padding:1%'>
 				<span><strong>{{op.op}}</strong></span>
@@ -151,6 +150,8 @@
 
 
 	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isParts">
+		
+		<label class='search col-md-3 col-sm-3-col-xs-3'>Search: <input ng-model="searchText_2"></label>
 		<div class='col-md-12 nopadding'>
 
 			<div class='col-md-3 col-sm-3 col-xs-3 mb-2 nopadding'>
@@ -169,12 +170,12 @@
 			</div>		
 		</div>
 
-		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon' ng-repeat='part in partes'>
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon' ng-repeat='part in partes | filter: searchText_2'>
 			<div class='col-md-3 col-sm-3 col-xs-3 nopadding'>
 				<span><strong>{{part.id}}</strong></span>
 			</div>
 			<div class='col-md-4 col-sm-4 col-xs-4'>
-				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.desc}}</span>
+				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.subti}}</span>
 			</div>
 			<div class='col-md-2 col-sm-2 col-xs-2'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.size}}</span>
@@ -187,6 +188,7 @@
 	</div>
 
 	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isOptions">
+		<label class='search col-md-3 col-sm-3-col-xs-3'>Search: <input ng-model="searchText"></label>
 		<div class='col-md-12 nopadding'>
 
 			<div class='col-md-3 col-sm-3 col-xs-3 mb-2 nopadding'>
@@ -205,12 +207,12 @@
 			</div>		
 		</div>
 
-		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon' ng-repeat='part in opciones'>
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon' ng-repeat='part in opciones | filter:searchText '>
 			<div class='col-md-3 col-sm-3 col-xs-3 nopadding'>
 				<span><strong>{{part.id}}</strong></span>
 			</div>
 			<div class='col-md-4 col-sm-4 col-xs-4'>
-				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.desc}}</span>
+				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.subti}}</span>
 			</div>
 			<div class='col-md-2 col-sm-2 col-xs-2'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.size}}</span>
