@@ -1046,8 +1046,29 @@ font-size: 1.2em;
 
 
 
-.efectoE{
+.img-hov-1{
 	background-image: url(../img/home/imagen_texto_006.png);
+
+}
+
+.img-hov-2{
+	background-image: url(../img/home/scroll-1_000.png);
+
+}
+.img-hov-3{
+	background-image: url(../img/home/scroll-2_000.png);
+
+}
+.img-hov-4{
+	background-image: url(../img/home/scroll-3_000.png);
+
+}
+.img-hov-5{
+	background-image: url(../img/home/scroll-4_000.png);
+
+}
+
+.efectoE{
 	background-size: cover;
 }
 
@@ -1368,4 +1389,9 @@ font-size: 1.2em;
 }
 .rengl span{
 	line-height: 30px;
+}
+
+.botones:hover{
+	    padding: 2%;
+    background-color: #DCDCDC;
 }

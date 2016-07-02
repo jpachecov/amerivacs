@@ -17,20 +17,55 @@
 				</div>				
 			</div>
 			<div class='col-md-5 col-sm-6 col-xs-12' style='text-align:right; margin-top:2%; margin-bottom:6%' ng-show='isVacuum'>
-				<div class='boton-compara' ng-click='toCompare(producto.name)'>
+				<!--<div class='boton-compara' ng-click='toCompare(producto.name)'>
 					<span class=''>Compare with other products</span>
 				</div>
 				<div class='boton-carrito'>
 					<span class=''>Add to Shopping Cart</span>
-				</div>				
+
+
+
+				</div>	-->
+
+					<form class='col-md-12 col-sm-12 col-xs-12 float-l' target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="EZBDFNWS23UDG">
+					<table>
+						<tr>
+							<td>
+								<input type="hidden" name="on0" value="Size:">Size:
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<select name="os0">
+									<option value="20"">20" $2,500.00 USD</option>
+									<option value="25"">25" $2,985.00 USD</option>
+									<option value="30"">30" $3,185.00 USD</option>
+									<option value="35"">35" $3,385.00 USD</option>
+									<option value="50"">50" $6,985.00 USD</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<!-- "https://www.paypalobjects.com/es_XC/i/btn/btn_cart_LG.gif" -->
+					<input type="hidden" name="currency_code" value="USD">
+					<input class='col-md-6 col-sm-6 col-xs-12 botones' style='padding:2%;' type="image" src="img/BOTON-2_000.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+					<div class='col-md-6 col-sm-6 col-xs-12 cursor botones' style='padding:2%;' ng-click='toCompare(producto.name)'>
+						<img src="img/BOTON-1_000.png" >
+					</div>
+					<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+					</form>
+
+
+
 			</div>
 		</div>
-		<div class='col-md-7 col-sm-9 nopadding' ng-show='isVacuum'>
-
+		<div class='col-md-7 col-sm-12 col-xs-12 nopadding' ng-show='isVacuum'>
 
 				
 			<!-- texto del producto -->
-			<div class='justif col-md-12' ng-show='isVacuum'>
+			<div class='justif col-md-12 col-sm-12 col-xs-12' ng-show='isVacuum'>
 				<p ng-bind-html='producto.parrafo'></p>
 				<span>All AmeriVacS <strong>AVN Vacuum Sealers</strong> include:</span>
 				<ul class='list col-md-8'>
@@ -40,8 +75,13 @@
 			</div>	
 
 
+
+		</div>
+		<!-- imagenes y botonres -->
+		<div class='col-md-5 col-sm-12 col-xs-12'>
+
 			<!-- PRICING TABLE -->
-			<div class='pricing_table col-md-9 tabla-p'>
+			<div class='pricing_table col-md-12 col-sm-12 col-xs-12 tabla-p' ng-show='isVacuum'>
 				<div class='col-md-12 nopadding mb-1'>
 					<span class='tab-name'>Pricing</span>
 				</div>
@@ -57,10 +97,8 @@
 					<!-- BOTON DE AGREGAR AL CARRITO-->
 				</div>
 			</div>
-		</div>
-		<!-- imagenes y botonres -->
-		<div class='col-md-5 col-sm-12 col-xs-12'>
-			<img src="{{producto.src}}">
+
+			<img src="{{producto.src}}" style='margin-top:15%;' ng-show='isVacuum'>
 		</div>
 		
 	</div>

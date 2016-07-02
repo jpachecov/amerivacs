@@ -1057,7 +1057,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 
 	$scope.isVacuum = true;
-	$scope.currentPage = "producto.html";
+	$scope.currentPage = "compare.html";
 	$scope.amerivacs_includes = [
 							"2-year limited warranty",
 							"1-week trial period",
@@ -1183,20 +1183,20 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 	$scope.accesories = [
 		{
-			'nombre' : 'ACCESORIES',
+			'nombre' : 'OPTIONS',
 			'descrip' : '',
 			'resumen_p' : '', 
 			'img' : ''
 		}
 	];
 
-	$scope.parts = 
+	$scope.parts = [
 		{
-			'name' : 'PARTS',
+			'nombre' : 'PARTS',
 			'subtitulo' : 'Replacement Parts',
 			'resumen_p' : '', 
 			'img' : ''
-		};
+		}];
 
 
 
