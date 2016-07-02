@@ -26,7 +26,7 @@
 
 
 				</div>	-->
-
+<!--
 					<form class='col-md-12 col-sm-12 col-xs-12 float-l' target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 					<input type="hidden" name="cmd" value="_s-xclick">
 					<input type="hidden" name="hosted_button_id" value="EZBDFNWS23UDG">
@@ -48,7 +48,6 @@
 							</td>
 						</tr>
 					</table>
-					<!-- "https://www.paypalobjects.com/es_XC/i/btn/btn_cart_LG.gif" -->
 					<input type="hidden" name="currency_code" value="USD">
 					<input class='col-md-6 col-sm-6 col-xs-12 botones' style='padding:2%;' type="image" src="img/BOTON-2_000.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
 					<div class='col-md-6 col-sm-6 col-xs-12 cursor botones' style='padding:2%;' ng-click='toCompare(producto.name)'>
@@ -56,8 +55,18 @@
 					</div>
 					<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
 					</form>
+-->
 
 
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="VFUL79ZRHZVRG">
+			<input type="image" class='col-md-6 col-sm-6 col-xs-6'src="img/BOTON-2_000.png" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+			<div class='col-md-6 col-sm-6 col-xs-12 cursor botones' style='padding:2%;' ng-click='toCompare(producto.name)'>
+				<img src="img/BOTON-1_000.png" >
+			</div>
+			<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+			</form>
 
 			</div>
 		</div>
