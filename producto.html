@@ -16,14 +16,8 @@
 					<span>{{producto.subtitulo}}</span>
 				</div>				
 			</div>
-			<div class='col-md-5 col-sm-6 col-xs-12' style='text-align:right; margin-top:2%; margin-bottom:6%' ng-show='isVacuum'>
-				<div class='boton-compara' ng-click='toCompare(producto.name)'>
-					<span class=''>Compare with other products</span>
-				</div>
-				<div class='boton-carrito'>
-					<span class=''>Add to Shopping Cart</span>
-
-				</div>
+			<div class='col-md-5 col-sm-6 col-xs-12' style='text-align:right; margin-top:5%; margin-bottom:5%' ng-show='isVacuum'>
+				<img src="img/BOTON-1_000.png" class='col-md-6 col-sm-7 col-xs-8' ng-click="toCompare('producto.name')">
 
 			</div>
 		</div>
@@ -51,19 +45,20 @@
 					<span class='tab-name'>Pricing</span>
 				</div>
 				<div class='col-md-12 nopadding rengl'>
-					<span class='col-md-4 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Model</span>
-					<span class='col-md-4 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Seal size</span>
-					<span class='col-md-4 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Price</span>
+					<span class='col-md-3 col-sm-3 col-xs-3 nopadding blue-c mb-2'>Model</span>
+					<span class='col-md-3 col-sm-3 col-xs-3 nopadding blue-c mb-2'>Seal size</span>
+					<span class='col-md-3 col-sm-3 col-xs-3 nopadding blue-c mb-2'>Price</span>
 				</div>
 				<div class='col-md-12 col-sm-12 col-xs-12 ren rengl nopadding' ng-repeat='x in producto.models'>
-					<span class='col-md-4 col-sm-4 col-xs-4 nopadding'><strong>{{x.id}}</strong></span>
-					<span class='col-md-4 col-sm-4 col-xs-4 nopadding'>{{x.size}}</span>
-					<span class='col-md-4 col-sm-4 col-xs-4 nopadding'>{{x.price}}</span>
+					<span class='col-md-3 col-sm-3 col-xs-3 nopadding'><strong>{{x.id}}</strong></span>
+					<span class='col-md-3 col-sm-3 col-xs-3 nopadding'>{{x.size}}</span>
+					<span class='col-md-2 col-sm-2 col-xs-2 nopadding'>{{x.price}}</span>
 					<!-- BOTON DE AGREGAR AL CARRITO-->
+					<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-4 carrito-boton cursor'></img>
 				</div>
 			</div>
 
-			<img src="{{producto.src}}" style='margin-top:15%;' ng-show='isVacuum'>
+			<img src="{{producto.src}}" style='margin-top:15%;' class='col-md-12 col-sm-12 col-xs-12' ng-show='isVacuum'>
 		</div>
 		
 	</div>
@@ -162,23 +157,23 @@
 				<span class='tab-name'>Part</span>
 			</div>
 
-			<div class='col-md-4 col-sm-4 col-xs-3 mb-2 nopadding'>
+			<div class='col-md-2 col-sm-2 col-xs-2 mb-2 nopadding'>
 				<span class='tab-name'>Info</span>
 			</div>
 
 			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
 				<span class='tab-name' style ='padding-left:5%'>Size</span>
 			</div>
-			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
+			<div class='col-md-2 col-sm-2 col-xs-2 mb-2 nopadding'>
 				<span class='tab-name'>Price</span>
 			</div>		
 		</div>
 
 		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon rengl' ng-repeat='part in partes | filter: searchText_2'>
-			<div class='col-md-3 col-sm-3 col-xs-3 nopadding'>
+			<div class='col-md-2 col-sm-2 col-xs-2 nopadding'>
 				<span><strong>{{part.id}}</strong></span>
 			</div>
-			<div class='col-md-4 col-sm-4 col-xs-4'>
+			<div class='col-md-3 col-sm-3 col-xs-3'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.subti}}</span>
 			</div>
 			<div class='col-md-2 col-sm-2 col-xs-2'>
@@ -186,7 +181,8 @@
 			</div>
 			<div class='col-md-2 col-sm-2 col-xs-2'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.price}}</span>
-			</div>			
+			</div>	
+			<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-3 carrito-boton-1 cursor'></img>			
 		</div>
 		
 	</div>
@@ -199,11 +195,11 @@
 				<span class='tab-name'>Option</span>
 			</div>
 
-			<div class='col-md-4 col-sm-4 col-xs-3 mb-2 nopadding'>
+			<div class='col-md-2 col-sm-4 col-xs-2 mb-2 nopadding'>
 				<span class='tab-name'>Info</span>
 			</div>
 
-			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
+			<div class='col-md-2 col-sm-2 col-xs-2 mb-2 nopadding'>
 				<span class='tab-name' style ='padding-left:5%'>Size</span>
 			</div>
 			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
@@ -212,18 +208,19 @@
 		</div>
 
 		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t rengl' ng-repeat='part in opciones | filter:searchText '>
-			<div class='col-md-3 col-sm-3 col-xs-3 nopadding'>
+			<div class='col-md-2 col-sm-2 col-xs-2 nopadding'>
 				<span><strong>{{part.id}}</strong></span>
 			</div>
-			<div class='col-md-4 col-sm-4 col-xs-4'>
+			<div class='col-md-3 col-sm-3 col-xs-2'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.subti}}</span>
 			</div>
-			<div class='col-md-2 col-sm-2 col-xs-2'>
+			<div class='col-md-2 col-sm-2 col-xs-3'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.size}}</span>
 			</div>
 			<div class='col-md-2 col-sm-2 col-xs-2'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.price}}</span>
-			</div>			
+			</div>
+			<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-3 carrito-boton-1 cursor'></img>			
 		</div>
 		
 	</div>

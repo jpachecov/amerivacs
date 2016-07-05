@@ -7,7 +7,9 @@ class Carrito{
 		this.productos = [];
 		this.currentIdx = 1;
 	}
-
+	esta(){
+		console.log('esta');
+	}
 	addP(producto){
 		producto.idx = this.currentIdx;
 		this.productos.push(producto);
@@ -16,9 +18,9 @@ class Carrito{
 	removeP(id_prod){
 		for (var i = 0; i < this.productos.length; i++){
 			if(this.productos[i].idx == id_prod){
-				this.productos.slice(i, 1);
+				this.productos.splice(i, 1);
 				this.currentIdx += -1;
-
+				continue;
 			}
 		}
 	}
@@ -41,18 +43,102 @@ class Cliente{
 
 class Form_Amerivacs_Client{
 	constructor(){
+
 		this.nombre = "";
 		this.empresa = "";
 		this.telefono = "";
 		this.ext = "";
 		this.card = "";
+		this.envio = "";
+		this.isInvalid = false;
+		this.errores = [];
+		this.mailTo = "jeanpierre@ciencias.unam.mx";
+
+		this.ERR = {};
+		this.ERR['nombre'] = {
+								isActive : false,
+								mensaje : "The name field is invalid."
+							};
+
+			
+		this.ERR['telefono'] = {
+								isActive : false,
+								mensaje : "The phone field is invalid."
+							};
+		this.ERR['envio'] = {
+								isActive : false,
+								mensaje : "The ship address field is invalid."
+							};
+
+		this.ERR['productos'] = {isActive:false, mensaje:"There is no products yet."};
+
+		
+
 	}
 	/**
 	* Validamos los datos actuales del formulario
 	*/
-	validate(){
+	validate(carrito){
+		if(!this.cart_ok(carrito)){
+
+
+			if(!this.ERR['productos'].isActive){
+				console.log('aaa')
+				this.ERR['productos'].isActive = true;
+				this.errores.push(this.ERR['productos']);
+			}
+		} else {
+			if(this.ERR['productos'].isActive){
+				this.ERR['productos'].isActive = false;
+			}
+		}
+
+		if(!this.name_ok()){
+
+			console.log('nobre mal');
+
+			if(!this.ERR['nombre'].isActive){
+				console.log('aaa')
+				this.ERR['nombre'].isActive = true;
+				this.errores.push(this.ERR['nombre']);
+			}
+		} else {
+			if(this.ERR['nombre'].isActive){
+				this.ERR['nombre'].isActive = false;
+			}
+		}
+
+
+
+		for (var key in this.ERR){
+			console.log('ee');
+			if(this.ERR[key].isActive){
+				this.isInvalid = true;
+				break;
+			}
+		}
+		console.log(this.isInvalid);
+		console.log(this.errores);
+		return !this.isInvalid;
 
 	}
+	name_ok(){
+		console.log('nameok');
+		if(this.nombre == "" || this.nombre.length < 5){
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	cart_ok(cart){
+		if(cart.productos.length == 0){
+			return false;
+		} else {
+			return true;
+		}
+	}
+
 	/**
 	* Envia la informacion al correo de Amerivacs
 	*/
@@ -61,16 +147,29 @@ class Form_Amerivacs_Client{
 	}
 }
 
+class Cart_Form_Handler{
+	constructor(cart, form){
+		this.cart = cart;
+		this.form = form;
+	}
+	validateForm(){
+		if(this.form.validate(this.cart)){
+			this.form.sendInfo();
+		}
+	}
+}
+
+
 app.controller('controlador', function($scope,$sce, $http) {
 	$scope.carrito = new Carrito();
 	$scope.formulario = new Form_Amerivacs_Client();
 
 
-	$scope.carrito.addP(new Producto(0,'AVN','maquina','$1800'));
-	$scope.carrito.addP(new Producto(0,'AVS','maquina','$1800'));
-	$scope.carrito.addP(new Producto(0,'CAVN','maquina','$1800'));
+	$scope.carrito.addP(new Producto(0,'AVN','maquina A','$1800'));
+	$scope.carrito.addP(new Producto(0,'AVS','maquina B','$1800'));
+	$scope.carrito.addP(new Producto(0,'CAVN','maquina C','$1800'));
 
-
+	$scope.handler = new Cart_Form_Handler($scope.carrito, $scope.formulario);
 
 	$scope.searchText;
 	$scope.searchText_2;
@@ -1126,7 +1225,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 
 	$scope.isVacuum = true;
-	$scope.currentPage = "cart.html";
+	$scope.currentPage = "home.html";
 	$scope.amerivacs_includes = [
 							"2-year limited warranty",
 							"1-week trial period",

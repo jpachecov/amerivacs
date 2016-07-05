@@ -24,6 +24,11 @@ display: block;
 
 }
 
+body *{
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
 img{
 
 	user-drag: none; 
@@ -65,7 +70,8 @@ html{
 	padding: 0%;
 }
 
-.content img {
+.content2{
+	padding: 0%;
 	width: 100%;
 }
 
@@ -1386,9 +1392,10 @@ font-size: 1.2em;
 }
 .rengl{
 	height: 30px;
+	margin-top: 1%;
 }
 .rengl span{
-	line-height: 30px;
+/*	line-height: 30px;*/
 }
 
 .botones:hover{
@@ -1402,24 +1409,15 @@ font-size: 1.2em;
 * ESTILO DEL CARRITO DE COMPRAS;
 */
 .carrito{
-
+	background-color: #AEADDE;
 }
 
-a.boxclose{
+.boxclose{
     cursor:pointer;
-    color: #fff;
-    border: 1px solid #DEDEDE;
-    border-radius: 15px;
-    background: #605F61;
-    font-size: 31px;
-    font-weight: bold;
-    display: inline-block;
-    line-height: 0px;
-    padding: 11px 11px;
-    width: 42px;
-    height: 25px;       
+    background-color: #DCDCDC;
 }
 
-.boxclose:before {
-    content: "×";
+.carrito-boton{
+	padding-right: 0%;
+	padding-left: 8%;
 }
