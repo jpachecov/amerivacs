@@ -1,8 +1,77 @@
+"use strict"
 var app = angular.module('amerivacs', ['ngSanitize','ngAnimate']);
 
 
+class Carrito{
+	constructor(){
+		this.productos = [];
+		this.currentIdx = 1;
+	}
+
+	addP(producto){
+		producto.idx = this.currentIdx;
+		this.productos.push(producto);
+		this.currentIdx += 1;
+	}
+	removeP(id_prod){
+		for (var i = 0; i < this.productos.length; i++){
+			if(this.productos[i].idx == id_prod){
+				this.productos.slice(i, 1);
+				this.currentIdx += -1;
+
+			}
+		}
+	}
+}
+
+class Producto{
+	constructor(idx, nombre, descripcion, precio){
+		this.idx = idx;
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.precio = precio;
+	}
+}
+
+class Cliente{
+	constructor(nombre){
+		this.nombre = nombre;
+	}
+}
+
+class Form_Amerivacs_Client{
+	constructor(){
+		this.nombre = "";
+		this.empresa = "";
+		this.telefono = "";
+		this.ext = "";
+		this.card = "";
+	}
+	/**
+	* Validamos los datos actuales del formulario
+	*/
+	validate(){
+
+	}
+	/**
+	* Envia la informacion al correo de Amerivacs
+	*/
+	sendInfo(){
+
+	}
+}
 
 app.controller('controlador', function($scope,$sce, $http) {
+	$scope.carrito = new Carrito();
+	$scope.formulario = new Form_Amerivacs_Client();
+
+
+	$scope.carrito.addP(new Producto(0,'AVN','maquina','$1800'));
+	$scope.carrito.addP(new Producto(0,'AVS','maquina','$1800'));
+	$scope.carrito.addP(new Producto(0,'CAVN','maquina','$1800'));
+
+
+
 	$scope.searchText;
 	$scope.searchText_2;
 	$scope.productos = 
@@ -1057,7 +1126,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 
 	$scope.isVacuum = true;
-	$scope.currentPage = "producto.html";
+	$scope.currentPage = "cart.html";
 	$scope.amerivacs_includes = [
 							"2-year limited warranty",
 							"1-week trial period",
@@ -1382,7 +1451,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 			var request = $http({
 		    method: "POST",
-		    url: "/amerivacss/php/parts.php",
+		    url: "/amerivacs/php/parts.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -1412,7 +1481,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 			var request = $http({
 		    method: "POST",
-		    url: "/amerivacss/php/options.php",
+		    url: "/amerivacs/php/options.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -1437,7 +1506,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 			var request = $http({
 		    method: "POST",
-		    url: "/amerivacss/php/producto.php",
+		    url: "/amerivacs/php/producto.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -1445,7 +1514,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 			var request2 = $http({
 		    method: "POST",
-		    url: "/amerivacss/php/modelo_prod.php",
+		    url: "/amerivacs/php/modelo_prod.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -1516,6 +1585,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 			case 'selector':
 				$scope.currentPage = 'ciber_selector.html'
 				break;
+
 		}
 	}
 	$scope.producto = {};
@@ -2517,7 +2587,7 @@ app.controller('compare', function($scope, $http){
 
 			var request = $http({
 		    method: "POST",
-		    url: "/amerivacss/php/producto.php",
+		    url: "/amerivacs/php/producto.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -2525,7 +2595,7 @@ app.controller('compare', function($scope, $http){
 
 			var request2 = $http({
 		    method: "POST",
-		    url: "/amerivacss/php/modelo_prod.php",
+		    url: "/amerivacs/php/modelo_prod.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -2556,7 +2626,7 @@ app.controller('compare', function($scope, $http){
 			$scope.selected_2 = true;
 			var requestt = $http({
 		    method: "POST",
-		    url: "/amerivacss/php/producto.php",
+		    url: "/amerivacs/php/producto.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -2564,7 +2634,7 @@ app.controller('compare', function($scope, $http){
 
 			var request3 = $http({
 		    method: "POST",
-		    url: "/amerivacss/php/modelo_prod.php",
+		    url: "/amerivacs/php/modelo_prod.php",
 		    data: {
 		    	'name': name,
 		    },
