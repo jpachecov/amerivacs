@@ -1224,7 +1224,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 
 	$scope.isVacuum = true;
-	$scope.currentPage = "productos.html";
+	$scope.currentPage = "compare.html";
 	$scope.amerivacs_includes = [
 							"2-year limited warranty",
 							"1-week trial period",
@@ -1708,7 +1708,8 @@ app.controller('controlador', function($scope,$sce, $http) {
 				break;
 			case 'compare':
 				$scope.currentPage = 'compare.html';
-
+				$('#AVS').addClass('seleccion');
+				$('#AVN').addClass('seleccion');
 				break;
 			case 'selector':
 				$scope.currentPage = 'ciber_selector.html'
@@ -2787,8 +2788,12 @@ app.controller('compare', function($scope, $http){
 	}
 
 
-	$scope.producto_1 = {};
-	$scope.producto_2 = {};
+	$scope.producto_1 = {};$scope.getProduct_1('AVN');
+	$scope.producto_2 = {};$scope.getProduct_2('AVS');
+
+
+	$scope.getProduct_1('AVN');
+	$scope.getProduct_2('AVS');
 
 });
 
