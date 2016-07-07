@@ -15,19 +15,24 @@
   <body>
     <div ng-controller='controlador'>
 
-      <div class='container container-fluid'>
 
+
+      <div class='container container-fluid'>
         <div class=' header col-md-12 col-sm-12 col-xs-12'>
 
-          <div class='col-md-12 col-sm-12 col-xs-12 no-padding' style='background-color:white; z-index:5;'>
+          <div class='col-md-12 col-sm-12 col-xs-12 nopadding' style='background-color:white; z-index:5;'>
 
             <div class='logo_container col-md-3 col-sm-7 col-xs-9'>
                <img class='logo_up' src="img/home/logo_000.png" alt="">     
             </div>
 
             <div class='menu col-sm-12 col-md-12 col-xs-12'>
+              <div>
+                <!--<i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>-->
+                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" ng-click="cart()"></i>
+              </div>
               <div class='col-xs-3 col-sm-3 col-md-1' style='padding:0.3% 1% 0.3% 1%;'>
-                <span ng-click="loadPage('contact')">Contact</span>  
+                <span ng-click="loadPage('contact')">Contact</span> 
               </div>
               <div class='raya-derecha col-xs-3 col-sm-3 col-md-1'>
                 <span ng-click="loadPage('products')">Products<span class='trian'>&#x25BC</span> </span>  
@@ -39,6 +44,7 @@
                 <span ng-click="loadPage('home')">Home</span>  
               </div>
             </div>
+            
 
           </div>
 
@@ -58,16 +64,21 @@
             </div>
 
           </div>
-
-
-            
         </div>
       </div>
 
+            <!-- Carrito de compras -->
+      <div class='container' style='position:fixed; z-index:20; top:200px;' ng-include='carrito_url'></div>
 
       <div class="slide-animate-container" style='overflow:hidden'>
-        <div  ng-include="currentPage" class="animation" [autoscroll="true"]></div>
+        <div  ng-include="currentPage" class="animation contenido-princi" [autoscroll="true"]></div>
       </div>
+
+
+
+
+
+
 
 
       <div class="footer container nopadding">

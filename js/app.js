@@ -147,7 +147,8 @@ class Form_Amerivacs_Client{
 }
 
 class Cart_Form_Handler{
-	constructor(cart, form){
+	constructor(scope, cart, form){
+		this.scope = scope;
 		this.cart = cart;
 		this.form = form;
 	}
@@ -155,6 +156,11 @@ class Cart_Form_Handler{
 		if(this.form.validate(this.cart)){
 			this.form.sendInfo();
 		}
+	}
+	addItem(id, nombre, precio){
+		console.log('addite');
+		this.cart.addP(new Producto(id, nombre,'$' + precio));
+		this.scope.cart();
 	}
 }
 
@@ -168,7 +174,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 	$scope.carrito.addP(new Producto(0,'AVS','maquina B','$1800'));
 	$scope.carrito.addP(new Producto(0,'CAVN','maquina C','$1800'));
 
-	$scope.handler = new Cart_Form_Handler($scope.carrito, $scope.formulario);
+	$scope.handler = new Cart_Form_Handler($scope, $scope.carrito, $scope.formulario);
 
 	$scope.searchText;
 	$scope.searchText_2;
@@ -1224,7 +1230,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 
 	$scope.isVacuum = true;
-	$scope.currentPage = "compare.html";
+	$scope.currentPage = "producto.html";
 	$scope.amerivacs_includes = [
 							"2-year limited warranty",
 							"1-week trial period",
@@ -1648,6 +1654,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 }
 
 	$scope.showing = false;
+	$scope.showingC = undefined;
 	$scope.showMenu =  function(){
 		$('.show-menu').velocity({
 			translateY: 0 + 'px',
@@ -1669,6 +1676,48 @@ app.controller('controlador', function($scope,$sce, $http) {
 				$scope.showing = false;
 			}
 		});
+	}
+
+	$scope.showCart = function(){
+		$('.contenido-princi').addClass('bluur');
+		$('.carrito').velocity({
+			translateX: 0 + '%',
+			opacity: 1,
+		},{
+			duration: 80,
+			easing: "easeInLine",
+			complete: function(){
+				$scope.showingC = true;
+			}
+		});		
+	}
+
+	$scope.hideCart = function(){
+		$('.contenido-princi').removeClass('bluur');
+		$('.carrito').velocity({
+			translateX: 100 + '%',
+			opacity: 0,
+		},{
+			duration: 80,
+			easing: "easeInLine",
+			complete: function(){
+				$scope.showingC = false;
+			}
+		});		
+	}	
+	$scope.cart =  function(){
+		console.log('cart');
+		if($scope.showingC == undefined){
+			$scope.carrito_url = "cart.html";
+			$scope.showCart();
+			return;
+		}
+
+		if($scope.showingC){
+			$scope.hideCart();
+		} else {
+			$scope.showCart();
+		}
 	}
 	$scope.animaScroll = function(){
 
@@ -2707,8 +2756,8 @@ app.controller('compare', function($scope, $http){
 
 	];
 
-	$scope.selected_1 = false;
-	$scope.selected_2 = false;
+	$scope.selected_1 = true;
+	$scope.selected_2 = true;
 	$scope.getProduct_1 = function(name){
 			$scope.producto_1['src'] = 'img/products/imagen_'+name+'_000.png';
 
@@ -2747,7 +2796,7 @@ app.controller('compare', function($scope, $http){
 
 			});
 				$('.menucito1 .seleccion').removeClass('seleccion');
-				$('.menucito1 #' + name).addClass('seleccion');
+				$('.menucito1 #1' + name).addClass('seleccion');
 		
 	}
 
@@ -2784,7 +2833,7 @@ app.controller('compare', function($scope, $http){
 
 			});
 				$('.menucito2 .seleccion').removeClass('seleccion');
-				$('.menucito2 #' + name).addClass('seleccion');
+				$('.menucito2 #2' + name).addClass('seleccion');
 	}
 
 

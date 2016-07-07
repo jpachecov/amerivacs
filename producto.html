@@ -54,7 +54,7 @@
 					<span class='col-md-3 col-sm-3 col-xs-3 nopadding'>{{x.size}}</span>
 					<span class='col-md-2 col-sm-2 col-xs-2 nopadding'>{{x.price}}</span>
 					<!-- BOTON DE AGREGAR AL CARRITO-->
-					<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-4 carrito-boton cursor'></img>
+					<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-4 carrito-boton cursor' ng-click='handler.addItem(x.id, x.size, x.price)'></img>
 				</div>
 			</div>
 

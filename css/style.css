@@ -115,6 +115,12 @@ html{
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
+.bluur{
+	
+	 -webkit-filter: blur(10px); /* Chrome, Safari, Opera */
+    filter: blur(10px);
+}
+
 .menu{
 	padding-right: 0%;
 	margin-top: 0%;
@@ -122,6 +128,14 @@ html{
 	z-index: 3;
 	background-color: white;
 
+}
+.menu i{
+
+	opacity: 0.3;
+}
+.menu div:nth-child(1):hover i{
+	opacity: 1;
+	cursor: pointer;
 }
 .menu div{
 	float: right;
