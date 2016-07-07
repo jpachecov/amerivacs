@@ -116,7 +116,7 @@ html{
 	margin-bottom: 1%;
 }
 .bluur{
-	
+
 	 -webkit-filter: blur(10px); /* Chrome, Safari, Opera */
     filter: blur(10px);
 }
@@ -1444,12 +1444,13 @@ font-size: 1.2em;
 * ESTILO DEL CARRITO DE COMPRAS;
 */
 .carrito{
-	background-color: #AEADDE;
+	background-color: white;
 }
 
 .boxclose{
     cursor:pointer;
-    background-color: #DCDCDC;
+    background-color: red;
+    margin: 0%;
 }
 
 .carrito-boton{

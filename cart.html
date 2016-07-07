@@ -1,48 +1,62 @@
-<div class='col-md-6 col-sm-6 col-xs-12 carrito' style='position:absolute; top:0px; left:50%;'>
+<div class='col-md-10 col-sm-10 col-xs-10 carrito' style='position:absolute; top:-10px; left:10%;'>
 
-	<!-- BOTON OCULTAR CARRITO -->
-	<div class='col-md-12 col-sm-12 col-xs-12'></div>
-
-	<h2 class='col-md-12 col-sm-12 col-xs-12'>Your shopping cart</h2>
-	
-	<!-- LISTA ORDENADA DE PRODUCTOS DEL CARRITO -->
-	<table class='col-md-12 col-sm-12 col-xs-12'>
-
-		<tr class='col-md-12 col-sm-12 col-xs-12' ng-repeat="p in carrito.productos">
-			<!-- NUMERO EN LA LISTA -->
-			<td class='col-md-1 col-sm-1 col-xs-2'>{{p.idx}}</td>
-			<td class='col-md-9 col-sm-9 col-xs-8'>{{p.descripcion}}</td>
-			<!-- BOTON QUITAR PROGUCTO -->
-			<td class='col-md-2 col-sm-2 col-xs-2' ng-click="carrito.removeP(p.idx)">
-				<button class='col-md-12 col-sm-12 col-xs-12 boxclose'>remove</button>
-			</td>
-		</tr>
-
-	</table>
-
-	<!-- FORMULARIO -->
-	<div class='col-md-10 col-sm-10 col-xs-10 form_client'>
-		<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
-		<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
-		<label class='col-md-4 col-sm-4 col-xs-4'>Correo</label>
-		<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
-		<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
-		<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
-		<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
-		<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
-		<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
-		<textarea class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre"></textarea>		
-	</div>
-
-	<!-- ERRORES FORMULARIO -->
-	<div class='col-md-12 col-sm-12 col-xs-12' ng-show="formulario.isInvalid">
-		<span ng-repeat="e in formulario.errores" class='col-md-12 col-sm-12 col-xs-12'>{{e.mensaje}}</span>
-	</div>
-
-	<!-- BOTON -->
 	<div class='col-md-6 col-sm-6 col-xs-6'>
-		<button class='col-md-12 col-sm-12 col-xs-12' ng-click="handler.validateForm()">Boton</button>
+
+
+
+
+		<h2 class='col-md-12 col-sm-12 col-xs-12 font1' style='font-size:3em;'>Your shopping cart</h2>
+		
+		<!-- LISTA ORDENADA DE PRODUCTOS DEL CARRITO -->
+		<table class='col-md-12 col-sm-12 col-xs-12'>
+
+			<tr class='col-md-12 col-sm-12 col-xs-12' ng-repeat="p in carrito.productos">
+				<!-- NUMERO EN LA LISTA -->
+				<td class='col-md-1 col-sm-1 col-xs-1'>{{p.idx}}</td>
+				<td class='col-md-3 col-sm-3 col-xs-3'>{{p.nombre}}</td>
+				<td class='col-md-6 col-sm-6 col-xs-6'>{{p.descripcion}}</td>
+				<!-- BOTON QUITAR PROGUCTO -->
+				<td class='col-md-2 col-sm-2 col-xs-2' ng-click="carrito.removeP(p.idx)">
+					<button class='col-md-12 col-sm-12 col-xs-12 boxclose'>remove</button>
+				</td>
+			</tr>
+
+		</table>
+
+
 	</div>
-	<!-- INFO DESCRIPTIVA -->
-	<p class='col-md-8 col-sm-8 col-xs-8'>We will contact you as soon as posible!</p>
+
+	<div class='col-md-6 col-sm-6 col-xs-6'>
+
+		<!-- FORMULARIO -->
+		<div class='col-md-12 col-sm-12 col-xs-12 form_client' style='padding:3%;'>
+			<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
+			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
+			<label class='col-md-4 col-sm-4 col-xs-4'>Correo</label>
+			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
+			<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
+			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
+			<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
+			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
+			<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
+			<textarea class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre"></textarea>		
+		</div>
+
+		<!-- ERRORES FORMULARIO -->
+		<div class='col-md-12 col-sm-12 col-xs-12' ng-show="formulario.isInvalid">
+			<span ng-repeat="e in formulario.errores" class='col-md-12 col-sm-12 col-xs-12'>{{e.mensaje}}</span>
+		</div>
+
+		<!-- BOTON -->
+		<div class='col-md-6 col-sm-6 col-xs-6'>
+			<button class='col-md-12 col-sm-12 col-xs-12' ng-click="handler.validateForm()">Send information</button>
+		</div>
+		<!-- INFO DESCRIPTIVA -->
+		<p class='col-md-11 col-sm-11 col-xs-11'>We will contact you as soon as posible!</p>
+		<!-- BOTON OCULTAR CARRITO -->
+		<a class='col-md-1 col-sm-1 col-xs-1 cursor' ng-click='cart()'>hide</a>
+
+
+	</div>
+
 </div>

@@ -159,7 +159,7 @@ class Cart_Form_Handler{
 	}
 	addItem(id, nombre, precio){
 		console.log('addite');
-		this.cart.addP(new Producto(id, nombre,'$' + precio));
+		this.cart.addP(new Producto(0, id, nombre,'$' + precio));
 		this.scope.cart();
 	}
 }
@@ -169,11 +169,11 @@ app.controller('controlador', function($scope,$sce, $http) {
 	$scope.carrito = new Carrito();
 	$scope.formulario = new Form_Amerivacs_Client();
 
-
+/*
 	$scope.carrito.addP(new Producto(0,'AVN','maquina A','$1800'));
 	$scope.carrito.addP(new Producto(0,'AVS','maquina B','$1800'));
 	$scope.carrito.addP(new Producto(0,'CAVN','maquina C','$1800'));
-
+*/
 	$scope.handler = new Cart_Form_Handler($scope, $scope.carrito, $scope.formulario);
 
 	$scope.searchText;
