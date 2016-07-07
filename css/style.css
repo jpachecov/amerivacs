@@ -49,7 +49,6 @@ html{
 	background-color: white;
 	padding: 0%;
 /*	position: fixed;*/
-	z-index: 10;
 	width: 100%;
 /*	max-width: 1175px;*/
 }
@@ -120,6 +119,8 @@ html{
 	padding-right: 0%;
 	margin-top: 0%;
 	padding-bottom: 2%;
+	z-index: 3;
+	background-color: white;
 
 }
 .menu div{
@@ -820,6 +821,25 @@ li:before {
 .fs-2{
 	font-size: 1.4em;
 }
+
+
+.iconos div:nth-child(1) img{
+	
+	padding-top: 1%;
+}
+.iconos div:nth-child(2) img{
+	padding: 2%;
+	padding-top: 3%;
+}
+.iconos div:nth-child(3) img{
+	
+	padding-top: 1%;
+}
+.iconos div:nth-child(4) img{
+	padding: 3%;
+	padding-top: 1%;
+}
+
 .icono{
 	padding: 0%;
 }
@@ -1421,4 +1441,13 @@ font-size: 1.2em;
 .carrito-boton{
 	padding-right: 0%;
 	padding-left: 8%;
+}
+
+.menu-chiqui{
+	position: absolute;
+}
+
+.show-menu{
+	-webkit-transform: translateY(-70px);
+	transform: translateY(-70px);
 }

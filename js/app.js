@@ -1224,7 +1224,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 
 	$scope.isVacuum = true;
-	$scope.currentPage = "home.html";
+	$scope.currentPage = "productos.html";
 	$scope.amerivacs_includes = [
 							"2-year limited warranty",
 							"1-week trial period",
@@ -1646,6 +1646,30 @@ app.controller('controlador', function($scope,$sce, $http) {
 			$('#' + name).addClass('seleccion');
 
 }
+
+	$scope.showing = false;
+	$scope.showMenu =  function(){
+		$('.show-menu').velocity({
+			translateY: 0 + 'px',
+		},{
+			duration: 180,
+			easing: "easeInLine",
+			complete: function(){
+				$scope.showing = true;
+			}
+		});
+	}
+	$scope.hideMenu =  function(){
+		$('.show-menu').velocity({
+			translateY: -70 + 'px',
+		},{
+			duration: 80,
+			easing: "easeInLine",
+			complete: function(){
+				$scope.showing = false;
+			}
+		});
+	}
 	$scope.animaScroll = function(){
 
 		$(window).scrollTop('0px');
@@ -1654,6 +1678,11 @@ app.controller('controlador', function($scope,$sce, $http) {
 	$scope.loadPage = function(page){
 		console.log('loadPage');
 
+		if($scope.currentPage == 'productos.html' && page == 'products' && $scope.showing){
+			console.log('caso');
+			$scope.hideMenu();
+			return;
+		}
 		$scope.animaScroll();
 
 		switch(page){
@@ -1672,6 +1701,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 				break;
 			case 'products':
 				$scope.currentPage = "productos.html";
+				$scope.showMenu();
 				break;
 			case 'all-products':
 				$scope.currentPage = 'producto.html';
@@ -1689,6 +1719,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 	$scope.producto = {};
 	$scope.partes = [];
 	$scope.getProduct('AVN');
+	$scope.getCat('retractable nozzle');
 
 
 });
