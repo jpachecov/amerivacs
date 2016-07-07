@@ -10,8 +10,6 @@ Compare
 -- Icono en el titulo
 
 Lista de Todos los Productos
--- Faltan imagenes a los productos
--- corregir contenido de tablas
 -- Boton de comparar con otros productos
 
 
@@ -19,7 +17,6 @@ Selector
 -- Hacer que filtre los productos
 -- adaptativas
 
--- HACER UNA BASE DE DATOS BIEN
 -- HACER FUNCIONAR SHOPPING CART
 
 

@@ -111,7 +111,6 @@ class Form_Amerivacs_Client{
 
 
 		for (var key in this.ERR){
-			console.log('ee');
 			if(this.ERR[key].isActive){
 				this.isInvalid = true;
 				break;
