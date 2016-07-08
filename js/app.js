@@ -1695,7 +1695,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 	$scope.hideCart = function(){
 		$('.contenido-princi').removeClass('bluur');
 		$('.carrito').velocity({
-			translateX: 100 + '%',
+			translateX: 120 + '%',
 			opacity: 0,
 		},{
 			duration: 80,
