@@ -1668,7 +1668,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 	}
 	$scope.hideMenu =  function(){
 		$('.show-menu').velocity({
-			translateY: -70 + 'px',
+			translateY: -80 + 'px',
 		},{
 			duration: 80,
 			easing: "easeInLine",

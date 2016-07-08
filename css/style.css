@@ -1463,8 +1463,8 @@ font-size: 1.2em;
 }
 
 .show-menu{
-	-webkit-transform: translateY(-70px);
-	transform: translateY(-70px);
+	-webkit-transform: translateY(-80px);
+	transform: translateY(-80px);
 }
 
 
