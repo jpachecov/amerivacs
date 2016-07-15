@@ -1603,6 +1603,12 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 		} else {
 
+			for(var i = 0; i < $scope.productos.length; i++){
+				if($scope.productos[i]['name'] == name){
+					$scope.producto['specs'] = $scope.productos[i]['specs'];
+				}
+			}
+
 			$scope.producto['src'] = 'img/products/imagen_'+name+'_000.png';
 			$scope.isVacuum = true;
 			$scope.isOptions = false;
