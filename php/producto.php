@@ -1,10 +1,13 @@
 <?php
 
 	$dataa = json_decode(file_get_contents("php://input"));
-	$connec = new mysqli("localhost", "root", "", "amerivacs");
+	$connec = new mysqli("mysql.webhero.com", "tadlock", "jptad0923", "tadlock");
 	if ($connec->connect_error) {
 	    die("Connection failed: " . $connec->connect_error);
-	} 
+	}  else {
+	//	echo "Conexion buena a DB";
+	}
+
 
 	$query = "select nombre, subti, desc_A, desc_B from productos where productos.nombre =". "'".$dataa->name."'";
 	$resul = $connec->query($query);
@@ -24,6 +27,7 @@
 	};
 
 	$resul->free();
+	
 	$connec->close()
 
 ?>

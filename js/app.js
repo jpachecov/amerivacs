@@ -1542,7 +1542,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 	}
 
 	$scope.getProduct = function(name){
-
+		console.log('getP ' + name);
 
 		if(name == 'PARTS'){
 			console.log('getproduct parts');
@@ -1555,7 +1555,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 			var request = $http({
 		    method: "POST",
-		    url: "/amerivacs/php/parts.php",
+		    url: "/NEW/php/parts.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -1585,7 +1585,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 			var request = $http({
 		    method: "POST",
-		    url: "/amerivacs/php/options.php",
+		    url: "/NEW/php/options.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -1610,7 +1610,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 			var request = $http({
 		    method: "POST",
-		    url: "/amerivacs/php/producto.php",
+		    url: "/NEW/php/producto.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -1618,7 +1618,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 			var request2 = $http({
 		    method: "POST",
-		    url: "/amerivacs/php/modelo_prod.php",
+		    url: "/NEW/php/modelo_prod.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -1631,6 +1631,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 			});
 
 			request.success(function (data) {
+				console.log(data);
 				var obj = data;//JSON.parse(data);
 				$scope.producto['name'] = obj['name'];
 				$scope.producto['subtitulo'] = obj['subtitulo'];
@@ -2766,7 +2767,7 @@ app.controller('compare', function($scope, $http){
 
 			var request = $http({
 		    method: "POST",
-		    url: "/amerivacs/php/producto.php",
+		    url: "/NEW/php/producto.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -2774,7 +2775,7 @@ app.controller('compare', function($scope, $http){
 
 			var request2 = $http({
 		    method: "POST",
-		    url: "/amerivacs/php/modelo_prod.php",
+		    url: "/NEW/php/modelo_prod.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -2788,7 +2789,7 @@ app.controller('compare', function($scope, $http){
 			});
 
 			request.success(function (data) {
-				//console.log(data);
+				console.log(data);
 				var obj = data;//JSON.parse(data);
 				$scope.producto_1['name'] = obj['name'];
 				$scope.producto_1['subtitulo'] = obj['subtitulo'];
@@ -2805,7 +2806,7 @@ app.controller('compare', function($scope, $http){
 			$scope.selected_2 = true;
 			var requestt = $http({
 		    method: "POST",
-		    url: "/amerivacs/php/producto.php",
+		    url: "/NEW/php/producto.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -2813,7 +2814,7 @@ app.controller('compare', function($scope, $http){
 
 			var request3 = $http({
 		    method: "POST",
-		    url: "/amerivacs/php/modelo_prod.php",
+		    url: "/NEW/php/modelo_prod.php",
 		    data: {
 		    	'name': name,
 		    },
@@ -2826,7 +2827,7 @@ app.controller('compare', function($scope, $http){
 			});
 
 			requestt.success(function (data) {
-				//console.log(data);
+				console.log(data);
 				var obj = data;//JSON.parse(data);
 				$scope.producto_2['name'] = obj['name'];
 				$scope.producto_2['subtitulo'] = obj['subtitulo'];

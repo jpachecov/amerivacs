@@ -1,7 +1,7 @@
 <?php
 
 	$data = json_decode(file_get_contents("php://input"));
-	$conn = new mysqli("localhost", "root", "", "amerivacs");
+	$conn = new mysqli("mysql.webhero.com", "tadlock", "jptad0923", "tadlock");
 	$query = "select productos.id_prod, productos.nombre, precios.medida, precios.cost from productos join precios on productos.id_prod = precios.id_prod and productos.nombre =". "'".$data->name."'";
 	
 	$res = $conn->query($query);
