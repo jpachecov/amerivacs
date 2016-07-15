@@ -14,7 +14,8 @@
 				<!-- NUMERO EN LA LISTA -->
 				<td class='col-md-1 col-sm-1 col-xs-1'>{{p.idx}}</td>
 				<td class='col-md-3 col-sm-3 col-xs-3'>{{p.nombre}}</td>
-				<td class='col-md-6 col-sm-6 col-xs-6'>{{p.descripcion}}</td>
+				<td class='col-md-3 col-sm-3 col-xs-3'>{{p.descripcion}}</td>
+				<td class='col-md-3 col-sm-3 col-xs-3'>{{p.precio}}</td>
 				<!-- BOTON QUITAR PROGUCTO -->
 				<td class='col-md-2 col-sm-2 col-xs-2' ng-click="carrito.removeP(p.idx)">
 					<button class='col-md-12 col-sm-12 col-xs-12 boxclose'>remove</button>
@@ -30,16 +31,21 @@
 
 		<!-- FORMULARIO -->
 		<div class='col-md-12 col-sm-12 col-xs-12 form_client' style='padding:3%;'>
-			<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
+			<label class='col-md-4 col-sm-4 col-xs-4'>Name</label>
 			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
-			<label class='col-md-4 col-sm-4 col-xs-4'>Correo</label>
-			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
-			<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
-			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
-			<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
-			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre">
-			<label class='col-md-4 col-sm-4 col-xs-4'>Nombre</label>
-			<textarea class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.nombre"></textarea>		
+
+			<label class='col-md-4 col-sm-4 col-xs-4'>Mail</label>
+			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.mail">
+
+			<label class='col-md-4 col-sm-4 col-xs-4'>Adress</label>
+			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.adress">
+
+			<label class='col-md-4 col-sm-4 col-xs-4'>Ship Adress</label>
+			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.shipAdresss">
+
+			<label class='col-md-4 col-sm-4 col-xs-4'>Phone</label>
+			<input class='col-md-8 col-sm-8 col-xs-8' ng-model="formulario.phone">
+
 		</div>
 
 		<!-- ERRORES FORMULARIO -->

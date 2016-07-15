@@ -1478,3 +1478,8 @@ font-size: 1.2em;
 
 }
 
+
+
+.form_client *{
+	display: block;
+}

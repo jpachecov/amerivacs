@@ -158,8 +158,8 @@ class Cart_Form_Handler{
 		}
 	}
 	addItem(id, nombre, precio){
-		console.log('addite');
-		this.cart.addP(new Producto(0, id, nombre,'$' + precio));
+		console.log('addite ' + precio);
+		this.cart.addP(new Producto(0, id, nombre, precio));
 		this.scope.cart();
 	}
 }
@@ -1230,7 +1230,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 
 	$scope.isVacuum = true;
-	$scope.currentPage = "producto.html";
+	$scope.currentPage = "home.html";
 	$scope.amerivacs_includes = [
 							"2-year limited warranty",
 							"1-week trial period",
