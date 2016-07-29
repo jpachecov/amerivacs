@@ -176,6 +176,8 @@ app.controller('controlador', function($scope,$sce, $http) {
 */
 	$scope.handler = new Cart_Form_Handler($scope, $scope.carrito, $scope.formulario);
 
+
+
 	$scope.searchText;
 	$scope.searchText_2;
 	$scope.productos = 
@@ -1227,7 +1229,11 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 	];
 
+	$scope.showCartButton = false;
 
+	$scope.showCartButtonn = function(){
+		$scope.showCartButton = !$scope.showCartButton;
+	};
 
 	$scope.isVacuum = true;
 	$scope.currentPage = "home.html";
@@ -1493,10 +1499,19 @@ app.controller('controlador', function($scope,$sce, $http) {
 	$scope.toProduct = function(name){
 
 		$scope.getProduct(name);
+
+
 		$scope.loadPage('all-products');
 
-		console.log('toProduct ' + name);
+		$('#' + name).addClass('seleccion');
+
+//		console.log('toProduct ' + name);
 	}
+	$scope.scrollProd = function(){
+		console.log('scrfoll prod');
+		window.scrollBy(0,1700);
+
+	};
 
 	$scope.getCat = function(name){
 		console.log('click cat');
@@ -1663,6 +1678,8 @@ app.controller('controlador', function($scope,$sce, $http) {
 	$scope.showing = false;
 	$scope.showingC = undefined;
 	$scope.showMenu =  function(){
+		console.log('showing menu');
+		//if($scope.showing)
 		$('.show-menu').velocity({
 			translateY: 0 + 'px',
 		},{
@@ -1757,7 +1774,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 				break;
 			case 'products':
 				$scope.currentPage = "productos.html";
-				$scope.showMenu();
+				//$scope.showMenu();
 				break;
 			case 'all-products':
 				$scope.currentPage = 'producto.html';
@@ -2800,8 +2817,20 @@ app.controller('compare', function($scope, $http){
 				$scope.producto_1['name'] = obj['name'];
 				$scope.producto_1['subtitulo'] = obj['subtitulo'];
 				//$scope.producto_1['src'] = obj['src'];
+				$scope.producto_1['parrafo'] = obj['parrafo'];
 
 			});
+
+
+			for(var i = 0; i < $scope.productos.length; i++){
+				if($scope.productos[i]['name'] == name){
+					$scope.producto_1['specs'] = $scope.productos[i]['specs'];
+				}
+			}
+
+
+
+
 				$('.menucito1 .seleccion').removeClass('seleccion');
 				$('.menucito1 #1' + name).addClass('seleccion');
 		
@@ -2837,8 +2866,17 @@ app.controller('compare', function($scope, $http){
 				var obj = data;//JSON.parse(data);
 				$scope.producto_2['name'] = obj['name'];
 				$scope.producto_2['subtitulo'] = obj['subtitulo'];
+				$scope.producto_2['parrafo'] = obj['parrafo'];
 
 			});
+
+			for(var i = 0; i < $scope.productos.length; i++){
+				if($scope.productos[i]['name'] == name){
+					$scope.producto_2['specs'] = $scope.productos[i]['specs'];
+				}
+			}
+
+
 				$('.menucito2 .seleccion').removeClass('seleccion');
 				$('.menucito2 #2' + name).addClass('seleccion');
 	}

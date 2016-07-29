@@ -67,8 +67,25 @@
 			<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
 
 				<div class='row'>
+					<p ng-bind-html='producto_1.parrafo' style='margin-top:5%; text-align:justify;'></p>
+
+					<!--  TABLE SPECIFICATIONS -->
+					<div class='col-md-12 col-xs-12 col-sm-12 tabla-p' ng-show='isVacuum' style='margin-top:5%'>
+						<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
+							<span class='tab-name'>Specifications</span>
+						</div>
+						<div class='ren2 col-md-12 col-sm-12 col-xs-12 nopadding' ng-repeat='sp in producto_1.specs'>
+							<div class='col-md-6 nopadding'>
+								<span><strong>{{sp.spec}}</strong></span>
+							</div>
+							<div class='col-md-6 txt-r'>
+								<span>{{sp.val}}</span>
+							</div>					
+						</div>
+					</div>
+
 					<!-- PRICING TABLE -->
-					<div class='pricing_table col-md-11 col-sm-10 col-xs-12 tabla-p col-cen' style='padding-top:4%;'>
+					<div class='pricing_table col-md-12 col-sm-10 col-xs-12 tabla-p' style='margin-top:4%;'>
 						<div class='col-md-12 nopadding mb-1'>
 							<span class='tab-name'>Pricing</span>
 						</div>
@@ -86,6 +103,10 @@
 						</div>
 						
 					</div>
+
+
+
+
 				</div>
 
 			</div>
@@ -154,8 +175,27 @@
 			<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
 
 				<div class='row'>
+
+					<p ng-bind-html='producto_2.parrafo' style='text-align:justify; margin-top:5%'></p>
+
+					<!--  TABLE SPECIFICATIONS -->
+					<div class='col-md-12 col-xs-12 col-sm-12 tabla-p' ng-show='isVacuum' style='margin-top:5%'>
+						<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
+							<span class='tab-name'>Specifications</span>
+						</div>
+						<div class='ren2 col-md-12 col-sm-12 col-xs-12 nopadding' ng-repeat='sp in producto_2.specs'>
+							<div class='col-md-6 nopadding'>
+								<span><strong>{{sp.spec}}</strong></span>
+							</div>
+							<div class='col-md-6 txt-r'>
+								<span>{{sp.val}}</span>
+							</div>					
+						</div>
+					</div>
+
+
 					<!-- PRICING TABLE -->
-					<div class='pricing_table col-md-11 col-sm-10 col-xs-12 tabla-p col-cen' style='padding-top:4%;'>
+					<div class='pricing_table col-md-12 col-sm-10 col-xs-12 tabla-p' style='margin-top:4%;'>
 						<div class='col-md-12 nopadding mb-1'>
 							<span class='tab-name'>Pricing</span>
 						</div>
@@ -171,8 +211,10 @@
 							<!-- BOTON DE AGREGAR AL CARRITO-->
 							<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-4 carrito-boton cursor' ng-click='handler.addItem(x.id, x.size, x.price)'></img>
 						</div>
+
 						
 					</div>
+
 				</div>
 
 

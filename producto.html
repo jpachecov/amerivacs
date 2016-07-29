@@ -17,9 +17,10 @@
 				</div>				
 			</div>
 			<div class='col-md-5 col-sm-6 col-xs-12' style='text-align:right; margin-top:5%; margin-bottom:5%' ng-show='isVacuum'>
-				<img src="img/BOTON-1_000.png" class='col-md-6 col-sm-7 col-xs-8' ng-click="toCompare('producto.name')">
-
+				<img src="img/BOTON-1_000.png" class='col-md-6 col-sm-7 col-xs-8 cursor' ng-click="toCompare('producto.name')">
+				<img src="img/BOTON-2_000.png" class='col-md-6 col-sm-7 col-xs-8 cursor' ng-click="showCartButtonn()">
 			</div>
+
 		</div>
 		<div class='col-md-7 col-sm-12 col-xs-12 nopadding' ng-show='isVacuum'>
 
@@ -54,7 +55,7 @@
 					<span class='col-md-3 col-sm-3 col-xs-3 nopadding'>{{x.size}}</span>
 					<span class='col-md-2 col-sm-2 col-xs-2 nopadding'>{{x.price}}</span>
 					<!-- BOTON DE AGREGAR AL CARRITO-->
-					<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-4 carrito-boton cursor' ng-click='handler.addItem(x.id, x.size, x.price)'></img>
+					<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-4 carrito-boton cursor' ng-click='handler.addItem(x.id, x.size, x.price)' ng-show='showCartButton'></img>
 				</div>
 			</div>
 
@@ -182,7 +183,7 @@
 			<div class='col-md-2 col-sm-2 col-xs-2'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.price}}</span>
 			</div>	
-			<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-3 carrito-boton-1 cursor' ng-click='handler.addItem(part.id, part.size, part.price)'></img>			
+			<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-3 carrito-boton-1 cursor' ng-click='handler.addItem(part.id, part.size, part.price)' ng-show="showCartButton"></img>			
 		</div>
 		
 	</div>
@@ -220,7 +221,7 @@
 			<div class='col-md-2 col-sm-2 col-xs-2'>
 				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.price}}</span>
 			</div>
-			<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-3 carrito-boton-1 cursor' ng-click='handler.addItem(part.id, part.size, part.price)'></img>			
+			<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-3 carrito-boton-1 cursor' ng-click='handler.addItem(part.id, part.size, part.price)' ng-show='showCartButton'></img>			
 		</div>
 		
 	</div>
