@@ -1454,6 +1454,12 @@ font-size: 1.2em;
 	background-color: white;
 	border: solid 1px;
 }
+.carrito span{
+	display: block;
+}
+.carrito label{
+	display: block;
+}
 
 .boxclose{
     cursor:pointer;
