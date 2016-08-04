@@ -168,7 +168,7 @@ class Cart_Form_Handler{
 app.controller('controlador', function($scope,$sce, $http) {
 
 	$scope.showingC = false;
-	
+
 	$scope.carrito = new Carrito();
 	$scope.formulario = new Form_Amerivacs_Client();
 
@@ -1506,7 +1506,11 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 		$scope.loadPage('all-products');
 
-		$('#' + name).addClass('seleccion');
+		setTimeout(function(){
+
+			$('#' + name).addClass('seleccion');	
+		}, 300);
+
 
 //		console.log('toProduct ' + name);
 	}
