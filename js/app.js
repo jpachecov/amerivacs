@@ -1344,7 +1344,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 							One button touch sealing, preset vacuum controls and \
 							a large 22"x22"x4" stainless steel vacuum chamber \
 							best define this no nonsense workhorse. ', 
-			'img' : 'img/products/imagen_CAVN_000.png'
+			'img' : 'img/products/imagen_AVC_000.png'
 		},
 		{
 			'nombre' : 'AVCG',
@@ -1356,7 +1356,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 							vacuum timers for every package. <br> \
 							No need to worry about adjusting vacuum timers for\
 							every package.',
-			'img' : 'img/products/imagen_CAVN_000.png'
+			'img' : 'img/products/imagen_AVCG_000.png'
 		},
 	];
 
