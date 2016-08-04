@@ -525,11 +525,7 @@ border-bottom: solid 1px black;
 	border-bottom: solid 1px black;
 	padding-bottom: 5%;
 }
-
 li:before {
-/*
-    content: "• ";
-    color: #243c74; /* or whatever color you prefer */
     content: "";
     line-height: 1em;
     width: .4em;
@@ -539,6 +535,11 @@ li:before {
     margin: .40em .40em 0;
     border-radius: 100%;
 
+/*
+content: "• ";
+    color: #243c74; 
+    float: left;
+    */
 }
 
 .tab-name{
@@ -1186,6 +1187,9 @@ font-size: 1.2em;
 	list-style: none;
 }
 
+.nodot li{
+	font-size: 20px;
+}
 .efectoH-4 img {
 	-webkit-transform: rotate(0deg) scale(1.08);
 	transform: rotate(0deg) scale(1.08);
@@ -1453,6 +1457,12 @@ font-size: 1.2em;
 .carrito{
 	background-color: white;
 	border: solid 1px;
+}
+.carrito span{
+	display: block;
+}
+.carrito label{
+	display: block;
 }
 
 .boxclose{

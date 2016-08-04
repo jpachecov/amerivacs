@@ -1270,7 +1270,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 		{'nombre':'INTUITIVE',
 		'descrip':'Our sealers are <strong>straightforward</strong> and <strong>easy to \
-					operate</strong> by anybody.',
+					operate.</strong>',
 		'src':'img/products/intuitive_icon_000.png'},
 	]
 
