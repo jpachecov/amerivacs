@@ -71,17 +71,11 @@
       </div>
 
             <!-- Carrito de compras -->
-      <div class='container' style='position:fixed; z-index:20; top:200px;' ng-include='carrito_url'></div>
+      <div class='container' ng-show="showingC" style='position:fixed; z-index:20; top:200px;' ng-include='carrito_url'></div>
 
       <div class="slide-animate-container" style='overflow:hidden'>
         <div  ng-include="currentPage" class="animation contenido-princi" [autoscroll="true"]></div>
       </div>
-
-
-
-
-
-
 
 
       <div class="footer container nopadding">

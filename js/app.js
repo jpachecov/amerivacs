@@ -166,6 +166,9 @@ class Cart_Form_Handler{
 
 
 app.controller('controlador', function($scope,$sce, $http) {
+
+	$scope.showingC = false;
+	
 	$scope.carrito = new Carrito();
 	$scope.formulario = new Form_Amerivacs_Client();
 
@@ -1676,7 +1679,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 }
 
 	$scope.showing = false;
-	$scope.showingC = undefined;
+
 	$scope.showMenu =  function(){
 		console.log('showing menu');
 		//if($scope.showing)
@@ -1703,6 +1706,7 @@ app.controller('controlador', function($scope,$sce, $http) {
 	}
 
 	$scope.showCart = function(){
+		$scope.showingC = true;
 		$('.contenido-princi').addClass('bluur');
 		$('.carrito').velocity({
 			translateX: 0 + '%',
@@ -1711,7 +1715,8 @@ app.controller('controlador', function($scope,$sce, $http) {
 			duration: 80,
 			easing: "easeInLine",
 			complete: function(){
-				$scope.showingC = true;
+
+
 			}
 		});		
 	}
@@ -1729,13 +1734,16 @@ app.controller('controlador', function($scope,$sce, $http) {
 			}
 		});		
 	}	
+	$scope.carrito_url = "cart.html";
 	$scope.cart =  function(){
 		console.log('cart');
+	/*
 		if($scope.showingC == undefined){
 			$scope.carrito_url = "cart.html";
 			$scope.showCart();
 			return;
 		}
+		*/
 
 		if($scope.showingC){
 			$scope.hideCart();
