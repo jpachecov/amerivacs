@@ -1,6 +1,18 @@
 "use strict"
 var app = angular.module('amerivacs', ['ngSanitize','ngAnimate']);
 
+class Compare{
+	constructor(a,b){
+		this.A = a;
+		this.B = b;
+		this.SCOPE = undefined;
+	}
+	addScope(scope){
+		this.SCOPE = scope;
+	}
+
+}
+var compara = new Compare('AVN', 'AVS');
 
 class Carrito{
 	constructor(){
@@ -166,6 +178,7 @@ class Cart_Form_Handler{
 
 
 app.controller('controlador', function($scope,$sce, $http) {
+
 
 	$scope.showingC = false;
 
@@ -1561,6 +1574,12 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 	$scope.toCompare = function(name){
 		$scope.loadPage('compare');
+
+		console.log('toComparae ' + name);
+		setTimeout(function(){
+			compara.A = name;
+			compara.SCOPE.getProduct_1(name);
+		}, 300);
 	}
 
 	$scope.getProduct = function(name){
@@ -1787,14 +1806,26 @@ app.controller('controlador', function($scope,$sce, $http) {
 			case 'products':
 				$scope.currentPage = "productos.html";
 				//$scope.showMenu();
+
 				break;
 			case 'all-products':
 				$scope.currentPage = 'producto.html';
+
+				setTimeout(function(){
+					$('#AVN').addClass('seleccion');
+				}, 300);
 				break;
 			case 'compare':
 				$scope.currentPage = 'compare.html';
-				$('#AVS').addClass('seleccion');
-				$('#AVN').addClass('seleccion');
+				$('#' + compara.A).addClass('seleccion');
+				$('#' + compara.B).addClass('seleccion');
+
+/*
+				setTimeout(function(){
+					compara.SCOPE.getProduct_1('AVN');
+					compara.SCOPE.getProduct_2('AVS');
+				}, 200);
+*/
 				break;
 			case 'selector':
 				$scope.currentPage = 'ciber_selector.html'
@@ -1810,9 +1841,13 @@ app.controller('controlador', function($scope,$sce, $http) {
 
 });
 
+
+
+
 app.controller('compare', function($scope, $http){
+	compara.addScope($scope);
 
-
+	console.log('CONTROLADOR COMPARE');
 	$scope.productos = 
 	[
 		{
@@ -2840,15 +2875,19 @@ app.controller('compare', function($scope, $http){
 				}
 			}
 
-
+				compara.A = name;
 
 
 				$('.menucito1 .seleccion').removeClass('seleccion');
-				$('.menucito1 #1' + name).addClass('seleccion');
+				$('.menucito1 #1' + compara.A).addClass('seleccion');
 		
 	}
 
 	$scope.getProduct_2 = function(name){
+
+
+			compara.B = name;
+
 			$scope.producto_2['src'] = 'img/products/imagen_'+name+'_000.png';
 			$scope.selected_2 = true;
 			var requestt = $http({
@@ -2890,16 +2929,13 @@ app.controller('compare', function($scope, $http){
 
 
 				$('.menucito2 .seleccion').removeClass('seleccion');
-				$('.menucito2 #2' + name).addClass('seleccion');
+				$('.menucito2 #2' + compara.B).addClass('seleccion');
 	}
 
 
-	$scope.producto_1 = {};$scope.getProduct_1('AVN');
-	$scope.producto_2 = {};$scope.getProduct_2('AVS');
+	$scope.producto_1 = {};
+	$scope.producto_2 = {};
 
-
-	$scope.getProduct_1('AVN');
-	$scope.getProduct_2('AVS');
 
 });
 
