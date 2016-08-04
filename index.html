@@ -74,7 +74,8 @@
       <div class='container' ng-show="showingC" style='position:fixed; z-index:20; top:200px;' ng-include='carrito_url'></div>
 
       <div class="slide-animate-container" style='overflow:hidden'>
-        <div  ng-include="currentPage" class="animation contenido-princi" [autoscroll="true"]></div>
+        <!--<div  ng-include="currentPage" class="animation contenido-princi" [autoscroll="true"]></div>-->
+        <div  ng-view class="animation contenido-princi" [autoscroll="true"]></div>
       </div>
 
 
@@ -130,6 +131,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src='js/formulario.js'></script>
     <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>   
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.6/angular-sanitize.js"></script>
     <script src="js/sizeChecker.js"></script>

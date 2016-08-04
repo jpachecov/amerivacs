@@ -1,5 +1,22 @@
 "use strict"
-var app = angular.module('amerivacs', ['ngSanitize','ngAnimate']);
+var app = angular.module('amerivacs', ['ngSanitize','ngAnimate','ngRoute']);
+
+// Rutas para la aplicacion
+app.config(['$routeProvider', function($routeProvider){
+    $routeProvider
+    .when('/',{templateUrl: "home.html"})
+    .when('/home',{templateUrl: "home.html"})
+    .when('/about', {templateUrl:"about_us.html"})
+    .when('/products', {templateUrl:"productos.html"})
+    .when('/product',{templateUrl: "producto.html"})
+    .when('/contact',{templateUrl: "contact.html"})
+    .when('/compare',{templateUrl: "compare.html"})
+    .when('/selector',{templateUrl: "ciber_selector.html"})
+    .otherwise({templateUrl:"404.html"});
+}]);
+
+
+
 
 class Compare{
 	constructor(a,b){
@@ -177,7 +194,7 @@ class Cart_Form_Handler{
 }
 
 
-app.controller('controlador', function($scope,$sce, $http) {
+app.controller('controlador', function($scope,$sce, $http, $location) {
 
 
 	$scope.showingC = false;
@@ -1792,43 +1809,49 @@ app.controller('controlador', function($scope,$sce, $http) {
 		switch(page){
 			case 'home':				
 				$scope.currentPage = "home.html";
+				$location.path('/home');
 				break;
 
 
 			case 'about_us':
 				$scope.currentPage = "about_us.html";
-
+				$location.path('/about');
 				break;
 			case 'contact':
 				$scope.currentPage = "contact.html";
-
+				$location.path('/contact');
 				break;
 			case 'products':
 				$scope.currentPage = "productos.html";
+				$location.path('/products');
 				//$scope.showMenu();
 
 				break;
 			case 'all-products':
 				$scope.currentPage = 'producto.html';
-
+				$location.path('/product');
+/*
 				setTimeout(function(){
 					$('#AVN').addClass('seleccion');
 				}, 300);
+*/
 				break;
 			case 'compare':
 				$scope.currentPage = 'compare.html';
+				$location.path('/compare');
 				$('#' + compara.A).addClass('seleccion');
 				$('#' + compara.B).addClass('seleccion');
 
-/*
+
 				setTimeout(function(){
 					compara.SCOPE.getProduct_1('AVN');
 					compara.SCOPE.getProduct_2('AVS');
 				}, 200);
-*/
+
 				break;
 			case 'selector':
 				$scope.currentPage = 'ciber_selector.html'
+				$location.path('/selector');
 				break;
 
 		}
