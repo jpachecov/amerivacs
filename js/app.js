@@ -1767,7 +1767,7 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 			translateX: 120 + '%',
 			opacity: 0,
 		},{
-			duration: 80,
+			duration: 200,
 			easing: "easeInLine",
 			complete: function(){
 				$scope.showingC = false;
@@ -1776,15 +1776,6 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 	}	
 	$scope.carrito_url = "cart.html";
 	$scope.cart =  function(){
-		console.log('cart');
-	/*
-		if($scope.showingC == undefined){
-			$scope.carrito_url = "cart.html";
-			$scope.showCart();
-			return;
-		}
-		*/
-
 		if($scope.showingC){
 			$scope.hideCart();
 		} else {

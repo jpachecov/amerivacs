@@ -36,8 +36,8 @@
               <div class='col-xs-2 col-sm-2 col-md-1' style='padding:0.3% 1% 0.3% 1%;'>
                 <span ng-click="loadPage('contact')">Contact</span> 
               </div>
-              <div class='raya-derecha col-xs-3 col-sm-3 col-md-1'>
-                <span ng-click="loadPage('products')" ng-mouseover="showMenu()" ng-mouseleave="hideMenu()">Products<span class='trian'>&#x25BC</span> </span>  
+              <div class='raya-derecha col-xs-3 col-sm-3 col-md-1' ng-mouseover="showMenu()" ng-mouseleave="hideMenu()">
+                <span ng-click="loadPage('products')">Products<span class='trian'>&#x25BC</span> </span>  
               </div>
               <div class='raya-derecha col-xs-3 col-sm-3 col-md-1'>
                 <span ng-click="loadPage('about_us')">About us</span>  
@@ -71,7 +71,7 @@
       </div>
 
             <!-- Carrito de compras -->
-      <div class='container' ng-show="showingC" style='position:fixed; z-index:20; top:200px;' ng-include='carrito_url'></div>
+      <div class='container cart-container' style='position:fixed; z-index:20; top:-600px;' ng-include='carrito_url'></div>
 
       <div class="slide-animate-container" style='overflow:hidden'>
         <!--<div  ng-include="currentPage" class="animation contenido-princi" [autoscroll="true"]></div>-->
