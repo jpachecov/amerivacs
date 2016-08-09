@@ -1054,7 +1054,8 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 					{
 						'id':'AVCG-20',
 						'size':'20” x 1/4',
-						'price':'$5,225.00'
+						'price':'$5,225.00',
+						'siz': '20',
 					},
 				],
 			'specs':
@@ -2964,6 +2965,24 @@ app.controller('compare', function($scope, $http){
 					$scope.producto_1['specs'] = $scope.productos[i]['specs'];
 				}
 			}
+
+			
+			var medidas = ['20"','25"','30"','35"','50"'];
+			var p;
+			// llenamos con espacios vacios
+			var i = 0;
+			for(var j = 0; j < smedias.length; j++){
+				p = $scope.producto_1['models'][j];
+				if(p.size != medidas[i]){
+					// Agrego una vacia y vanzo solo i
+					i++;
+				} else {
+					// son iguales
+					i++;
+					j++;
+				}
+			}
+
 
 				compara.A = name;
 
