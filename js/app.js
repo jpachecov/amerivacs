@@ -1273,11 +1273,11 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 	$scope.amerivacs_includes = [
 							"2-year limited warranty",
 							"1-week trial period",
-							"Clean room compatible",
-							"100% maintenance free Venturi vacuum pumps",
+							"Clean-room compatible",
+							"100% maintenance free verture vacuum pumps",
 							"Intuitive design","Extensive safety features",
-							"Engineer direct technical support","Rust treated and powder coated steel chassis",
-							"Industry leading performance"
+							"Technical support","Rust-treated and powder-coated steel chassis",
+							"Industry-leading performance"
 	];
 							
 
