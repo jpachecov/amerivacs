@@ -79,44 +79,7 @@
 		</div>
 	</div>
 
-<!-- CAMBIAR A VERSION COLUMNAS PARA SIPLIFICAR BACKEND 
-
-	<div class='col-md-12 tabla-p' style='display:table'>
-		<div class='col-md-12 nopadding'>
-			<div class='col-md-12 mb-2 nopadding'>
-				<span class='tab-name'>Options</span>
-			</div>
-			<div class='col-md-12 ren2 nopadding'>
-				<div class='col-md-1 col-xs-12 nopadding'>
-					<span class='blue-c'>Option</span>
-				</div>			
-				<div class='col-md-5 col-xs-12 col-sm-6 col-xs-12 bord-l' style='margin-bottom:3%;'>
-					<span></span>
-				</div>				
-				<div class='col-md-1 col-sm-2 col-xs-2 blue-c bord-l' ng-repeat='x in producto.options[0]'>
-					<span class=''>{{x}}</span>
-				</div>
-			</div>
-		</div>
-
-		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t' ng-repeat='op in producto.options[1]'>
-			<div class='col-md-2 col-sm-4 col-xs-4 nopadding' style='padding:1%'>
-				<span><strong>{{op.op}}</strong></span>
-			</div>
-			<div class='col-md-4' style='padding:1%'>
-				<span>{{op.des}}</span>
-			</div>
-			<div class='col-md-1 col-xs-2' ng-repeat='y in op.prices'>
-				<span>{{y}}</span>
-			</div>			
-		</div>
-		
-	</div>
--->
-
-
-<!-- NUEVA VERSION -->
-
+<!--
 	<div class='col-md-12 tabla-p' style='display:table' ng-show="isVacuum">
 		<div class='col-md-12 nopadding'>
 			<div class='col-md-12 mb-2 nopadding'>
@@ -145,10 +108,33 @@
 				<span>{{y}}</span>
 			</div>			
 		</div>
-		
+	
 	</div>
+-->
+<div class=='col-md-12 col-sm-12 col-xs-12' ng-show='isVacuum'>
+	<table ng-show='isAVN'>
+		<tr ng-repeat='op in options_AVN'>
+			<td colspan="" rowspan="">{{op.name}}</td>
+			<td colspan="" rowspan="">{{op.desc}}</td>
+			<td colspan="" rowspan="" ng-repeat='p in op.prices'>{{op.price}}</td>
+		</tr>
+	</table>
+	<table ng-show='isCAVS'>
+		<tr ng-repeat='op in options_CAVS'>
+			<td colspan="" rowspan="">{{op.name}}</td>
+			<td colspan="" rowspan="">{{op.desc}}</td>
+			<td colspan="" rowspan="" ng-repeat='p in op.prices'>{{op.price}}</td>
+		</tr>
+	</table>
 
-
+	<table ng-show='isAVG'>
+		<tr ng-repeat='op in options_AVG'>
+			<td colspan="" rowspan="">{{op.name}}</td>
+			<td colspan="" rowspan="">{{op.desc}}</td>
+			<td colspan="" rowspan="" ng-repeat='p in op.price'>{{p.price}}</td>
+		</tr>
+	</table>
+</div>
 	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isParts">
 		
 		<label class='search col-md-3 col-sm-3-col-xs-3'>Search: <input ng-model="searchText_2"></label>
