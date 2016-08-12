@@ -1054,7 +1054,8 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 					{
 						'id':'AVCG-20',
 						'size':'20” x 1/4',
-						'price':'$5,225.00'
+						'price':'$5,225.00',
+						'siz': '20',
 					},
 				],
 			'specs':
@@ -1528,6 +1529,82 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 					},
 				
 				]];
+
+	$scope.isAVN = true;
+	$scope.isCAVN = false;
+	$scope.isAVG = false;
+
+	$scope.options_AVN = [
+		{
+			'name':'BAS',
+			'desc':'Upper and Lower Heating Elements',
+			'price':['$275','$375','*$700','*$900','']
+		},
+		{
+			'name':'SS',
+			'desc':'Stainless Steel Upgrade',
+			'price':[]
+		},
+				{
+			'name':'CE',
+			'desc':'CE certification*',
+			'price':[]
+		},
+				{
+			'name':'VF',
+			'desc':'Vacuum Filter',
+			'price':[]
+		},
+				{
+			'name':'VR',
+			'desc':'Vacuum Regulator',
+			'price':[]
+		},
+				{
+			'name':'220PX',
+			'desc':'220 Volt A.C. 50-60 Hz conversion',
+			'price':[]
+		},
+				{
+			'name':'DN',
+			'desc':'Dual Nozzle (w/dual vac pumps)(AVS-AVN only)',
+			'price':[]
+		},
+				{
+			'name':'TRAY',
+			'desc':'Work Tray – 20\" x 12\"',
+			'price':[]
+		},
+				{
+			'name':'EC',
+			'desc':'Additional Vacuum or Gas cycle (AVN only)',
+			'price':[]
+		},
+				{
+			'name':'LPC',
+			'desc':'Low-pressure Bar Close',
+			'price':[]
+		},
+				{
+			'name':'AF',
+			'desc':'Coalescing Air Filter (not for CAV)',
+			'price':[]
+		},
+				{
+			'name':'TC',
+			'desc':'Digital Temperature Control',
+			'price':[]
+		},
+		{
+			'name':'PE',
+			'desc':'Ported Exhaust**',
+			'price':[]
+		},
+		{
+			'name':'STAND',
+			'desc':'Multi-Position Stand (AVS and up to AVN-35) **',
+			'price':[]
+		},	];
 
 	$scope.toProduct = function(name){
 
@@ -2888,6 +2965,24 @@ app.controller('compare', function($scope, $http){
 					$scope.producto_1['specs'] = $scope.productos[i]['specs'];
 				}
 			}
+
+			
+			var medidas = ['20"','25"','30"','35"','50"'];
+			var p;
+			// llenamos con espacios vacios
+			var i = 0;
+			for(var j = 0; j < smedias.length; j++){
+				p = $scope.producto_1['models'][j];
+				if(p.size != medidas[i]){
+					// Agrego una vacia y vanzo solo i
+					i++;
+				} else {
+					// son iguales
+					i++;
+					j++;
+				}
+			}
+
 
 				compara.A = name;
 
