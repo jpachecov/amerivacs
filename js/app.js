@@ -1740,14 +1740,18 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 
 			for(var i = 0; i < $scope.productos.length; i++){
 				if($scope.productos[i]['name'] == name){
-					$scope.producto['specs'] = $scope.productos[i]['specs'];
+
+					$scope.producto = $scope.productos[i];
+					//$scope.producto['specs'] = $scope.productos[i]['specs'];
 				}
 			}
 
 			$scope.producto['src'] = 'img/products/imagen_'+name+'_000.png';
+			
 			$scope.isVacuum = true;
 			$scope.isOptions = false;
 			$scope.isParts = false;
+/*
 
 			var request = $http({
 		    method: "POST",
@@ -1783,6 +1787,7 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 				//console.log(data);
 
 			});
+*/
 
 		}
 
@@ -2921,11 +2926,10 @@ app.controller('compare', function($scope, $http){
 	$scope.selected_1 = true;
 	$scope.selected_2 = true;
 	$scope.getProduct_1 = function(name){
-			$scope.producto_1['src'] = 'img/products/imagen_'+name+'_000.png';
 
 			$scope.selected_1 = true;
 
-
+/*
 			var request = $http({
 		    method: "POST",
 		    url: "/NEW/php/producto.php",
@@ -2959,19 +2963,24 @@ app.controller('compare', function($scope, $http){
 
 			});
 
+*/
+
 
 			for(var i = 0; i < $scope.productos.length; i++){
 				if($scope.productos[i]['name'] == name){
+					$scope.producto_1 = $scope.productos[i];
 					$scope.producto_1['specs'] = $scope.productos[i]['specs'];
 				}
 			}
+			$scope.producto_1['src'] = 'img/products/imagen_'+name+'_000.png';
 
-			
+
+/*			
 			var medidas = ['20"','25"','30"','35"','50"'];
 			var p;
 			// llenamos con espacios vacios
 			var i = 0;
-			for(var j = 0; j < smedias.length; j++){
+			for(var j = 0; j < medidas.length; j++){
 				p = $scope.producto_1['models'][j];
 				if(p.size != medidas[i]){
 					// Agrego una vacia y vanzo solo i
@@ -2983,7 +2992,7 @@ app.controller('compare', function($scope, $http){
 				}
 			}
 
-
+*/
 				compara.A = name;
 
 
@@ -2996,7 +3005,7 @@ app.controller('compare', function($scope, $http){
 
 
 			compara.B = name;
-
+/*
 			$scope.producto_2['src'] = 'img/products/imagen_'+name+'_000.png';
 			$scope.selected_2 = true;
 			var requestt = $http({
@@ -3035,6 +3044,16 @@ app.controller('compare', function($scope, $http){
 					$scope.producto_2['specs'] = $scope.productos[i]['specs'];
 				}
 			}
+*/
+
+			for(var i = 0; i < $scope.productos.length; i++){
+				if($scope.productos[i]['name'] == name){
+					$scope.producto_2 = $scope.productos[i];
+					$scope.producto_2['specs'] = $scope.productos[i]['specs'];
+				}
+			}
+			$scope.producto_2['src'] = 'img/products/imagen_'+name+'_000.png';
+
 
 
 				$('.menucito2 .seleccion').removeClass('seleccion');
