@@ -28,7 +28,6 @@
 			<!-- texto del producto -->
 			<div class='justif col-md-12 col-sm-12 col-xs-12' ng-show='isVacuum'>
 				<p ng-bind-html='producto.parrafo'></p>
-				<span>All AmeriVacS <strong>AVN Vacuum Sealers</strong> include:</span>
 				<ul class='list col-md-8'>
 					<li ng-repeat='x in amerivacs_includes'>{{x}}</li>
 				</ul>
@@ -79,7 +78,6 @@
 		</div>
 	</div>
 
-<!--
 	<div class='col-md-12 tabla-p' style='display:table' ng-show="isVacuum">
 		<div class='col-md-12 nopadding'>
 			<div class='col-md-12 mb-2 nopadding'>
@@ -110,7 +108,8 @@
 		</div>
 	
 	</div>
--->
+
+<!--
 <div class=='col-md-12 col-sm-12 col-xs-12' ng-show='isVacuum'>
 	<table ng-show='isAVN'>
 		<tr ng-repeat='op in options_AVN'>
@@ -135,6 +134,7 @@
 		</tr>
 	</table>
 </div>
+-->
 	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isParts">
 		
 		<label class='search col-md-3 col-sm-3-col-xs-3'>Search: <input ng-model="searchText_2"></label>

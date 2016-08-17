@@ -220,31 +220,31 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 			'subtitulo':'RETRACTABLE NOZZLE VACUUM SEALER WITH GAS PURGE',
 			'parrafo':
 				[
-				'	<strong>Foot pedal activated gas-flush vacuum packaging at its finest. The AVN’s 1/4” wide \
+				'	<strong>Foot pedal activated gas-flush vacuum packaging at its finest. The AVN\"s 1/4\" wide \
 					sealing element delivers a leak-proof seal </strong> from sensitive electronics, to sterile medical \
-					devices, food to biotech applications, aerospace technology to scientific devices, etc. \
+					devices, food to biotech applications, aerospace technology to scientific devices, etc.\
+					<br><br> \
+					With one touch of the pedal, <strong> the AVN flushes out oxygen and moisture with an inert gas \
+					of your choice </strong>, the automated stainless steel nozzle retracts, and your products are sealed in seconds.\
+					Clean Room compatible, the <strong>AVN</strong> is also ideal for electronics, medical and pharmaceutical \
+					applications. <strong>Combine the AVN\"s precise automation with speed, extensive safety features and incredible \
+					bility, and faulty seals</strong> resulting from operator or machine error are virtually eliminated. \
+					<br><br> \
+					Providing additional functionality and nience, the <strong>AVN\"s</strong> gas-flush feature can be switched off, \
+					as well as the vacuum feature, or both off for impulse heat only sealing. \
+					<br><br> \
+					The <strong>AVN</strong> is hand assembled at our facility using only superior grade components. \
+					The <strong>AVN</strong> also features five seal lengths (20\" 25\" 30\" 35\" and 50\") and can be custom \
+					configured to meet CE Certification requirements. \
 					<br><br>\
-					With one touch of the pedal, <strong> the AVN flushes out oxygen and moisture with an inert \
-					gas of your choice </strong>, the automated stainless steel nozzle retracts, and your products are \
-					sealed in seconds. Clean Room compatible, the <strong>AVN</strong> is also ideal for electronics, medical \
-					and pharmaceutical applications. <strong>Combine the AVN’s precise automation with speed, \
-					extensive safety features and incredible durability, and faulty seals</strong> resulting from \
-					operator or machine error are virtually eliminated. \
-					<br><br>\
-					Providing additional functionality and convenience, the <strong>AVN’s</strong> gas-flush feature can be\
-					switched off, as well as the vacuum feature, or both off for impulse heat only sealing.\
-					<br><br>\
-					The <strong>AVN</strong> is hand assembled at our facility using only superior grade components. The <strong>AVN</strong>\
-					also features five seal lengths (20” 25” 30” 35” and 50”) and can be custom configured to\
-					meet CE Certification requirements.'
-				],		
+					All AmeriVaCs <strong>AVN Vacuum Sealers </strong> include:'],		
 			'models':
 				[
-					{'id':'AVN-20','size':'20\” x 1/4\”\nStainless steel upgrade Ce certification','price':'$2,500.00\n$500.00\n$700.00'},
-					{'id':'AVN-25','size':'25\” x 1/4\”\nStainless steel upgrade Ce certification','price':'$2,985.00\n$500.00\n$700.00'},
-					{'id':'AVN-30','size':'30\” x 1/4\”\nStainless steel upgrade Ce certification','price':'$3,185.00\n$500.00\n$700.00'},
-					{'id':'AVN-35','size':'35\” x 1/4\”\nStainless steel upgrade Ce certification','price':'$3,385.00\n$500.00\n$700.00'},
-					{'id':'AVN-50','size':'50\” x 1/4\”\nStainless steel upgrade Ce certification','price':'$6,985.00\n$500.00\n$700.00'},
+					{'id':'AVN-20','size':'20\” x 1/4\”','price':'$2,500.00'},
+					{'id':'AVN-25','size':'25\” x 1/4\”','price':'$2,985.00'},
+					{'id':'AVN-30','size':'30\” x 1/4\”','price':'$3,185.00'},
+					{'id':'AVN-35','size':'35\” x 1/4\”','price':'$3,385.00'},
+					{'id':'AVN-50','size':'50\” x 1/4\”','price':'$6,985.00'},
 				],
 			'specs':
 				[
@@ -390,8 +390,8 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 				[
 					{
 						'id':'AVS-20',
-						'size':'20\” x 1/4\”\nStainless steel upgrade Ce certification',
-						'price':'$1,995.00\n$500.00\n$700.00'
+						'size':'20\” x 1/4\”',
+						'price':'$1,995.00'
 					},
 				],
 			'specs':
@@ -437,115 +437,60 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 			'options':
 				[['20"'],[
 					{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
-											'20"':'$275',
-											'25"':'$375',
-											'30"':'$700',
-											'35"':'$900',
-											'50"':'N.A',																														
+											'20"':'$275',																														
 												}
 					},
 					{'op':'SS','des':'Stainless Steel Upgrade','prices':{
 											'20"':'$500',
-											'25"':'$550',
-											'30"':'$600',
-											'35"':'$650',
-											'50"':'$800',																														
+																														
 												}
 					},
 					{'op':'CE','des':'CE certification*','prices':{
 											'20"':'$700',
-											'25"':'$750',
-											'30"':'$800',
-											'35"':'$850',
-											'50"':'$1,000',																														
 												}
 					},
 					{'op':'VF','des':'Vacuum Filter','prices':{
-											'20"':'$100',
-											'25"':'$100',
-											'30"':'$100',
-											'35"':'$100',
-											'50"':'$100',																														
+											'20"':'$100',																														
 												}
 					},
 					{'op':'VR','des':'Vacuum Regulator','prices':{
-											'20"':'$50',
-											'25"':'$50',
-											'30"':'$50',
-											'35"':'$50',
-											'50"':'$50',																														
+											'20"':'$50',																														
 												}
 					},
 					{'op':'220PX','des':'220 Volt A.C. 50-60 Hz conversion','prices':{
-											'20"':'$350',
-											'25"':'$350',
-											'30"':'$350',
-											'35"':'$350',
-											'50"':'$350',																														
+											'20"':'$350',																														
 												}
 					},
 					{'op':'DN','des':'Dual Nozzle (w/dual vac pumps)(AVS-AVN only)','prices':{
 											'20"':'$765',
-											'25"':'$765',
-											'30"':'$765',
-											'35"':'$765',
-											'50"':'included',																														
 												}
 					},
 					{'op':'TRAY','des':'Work Tray – 20” x 12”','prices':{
-											'20"':'$75',
-											'25"':'$75',
-											'30"':'$75',
-											'35"':'$75',
-											'50"':'N.A',																														
+											'20"':'$75',																														
 												}
 					},
 					{'op':'EC','des':'Additional Vacuum or Gas cycle (AVN only)','prices':{
-											'20"':'$250',
-											'25"':'$250',
-											'30"':'$250',
-											'35"':'$250',
-											'50"':'$250',																														
+											'20"':'$250',																														
 												}
 					},
 					{'op':'LPC','des':'Low-pressure Bar Close','prices':{
 											'20"':'$250',
-											'25"':'$250',
-											'30"':'$250',
-											'35"':'$250',
-											'50"':'included',																														
 												}
 					},
 					{'op':'AF','des':'Coalescing Air Filter (not for CAV)','prices':{
-											'20"':'$195',
-											'25"':'$195',
-											'30"':'$195',
-											'35"':'$195',
-											'50"':'$195',																														
+											'20"':'$195',																														
 												}
 					},
 					{'op':'TC','des':'Digital Temperature Control','prices':{
 											'20"':'$1,995',
-											'25"':'$1,995',
-											'30"':'$1,995',
-											'35"':'$1,995',
-											'50"':'$1,995',																														
 												}
 					},
 					{'op':'PE','des':'Ported Exhaust','prices':{
 											'20"':'$220',
-											'25"':'$220',
-											'30"':'$220',
-											'35"':'$220',
-											'50"':'$220',																														
 												}
 					},
 					{'op':'STAND','des':'Multi-Position Stand (AVS, AVN and AVP only)','prices':{
 											'20"':'$250',
-											'25"':'$250',
-											'30"':'$250',
-											'35"':'$250',
-											'50"':'N.A',																														
 												}
 					},
 				]]
@@ -575,18 +520,22 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 				 The <strong>CAV Series Vacuum Sealers</strong> are hand-assembled at our facility \
 				 using only superior grade components. <strong>Available in 20” and 30” and can be custom configured to \
 				 meet CE Certification requirements.</strong>'
+
+
+
+
 				],		
 			'models':
 				[
 					{
 						'id':'CAVN-20',
-						'size':'20\” x 1/4\”\nStainless steel upgrade Ce certification',
-						'price':'$3,495.00\n$500.00\n$700.00'
+						'size':'20\” x 1/4\”',
+						'price':'$3,495.00'
 					},
 					{
 						'id':'CAVN-30',
-						'size':'30\” x 1/4\”\nStainless steel upgrade Ce certification',
-						'price':'$3,885.00\n$500.00\n$700.00'
+						'size':'30\” x 1/4\”',
+						'price':'$3,885.00'
 					},
 
 				],
@@ -634,114 +583,72 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 				[['20"','30"'],[
 					{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
 											'20"':'$275',
-											'25"':'$375',
-											'30"':'$700',
-											'35"':'$900',
-											'50"':'N.A',																														
+											'30"':'$700',																														
 												}
 					},
 					{'op':'SS','des':'Stainless Steel Upgrade','prices':{
 											'20"':'$500',
-											'25"':'$550',
-											'30"':'$600',
-											'35"':'$650',
-											'50"':'$800',																														
+											'30"':'$600',																														
 												}
 					},
 					{'op':'CE','des':'CE certification*','prices':{
 											'20"':'$700',
-											'25"':'$750',
-											'30"':'$800',
-											'35"':'$850',
-											'50"':'$1,000',																														
+											'30"':'$800',																														
 												}
 					},
 					{'op':'VF','des':'Vacuum Filter','prices':{
 											'20"':'$100',
-											'25"':'$100',
-											'30"':'$100',
-											'35"':'$100',
-											'50"':'$100',																														
+											'30"':'$100',																														
 												}
 					},
 					{'op':'VR','des':'Vacuum Regulator','prices':{
 											'20"':'$50',
-											'25"':'$50',
-											'30"':'$50',
-											'35"':'$50',
-											'50"':'$50',																														
+											'30"':'$50',																														
 												}
 					},
 					{'op':'220PX','des':'220 Volt A.C. 50-60 Hz conversion','prices':{
 											'20"':'$350',
-											'25"':'$350',
-											'30"':'$350',
-											'35"':'$350',
-											'50"':'$350',																														
+											'30"':'$350',																														
 												}
 					},
 					{'op':'DN','des':'Dual Nozzle (w/dual vac pumps)(AVS-AVN only)','prices':{
 											'20"':'$765',
-											'25"':'$765',
 											'30"':'$765',
-											'35"':'$765',
-											'50"':'included',																														
 												}
 					},
 					{'op':'TRAY','des':'Work Tray – 20” x 12”','prices':{
 											'20"':'$75',
-											'25"':'$75',
-											'30"':'$75',
-											'35"':'$75',
-											'50"':'N.A',																														
+											'30"':'$75',																														
 												}
 					},
 					{'op':'EC','des':'Additional Vacuum or Gas cycle (AVN only)','prices':{
 											'20"':'$250',
-											'25"':'$250',
-											'30"':'$250',
-											'35"':'$250',
-											'50"':'$250',																														
+											'30"':'$250',																														
 												}
 					},
 					{'op':'LPC','des':'Low-pressure Bar Close','prices':{
 											'20"':'$250',
-											'25"':'$250',
 											'30"':'$250',
-											'35"':'$250',
-											'50"':'included',																														
 												}
 					},
 					{'op':'AF','des':'Coalescing Air Filter (not for CAV)','prices':{
 											'20"':'$195',
-											'25"':'$195',
-											'30"':'$195',
-											'35"':'$195',
-											'50"':'$195',																														
+											'30"':'$195',																														
 												}
 					},
 					{'op':'TC','des':'Digital Temperature Control','prices':{
 											'20"':'$1,995',
-											'25"':'$1,995',
-											'30"':'$1,995',
-											'35"':'$1,995',
-											'50"':'$1,995',																														
+											'30"':'$1,995',																														
 												}
 					},
 					{'op':'PE','des':'Ported Exhaust','prices':{
 											'20"':'$220',
-											'25"':'$220',
-											'30"':'$220',
-											'35"':'$220',
-											'50"':'$220',																														
+											'30"':'$220',																														
 												}
 					},
 					{'op':'STAND','des':'Multi-Position Stand (AVS, AVN and AVP only)','prices':{
 											'20"':'$250',
-											'25"':'$250',
-											'30"':'$250',
-											'35"':'$250',
-											'50"':'N.A',																														
+											'30"':'$250',																														
 												}
 					},
 				]]
@@ -778,13 +685,13 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 				[
 					{
 						'id':'CAVS-20',
-						'size':'20\” x 1/4\”\nStainless steel upgrade Ce certification',
-						'price':'$2,985.00\n$500.00\n$700.00'
+						'size':'20\” x 1/4\”',
+						'price':'$2,985.00'
 					},
 					{
 						'id':'CAVS-30',
-						'size':'30\” x 1/4\”\nStainless steel upgrade Ce certification',
-						'price':'$3,485.00\n$500.00\n$700.00'
+						'size':'30\” x 1/4\”',
+						'price':'$3,485.00'
 					},
 
 				],
@@ -832,114 +739,72 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 				[['20"','30"'],[
 					{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
 											'20"':'$275',
-											'25"':'$375',
-											'30"':'$700',
-											'35"':'$900',
-											'50"':'N.A',																														
+											'30"':'$700',																														
 												}
 					},
 					{'op':'SS','des':'Stainless Steel Upgrade','prices':{
 											'20"':'$500',
-											'25"':'$550',
-											'30"':'$600',
-											'35"':'$650',
-											'50"':'$800',																														
+											'30"':'$600',																														
 												}
 					},
 					{'op':'CE','des':'CE certification*','prices':{
 											'20"':'$700',
-											'25"':'$750',
-											'30"':'$800',
-											'35"':'$850',
-											'50"':'$1,000',																														
+											'30"':'$800',																														
 												}
 					},
 					{'op':'VF','des':'Vacuum Filter','prices':{
 											'20"':'$100',
-											'25"':'$100',
-											'30"':'$100',
-											'35"':'$100',
-											'50"':'$100',																														
+											'30"':'$100',																														
 												}
 					},
 					{'op':'VR','des':'Vacuum Regulator','prices':{
 											'20"':'$50',
-											'25"':'$50',
-											'30"':'$50',
-											'35"':'$50',
-											'50"':'$50',																														
+											'30"':'$50',																														
 												}
 					},
 					{'op':'220PX','des':'220 Volt A.C. 50-60 Hz conversion','prices':{
 											'20"':'$350',
-											'25"':'$350',
-											'30"':'$350',
-											'35"':'$350',
-											'50"':'$350',																														
+											'30"':'$350',																														
 												}
 					},
 					{'op':'DN','des':'Dual Nozzle (w/dual vac pumps)(AVS-AVN only)','prices':{
 											'20"':'$765',
-											'25"':'$765',
 											'30"':'$765',
-											'35"':'$765',
-											'50"':'included',																														
 												}
 					},
 					{'op':'TRAY','des':'Work Tray – 20” x 12”','prices':{
 											'20"':'$75',
-											'25"':'$75',
-											'30"':'$75',
-											'35"':'$75',
-											'50"':'N.A',																														
+											'30"':'$75',																														
 												}
 					},
 					{'op':'EC','des':'Additional Vacuum or Gas cycle (AVN only)','prices':{
 											'20"':'$250',
-											'25"':'$250',
-											'30"':'$250',
-											'35"':'$250',
-											'50"':'$250',																														
+											'30"':'$250',																														
 												}
 					},
 					{'op':'LPC','des':'Low-pressure Bar Close','prices':{
 											'20"':'$250',
-											'25"':'$250',
 											'30"':'$250',
-											'35"':'$250',
-											'50"':'included',																														
 												}
 					},
 					{'op':'AF','des':'Coalescing Air Filter (not for CAV)','prices':{
 											'20"':'$195',
-											'25"':'$195',
-											'30"':'$195',
-											'35"':'$195',
-											'50"':'$195',																														
+											'30"':'$195',																														
 												}
 					},
 					{'op':'TC','des':'Digital Temperature Control','prices':{
 											'20"':'$1,995',
-											'25"':'$1,995',
-											'30"':'$1,995',
-											'35"':'$1,995',
-											'50"':'$1,995',																														
+											'30"':'$1,995',																														
 												}
 					},
 					{'op':'PE','des':'Ported Exhaust','prices':{
 											'20"':'$220',
-											'25"':'$220',
-											'30"':'$220',
-											'35"':'$220',
-											'50"':'$220',																														
+											'30"':'$220',																														
 												}
 					},
 					{'op':'STAND','des':'Multi-Position Stand (AVS, AVN and AVP only)','prices':{
 											'20"':'$250',
-											'25"':'$250',
-											'30"':'$250',
-											'35"':'$250',
-											'50"':'N.A',																														
+											'30"':'$250',																														
 												}
 					},
 				]]
