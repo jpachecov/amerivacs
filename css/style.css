@@ -244,7 +244,7 @@ font-family: 'menu', sans-serif;
 
 .form-container img{
 	display: block;
-	width: 100%;
+	width: 113%;
 
 }
 .form-contact{
@@ -479,12 +479,20 @@ ABOUT US
 
 .ren{
 	border-top: solid 1px black;
+	height: 45px;
 }
 .ren2{
 border-bottom: solid 1px black;	
 	margin-right: 5%;
 }
-
+.ren6{
+	border-bottom: solid 1px black;
+	height: 28px;
+}
+.pricing_table{
+	padding-left: 6%;
+	padding-right: 6%;
+}
 
 .prod_name {
 	display: inline-block;
@@ -1437,11 +1445,16 @@ font-size: 1.2em;
 	padding-bottom: 3%;
 }
 .rengl{
-	height: 30px;
-	margin-top: 1%;
+	height: auto;
+	padding: 5px;
 }
 .rengl span{
 /*	line-height: 30px;*/
+}
+
+.fijo{
+	height: 600px;
+	overflow-y: scroll;
 }
 
 .botones:hover{

@@ -16,26 +16,29 @@
 					<span>{{producto.subtitulo}}</span>
 				</div>				
 			</div>
-			<div class='col-md-5 col-sm-6 col-xs-12' style='text-align:right; margin-top:5%; margin-bottom:5%' ng-show='isVacuum'>
-				<img src="img/BOTON-1_000.png" class='col-md-6 col-sm-7 col-xs-8 cursor' ng-click='toCompare(producto.name)'>
-				<img src="img/BOTON-2_000.png" class='col-md-6 col-sm-7 col-xs-8 cursor' ng-click="showCartButtonn()">
+			<div class='col-md-5 col-sm-12 col-xs-12' style='text-align:right; margin-top:5%; margin-bottom:5%' ng-show='isVacuum'>
+
+				<div class='col-md-6 col-sm-6 col-xs-10 nopadding' style='margin-bottom:10px;'>
+					<img src="img/BOTON-1_000.png" class='col-md-12 col-sm-12 col-xs-12 cursor' ng-click='toCompare(producto.name)'>
+				</div>
+
+				<div class='col-md-6 col-sm-6 col-xs-10 nopadding'>
+					<img src="img/BOTON-2_000.png" class='col-md-12 col-sm-12 col-xs-12 cursor' ng-click="showCartButtonn()">
+				</div>
 			</div>
 
 		</div>
-		<div class='col-md-7 col-sm-12 col-xs-12 nopadding' ng-show='isVacuum'>
-
-				
+		<div class='col-md-7 col-sm-12 col-xs-12 nopadding' ng-show='isVacuum'>		
 			<!-- texto del producto -->
 			<div class='justif col-md-12 col-sm-12 col-xs-12' ng-show='isVacuum'>
 				<p ng-bind-html='producto.parrafo'></p>
 				<ul class='list col-md-8'>
-					<li ng-repeat='x in amerivacs_includes'>{{x}}</li>
+					<li ng-repeat='x in producto.warranty'>{{x}}</li>
 				</ul>
 
 			</div>	
-
-
 		</div>
+
 		<!-- imagenes y botonres -->
 		<div class='col-md-5 col-sm-12 col-xs-12'>
 
@@ -68,11 +71,11 @@
 		<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
 			<span class='tab-name'>Specifications</span>
 		</div>
-		<div class='ren2 col-md-5 nopadding' ng-repeat='sp in producto.specs'>
-			<div class='col-md-6 nopadding'>
+		<div class='col-md-6 nopadding' style='margin:0%;' ng-repeat='sp in producto.specs'>
+			<div class='col-md-6 col-sm-6 col-xs-6 nopadding ren6'>
 				<span><strong>{{sp.spec}}</strong></span>
 			</div>
-			<div class='col-md-6 txt-r'>
+			<div class='col-md-5 col-sm-5 col-xs-5 txt-r ren6'>
 				<span>{{sp.val}}</span>
 			</div>					
 		</div>
@@ -80,14 +83,14 @@
 
 	<div class='col-md-12 tabla-p' style='display:table' ng-show="isVacuum">
 		<div class='col-md-12 nopadding'>
-			<div class='col-md-12 mb-2 nopadding'>
+			<div class='col-md-12 mb-2 nopadding' style='margin-top:1%; margin-bottom:2%;'>
 				<span class='tab-name'>Options</span>
 			</div>
-			<div class='col-md-12 ren2 nopadding'>
+			<div class='col-md-12 nopadding' style='margin-bottom:10px;'>
 				<div class='col-md-1 col-xs-12 nopadding'>
 					<span class='blue-c'>Option</span>
 				</div>			
-				<div class='col-md-5 col-xs-2 col-sm-6 col-xs-12 bord-l' style='margin-bottom:3%; text-align:center;'>
+				<div class='col-md-5 col-xs-2 col-sm-6 col-xs-12 bord-l' style='text-align:center;'>
 					<span class='blue-c'>Info</span>
 				</div>				
 				<div class='col-md-1 col-sm-2 col-xs-2 blue-c bord-l' ng-repeat='x in producto.options[0]'>
@@ -108,6 +111,10 @@
 		</div>
 	
 	</div>
+
+	<span class='col-md-11 col-sm-11 col-xs-11' style='margin-top:20px; text-align:right;'>N.A Not available</span>
+	<span class='col-md-11 col-sm-11 col-xs-11' style='text-align:right;'>* 220 Volt A.C. conversion included.</span>
+	<span class='col-md-11 col-sm-11 col-xs-11' style='text-align:right;'>** $15 Handling fee per Stand.</span>
 
 <!--
 <div class=='col-md-12 col-sm-12 col-xs-12' ng-show='isVacuum'>

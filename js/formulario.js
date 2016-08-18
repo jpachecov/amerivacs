@@ -58,6 +58,7 @@ function valida_datos(){
   hayErrores = false;
     verifica("nombre",nombre);
     verifica("correo",correo);
+    //verifica('correo2')
     verifica("mensaje",mensaje);
   if(!hayErrores){
       /*Si ya no hay errores en el formulario pero hay
