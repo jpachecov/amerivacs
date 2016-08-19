@@ -1524,16 +1524,23 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 
 	$scope.toProduct = function(name){
 
+
+
+
+		//$scope.loadPage('all-products');
+		
+		$location.path('/product');
+		setTimeout(function(){
 		$scope.getProduct(name);
 
+		},200)
 
-		$scope.loadPage('all-products');
-
+/*
 		setTimeout(function(){
 
 			$('#' + name).addClass('seleccion');	
 		}, 300);
-
+*/
 
 //		console.log('toProduct ' + name);
 	}
@@ -1593,6 +1600,9 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 	}
 
 	$scope.getProduct = function(name){
+		
+
+
 		console.log('getP ' + name);
 
 		if(name == 'PARTS'){
@@ -1819,11 +1829,13 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 			case 'all-products':
 				$scope.currentPage = 'producto.html';
 				$location.path('/product');
-/*
+
 				setTimeout(function(){
-					$('#AVN').addClass('seleccion');
-				}, 300);
-*/
+					$scope.getProduct('AVN');
+				}, 200);
+
+
+
 				break;
 			case 'compare':
 				$scope.currentPage = 'compare.html';
@@ -1833,6 +1845,7 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 
 
 				setTimeout(function(){
+					console.log('tiemout');
 					compara.SCOPE.getProduct_1('AVN');
 					compara.SCOPE.getProduct_2('AVS');
 				}, 200);
@@ -1845,11 +1858,17 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 
 		}
 	}
+
+
 	$scope.producto = {};
 	$scope.partes = [];
 	$scope.getProduct('AVN');
 	$scope.getCat('retractable nozzle');
 
+	setTimeout(function(){
+		$('.seleccion').removeClass('seleccion');
+		$('#AVN').addClass('seleccion');
+	}, 300);
 
 });
 
@@ -1860,6 +1879,8 @@ app.controller('compare', function($scope, $http){
 	compara.addScope($scope);
 
 	console.log('CONTROLADOR COMPARE');
+
+
 /*
 	$scope.productos = 
 	[
@@ -2836,8 +2857,6 @@ app.controller('compare', function($scope, $http){
 			'options':
 				[['20"'],[]]
 		},
-
-
 	];
 */	
 
@@ -4005,9 +4024,21 @@ app.controller('compare', function($scope, $http){
 				angular.element('.menucito2 #2' + compara.B).addClass('seleccion');
 	}
 
+	
+
+	$scope.init = function(A,B){
+
+
+	}
+
 
 	$scope.producto_1 = {};
 	$scope.producto_2 = {};
+
+/*
+	$scope.getProduct_1('AVN');
+	$scope.getProduct_2('AVS');
+*/
 
 
 
