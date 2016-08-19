@@ -1,41 +1,53 @@
     <div class='content'>
       <div class='form-container container nopadding'>
-
-        <img  class='col-md-12 nopadding' src="img/contact/image_000.png" alt="">
         
-        <div id='formu' class="form-contact col-md-6 col-sm-10 col-xs-10" style='background-color: rgba(255,255,255,.7)'>
+        <form name='form' class="form-contact col-md-6 col-sm-10 col-xs-10" style='background-color: rgba(255,255,255,.7);' ng-controller='contacto' novalidate>
         
           <span>CONTACT US </span>
-          <label class="cph10">Name:</label>
+          
+          <label >Name:</label>
+          <input type="text" name='name' class="box" ng-model='name' required>
+          <p ng-show='!form.name.$valid'>The name is required.</p>
 
-          <input name="nombre" type="text" id="nombre" class="form-control box">
-          <p id="error_nombre"></p>
-          <label class="cph11">E-mail:</label>
-          <input style='background-color: rgba(255,255,255,255)' name="correo" type="email" id="correo"  class="form-control box" value="">
+          <label >E-mail:</label>
+          <input style='background-color: rgba(255,255,255,255)' name="mail" type="email" class="box" ng-model='mail' required>
+          <p ng-show="!form.mail.$valid">Invalid mail</p>
+          
           <label class=''>Confirm e-mail</label>
-          
-          <input style='background-color: rgba(255,255,255,255)' name="correo" type="email" id="correo"  class="form-control box" value="">
-          <p id="error_correo"></p>
-          <label class="cph11">Telephone:</label>
-          <input style='background-color: rgba(255,255,255,255)' name="correo" type="email" id="correo"  class="form-control box" value="">
-          <p id="error_telefono"></p>
-          <label class="cph12">Message:</label>
+          <input style='background-color: rgba(255,255,255,255)' name="c-mail" type="email" class="box" ng-model='cmail' required match='mail'>
+          <p ng-show="form.cmail.$error.mismatch">The e-mail is not the same.</p>
 
-          <textarea style='background-color: rgba(255,255,255,1)' name="mensaje" cols="40" rows="5"  class="form-control box" id = "comentario"></textarea>
-          <p id="error_mensaje"></p>
+          <label >Telephone:</label>
+          <input style='background-color: rgba(255,255,255,255)' name="phone" class="box" ng-model='phone'>
+
+          <label class="cph12">Message:</label>
+          <textarea style='background-color: rgba(255,255,255,1)' name="message" cols="40" rows="5"  ng-model='message' class="box" required></textarea>
+          <p ng-show='!form.message.$valid'>Please tell us more!</p>
           
-          <button id="boton_form"  onclick="valida_datos();">
-            <p  class="cph13">SEND</p>
+          <button class="boton_form" type='submit' ng-click='sendmail()'>
+            <p style='color:white;'>SEND</p>
           </button>
+
+          <!--
+
+    <div class="column-one no-padding modal fade modal" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="text-align: center;">
+                        {{ titleModal }}
+                    </h4>
+                </div>
+                <div class="modal-body" ng-bind-html="bodyModal"></div>
+            </div>
         </div>
+    </div>
+
+
+        -->
+        
+        </form>
         
       </div>  
     </div>
-    <script>
-    if($(window).width() < 970){
-      $('#formu').css('position','relative');
-    } else {
-      $('#formu').css('position','absolute');
-    }
-
-    </script>

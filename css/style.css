@@ -240,18 +240,13 @@ font-family: 'menu', sans-serif;
 .form-container{
 	position: relative;
 	width: 100%;
+	background-image: url(../img/contact/image_000.png);
+	background-size: cover;
 }
 
-.form-container img{
-	display: block;
-	width: 113%;
 
-}
 .form-contact{
-	top: 0%;
-	left: 0%;
-	z-index: 5;
-	position: absolute;
+
 	/*width: 45%;*/
 	height: 100%;
 	margin-left: 5%;
@@ -263,6 +258,10 @@ font-family: 'menu', sans-serif;
 
 
 
+
+.form-contact p {
+	color: red;
+}
 /*Formulario*/
 .form-contact label, .form-contact input, .form-contact textarea{
 	display: block;
@@ -299,6 +298,7 @@ font-family: 'menu', sans-serif;
 
 .box{
 	border-radius: 0%;
+	border: none;
 }
 
 .form-contact > label{
@@ -310,10 +310,6 @@ font-family: 'menu', sans-serif;
 	height: 130px;
 }
 
-form-control{
-    border: none;
-    border-bottom: 1px solid #333;
-}
 button p {
   margin:0;
 }
@@ -333,23 +329,16 @@ textarea{
 	height: 95px !important;
 }
 
-#boton_form{
+.boton_form{
 	float: right;
 	font-size: 20px;
 	border-radius: 0%;
 	border: solid 1px;
 	background-color: #0A1346;
+	cursor: pointer;
 }
 
-#boton_form:hover{
-	float: right;
-	font-size: 20px;
-	border-radius: 0%;
-	border: solid 1px;
-	background-color: white;
-	color: black;
-	opacity: 0.8;
-}
+
 
 #color_text{
 
@@ -487,8 +476,9 @@ border-bottom: solid 1px black;
 }
 .ren6{
 	border-bottom: solid 1px black;
-	height: 28px;
+	height: 33px;
 }
+
 .pricing_table{
 	padding-left: 6%;
 	padding-right: 6%;
@@ -709,11 +699,11 @@ content: "• ";
 
 
 .animation {
-  -webkit-transition: 0.3s cubic-bezier(.17,.67,.83,.67) all;
-  -moz-transition: 0.3s cubic-bezier(.17,.67,.83,.67) all;
-  -ms-transition: 0.3s cubic-bezier(.17,.67,.83,.67) all;
-  -o-transition: 0.3s cubic-bezier(.17,.67,.83,.67) all;
-  transition: 0.3s cubic-bezier(.17,.67,.83,.67) all;
+  -webkit-transition: 0.2s cubic-bezier(.17,.67,.83,.67) all;
+  -moz-transition: 0.2s cubic-bezier(.17,.67,.83,.67) all;
+  -ms-transition: 0.2s cubic-bezier(.17,.67,.83,.67) all;
+  -o-transition: 0.2s cubic-bezier(.17,.67,.83,.67) all;
+  transition: 0.2s cubic-bezier(.17,.67,.83,.67) all;
 }
 
 
