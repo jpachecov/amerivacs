@@ -467,9 +467,10 @@ ABOUT US
 }
 
 .ren{
-	border-top: solid 1px black;
-	height: 45px;
+	height: 40px;
+	border-bottom: solid 1px gray;
 }
+
 .ren2{
 border-bottom: solid 1px black;	
 	margin-right: 5%;
@@ -1445,6 +1446,7 @@ font-size: 1.2em;
 .fijo{
 	height: 600px;
 	overflow-y: scroll;
+	border-bottom: solid 1px gray;
 }
 
 .botones:hover{
@@ -1475,8 +1477,10 @@ font-size: 1.2em;
 }
 
 .carrito-boton{
-	padding-right: 0%;
-	padding-left: 8%;
+	padding-left: 4%;
+	padding-right: 5%;
+	padding-top: 0%;
+	padding-bottom: 0%;
 }
 
 .menu-chiqui{

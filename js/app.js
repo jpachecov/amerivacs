@@ -3911,9 +3911,8 @@ app.controller('compare', function($scope, $http){
 
 				compara.A = name;
 
-
-				$('.menucito1 .seleccion').removeClass('seleccion');
-				$('.menucito1 #1' + compara.A).addClass('seleccion');
+				angular.element('.menucito1 .seleccion').removeClass('seleccion');
+				angular.element('.menucito1 #1' + compara.A).addClass('seleccion');
 		
 	}
 
@@ -3994,11 +3993,16 @@ app.controller('compare', function($scope, $http){
 					}
 				}
 				$scope.producto_2['models'] = nueva;
-				
+				/*
+				nueva.forEach(function(e){
+					if(JSON.stringify(obj1) == JSON.stringify({})){
+						// cambio css del elemento con clase .ren
+					}
+				})*/
 
 
-				$('.menucito2 .seleccion').removeClass('seleccion');
-				$('.menucito2 #2' + compara.B).addClass('seleccion');
+				angular.element('.menucito2 .seleccion').removeClass('seleccion');
+				angular.element('.menucito2 #2' + compara.B).addClass('seleccion');
 	}
 
 
