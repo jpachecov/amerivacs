@@ -7,7 +7,7 @@
 	<div style='height:20px;' class='col-md-3 col-sm-3 col-xs-12'></div>
 
 	<div class='col-md-6 col-sm-6 col-xs-12 box-container'>
-		<div class='col-md-12 col-sm-12 col-xs-12 cursor box-sel efe-sel'>
+		<div class='col-md-12 col-sm-12 col-xs-12 cursor box-sel efe-sel' ng-click='begin()'>
 			<span class='col-md-12 col-sm-12 col-xs-12 blue-c bot-1'>VACUUM SELECTOR</span>
 			<span class='col-md-12 col-sm-12 col-xs-12 blue-c bot-2'>CLICK TO START</span>			
 		</div>
@@ -34,19 +34,19 @@
 			<div class='col-md-2' style='height:20px'>
 				
 			</div>
-			<div class='little-box cursor col-md-2 efe-sel-2'>
-				<span class='blue-c col-md-12'>UP TO 20"</span>
+			<div class='little-box cursor col-md-2 efe-sel-2' ng-click='addAns(0)'>
+				<span class='blue-c col-md-12'>LESS THAN 20"</span>
 			</div>
 			<div class='col-md-1' style='height:20px'>
 				
 			</div>
-			<div class='little-box cursor col-md-2 efe-sel-2'>
+			<div class='little-box cursor col-md-2 efe-sel-2' ng-click='addAns(1)'>
 				<span class='blue-c col-md-12'>FROM 20" TO 25"</span>
 			</div>
 			<div class='col-md-1' style='height:20px'>
 				
 			</div>
-			<div class='little-box cursor col-md-2 efe-sel-2'>
+			<div class='little-box cursor col-md-2 efe-sel-2' ng-click='addAns(2)'>
 				<span class='blue-c col-md-12'>FROM 25" TO 30"</span>
 			</div>
 
@@ -56,12 +56,12 @@
 
 	<div class='row rw-1'>
 		<div class='col-md-5 col-cen'>
-			<div class='little-box cursor col-md-4 efe-sel-2' style='margin-left:5%'>
+			<div class='little-box cursor col-md-4 efe-sel-2' style='margin-left:5%' ng-click='addAns(3)'>
 				<span class='blue-c col-md-12'>FROM 30" TO 35"</span>
 			</div>
 			<div class='col-md-4' style='height:20px; margin-left:-4%; margin-right:-5%'></div>
 
-			<div class='little-box cursor col-md-4 efe-sel-2'>
+			<div class='little-box cursor col-md-4 efe-sel-2' ng-click='addAns(4)'>
 				<span class='blue-c col-md-12'>FROM 35" TO 50"</span>
 			</div>
 
@@ -91,7 +91,7 @@
 	<!-- Contenedor Pregunta 1 -->
 	<div class='col-md-6'>
 		<div class='row'>
-			<div class='ans ans-yes col-md-6 col-cen cursor efe-sel-3'>
+			<div class='ans ans-yes col-md-6 col-cen cursor efe-sel-3' ng-click='addAns("yes")'>
 				<span>Yes, I do need the gas purge feature</span>
 			</div>			
 		</div>
@@ -100,7 +100,7 @@
 	<!-- Contenedor Pregunta 2 -->
 	<div class='col-md-6'>
 		<div class='row'>
-			<div class='ans ans-no col-md-6 col-cen cursor efe-sel-3'>
+			<div class='ans ans-no col-md-6 col-cen cursor efe-sel-3' ng-click='addAns("no")'>
 				<span>No, just vacuum and seal will do</span>
 			</div>		
 			
@@ -112,78 +112,207 @@
 </div>
 
 
+
+
+
+<!-- PANTALLA 4 DEL SELECTOR -->
 <div class='selector-4 col-md-12 col-sm-12 col-xs-12' style='display:none'>
+
+	<span class='blue-c question scale'>Do you have a compressed air supply with 6CFM @ 100psi (110 preferred) of unrestricted air flow?</span>
 	
-	<!-- TEXTO INDICANDO LA SELECCION -->
-	<div class='selected-vac col-md-12 col-sm-12 col-xs-12'>
+	<div class='row'>
+		<img class='col-md-1 col-cen scale' src="img/selector/icono_001.png" style="padding:3%">
+	</div>
+
+	<div class='col-md-12 espacio-arriba'></div>
+
+	<!-- Contenedor Pregunta 1 -->
+	<div class='col-md-6'>
 		<div class='row'>
-			<span class='col-md-10 col-cen blue-c esp-a'>The selected vacuum sealer will be the</span>
-			<span class='col-md-10 col-cen blue-c selected-v'>AVN-20</span>		
+			<div class='ans ans-yes col-md-6 col-cen cursor efe-sel-3' ng-click='addAns("yes")'>
+				<span>Yes</span>
+			</div>			
 		</div>
 	</div>
 
-	<!-- PARA MOSTRAR LA INFROMACION DE LA SELECCION -->
-	<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
+	<!-- Contenedor Pregunta 2 -->
+	<div class='col-md-6'>
+		<div class='row'>
+			<div class='ans ans-no col-md-6 col-cen cursor efe-sel-3' ng-click='addAns("no")'>
+				<span>No</span>
+			</div>		
+			
+		</div>
+	</div>
+	
+	<div class='col-md-12 espacio-abajo'></div>
+
+</div>
+
+
+<!-- PANTALLA 5 DEL SELECTOR -->
+<div class='selector-5 col-md-12 col-sm-12 col-xs-12' style='display:none'>
+
+	<span class='blue-c question scale'>Can you get an air compressor with a tank of at least 20 gallons?</span>
+	
+	<div class='row'>
+		<img class='col-md-1 col-cen scale' src="img/selector/icono_001.png" style="padding:3%">
+	</div>
+
+	<div class='col-md-12 espacio-arriba'></div>
+
+	<!-- Contenedor Pregunta 1 -->
+	<div class='col-md-6'>
+		<div class='row'>
+			<div class='ans ans-yes col-md-6 col-cen cursor efe-sel-3' ng-click='addAns("yes")'>
+				<span>Yes</span>
+			</div>			
+		</div>
+	</div>
+
+	<!-- Contenedor Pregunta 2 -->
+	<div class='col-md-6'>
+		<div class='row'>
+			<div class='ans ans-no col-md-6 col-cen cursor efe-sel-3' ng-click='addAns("no")'>
+				<span>No</span>
+			</div>		
+			
+		</div>
+	</div>
+	
+	<div class='col-md-12 espacio-abajo'></div>
+
+</div>
+	
+
+
+	<div class='final' style='display:none'>
+
+
+		<div class="selected-vac col-md-12 col-sm-12 col-xs-12">
+			<div class="row">
+				<span class="col-md-10 col-cen blue-c esp-a">The selected vacuum sealer will be the</span>
+				<span class="col-md-10 col-cen blue-c selected-v">{{seleccionado.id}}</span>	
+				<button ng-click='reset()' style='margin-top:2%;'>RESET</button>	
+			</div>
+		</div>
+
+
+
 		<div class='content container col-md-12' style='padding-left:5%; margin-top:4%; padding-bottom:5%'>
 			<div class='col-md-12 col-sm-12 nopadding'>
 				<div class='col-md-12 col-sm-12 col-xs-12'>
 					<div class='col-md-7 col-sm-9 col-xs-12 nopadding'>
-						<div class='prod_name col-md-5'>
+						<div class='prod_name'>
 							<span>{{producto.name}}</span>
 						</div>
 						<div class='prod_des col-md-6'>
 							<span>{{producto.subtitulo}}</span>
 						</div>				
 					</div>
-					<div class='col-md-5 col-sm-6 col-xs-12' style='text-align:right; margin-top:2%; margin-bottom:6%'>
-						<div class='boton-compara '>
-							<span>Compare with other products</span>
+<!--
+					<div class='col-md-5 col-sm-12 col-xs-12' style='text-align:right; margin-top:5%; margin-bottom:5%' >
+
+						<div class='col-md-6 col-sm-6 col-xs-10 nopadding' style='margin-bottom:10px;'>
+							<img src="img/BOTON-1_000.png" class='col-md-12 col-sm-12 col-xs-12 cursor' ng-click='toCompare(producto.name)'>
 						</div>
-						<div class='boton-carrito'>
-							<span>Add to Shopping Cart</span>
-						</div>				
-					</div>
+
+						<div class='col-md-6 col-sm-6 col-xs-10 nopadding'>
+							<img src="img/BOTON-2_000.png" class='col-md-12 col-sm-12 col-xs-12 cursor' ng-click="showCartButtonn()">
+						</div>
+					</div> -->
 				</div>
-				<div class='col-md-7 col-sm-9 nopadding'>
-
-
-						
+				<div class='col-md-7 col-sm-12 col-xs-12 nopadding'>		
 					<!-- texto del producto -->
-					<div class='justif col-md-12'>
+					<div class='justif col-md-12 col-sm-12 col-xs-12'>
 						<p ng-bind-html='producto.parrafo'></p>
-						<span>All AmeriVacS <strong>AVN Vacuum Sealers</strong> include:</span>
 						<ul class='list col-md-8'>
-							<li ng-repeat='x in amerivacs_includes'>{{x}}</li>
+							<li ng-repeat='x in producto.warranty'>{{x}}</li>
 						</ul>
 
 					</div>	
-					<!-- PRICING TABLE -->
-					<div class='pricing_table col-md-11 tabla-p'>
-						<div class='col-md-12 nopadding mb-1'>
-							<span class='tab-name'>Pricing</span>
-						</div>
-						<div class='col-md-12 nopadding'>
-							<span class='col-md-4 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Model</span>
-							<span class='col-md-5 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Seal size</span>
-							<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Price</span>
-						</div>
-						<div class='col-md-12 col-sm-12 col-xs-12 ren nopadding' ng-repeat='x in producto.models'>
-							<span class='col-md-4 col-sm-4 col-xs-3 nopadding'><strong>{{x.id}}</strong></span>
-							<span class='col-md-5 col-sm-4 col-xs-5 nopadding'>{{x.size}}</span>
-							<span class='col-md-2 col-sm-4 col-xs-3 nopadding'>{{x.price}}</span>
-						</div>
-					</div>
 				</div>
+
 				<!-- imagenes y botonres -->
 				<div class='col-md-5 col-sm-12 col-xs-12'>
 
+					<!-- PRICING TABLE -->
+					<div class='pricing_table col-md-12 col-sm-12 col-xs-12 tabla-p'>
+						<div class='col-md-12 nopadding mb-1'>
+							<span class='tab-name'>Pricing</span>
+						</div>
+						<div class='col-md-12 nopadding rengl'>
+							<span class='col-md-3 col-sm-3 col-xs-4 nopadding blue-c mb-2'>Model</span>
+							<span class='col-md-3 col-sm-3 col-xs-4 nopadding blue-c mb-2'>Seal size</span>
+							<span class='col-md-3 col-sm-3 col-xs-4 nopadding blue-c mb-2'>Price</span>
+						</div>
+						<div class='col-md-12 col-sm-12 col-xs-12 ren rengl nopadding' ng-repeat='x in producto.models'>
+							<span class='col-md-3 col-sm-3 col-xs-4 nopadding'><strong>{{x.id}}</strong></span>
+							<span class='col-md-3 col-sm-3 col-xs-4 nopadding'>{{x.size}}</span>
+							<span class='col-md-2 col-sm-2 col-xs-4 nopadding'>{{x.price}}</span>
+					
+						</div>
+					</div>
+
+					<img src="{{producto.src}}" style='margin-top:15%;' class='col-md-12 col-sm-12 col-xs-12' >
+				</div>
+				
+			</div>
+
+			<!--  TABLE SPECIFICATIONS -->
+			<div class='col-md-12 col-xs-12 col-sm-12 tabla-p' >
+				<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
+					<span class='tab-name'>Specifications</span>
+				</div>
+				<div class='col-md-6 nopadding' style='margin:0%;' ng-repeat='sp in producto.specs'>
+					<div class='col-md-6 col-sm-6 col-xs-12 nopadding ren6'>
+						<span><strong>{{sp.spec}}</strong></span>
+					</div>
+					<div class='col-md-5 col-sm-5 col-xs-12 txt-r ren6'>
+						<span>{{sp.val}}</span>
+					</div>					
 				</div>
 			</div>
-		</div>
+
+			<div class='col-md-12 tabla-p' style='display:table' >
+				<div class='col-md-12 nopadding'>
+					<div class='col-md-12 mb-2 nopadding' style='margin-top:1%; margin-bottom:2%;'>
+						<span class='tab-name'>Options</span>
+					</div>
+					<div class='col-md-12 nopadding' style='margin-bottom:10px;'>
+						<div class='col-md-1 col-xs-4 nopadding'>
+							<span class='blue-c col-xs-12'>Option</span>
+						</div>			
+						<div class='col-md-5 col-sm-6 col-xs-8 bord-l' style='text-align:center;'>
+							<span class='blue-c'>Info</span>
+						</div>				
+						<div class='col-md-1 col-sm-2 col-xs-2 blue-c bord-l' ng-repeat='x in producto.options[0]'>
+							<span class=''>{{x}}</span>
+						</div>
+					</div>
+				</div>
+				<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t rengl' ng-repeat='op in producto.options[1]'>
+					<div class='col-md-2 col-sm-4 col-xs-3 nopadding'>
+						<span><strong>{{op.op}}</strong></span>
+					</div>
+					<div class='col-md-4 col-sm-4 col-xs-9 nopadding'>
+						<span>{{op.des}}</span>
+					</div>
+					<div class='col-md-1 col-xs-2' ng-repeat='y in op.prices'>
+						<span>{{y}}</span>
+					</div>			
+				</div>
+			
+			</div>
+
+			<span class='col-md-11 col-sm-11 col-xs-11' style='margin-top:20px; text-align:right;'>N.A Not available</span>
+			<span class='col-md-11 col-sm-11 col-xs-11' style='text-align:right;'>* 220 Volt A.C. conversion included.</span>
+			<span class='col-md-11 col-sm-11 col-xs-11' style='text-align:right;'>** $15 Handling fee per Stand.</span>
+
+		</div>	
+
 	</div>
 
-</div>
 
-	
 </div>
 

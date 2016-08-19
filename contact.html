@@ -14,8 +14,8 @@
           <p ng-show="!form.mail.$valid">Invalid mail</p>
           
           <label class=''>Confirm e-mail</label>
-          <input style='background-color: rgba(255,255,255,255)' name="c-mail" type="email" class="box" ng-model='cmail' required match='mail'>
-          <p ng-show="form.cmail.$error.mismatch">The e-mail is not the same.</p>
+          <input style='background-color: rgba(255,255,255,255)' name="c-mail" type="email" class="box" ng-model='cmail' required>
+          <p ng-show="errorConfirm">The e-mail is not the same.</p>
 
           <label >Telephone:</label>
           <input style='background-color: rgba(255,255,255,255)' name="phone" class="box" ng-model='phone'>

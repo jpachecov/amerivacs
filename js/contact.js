@@ -20,8 +20,16 @@ app.controller('contacto', function($scope,$sce, $http, $location) {
 	$scope.phone = '';
 	$scope.message  = '';
 	$scope.buttonstate = 'disabled';
+	$scope.errorConfirm = false;
 	$scope.sendmail = function(){
-
+		console.log('JEEEAN');
+		if($scope.mail === $scope.cmail){
+			console.log('soon iguales')
+			$scope.errorConfirm = false;
+		} else {
+			$scope.errorConfirm = true;
+			console.log('son diferentes');
+		}
 		console.log('sendmail');
 
 	}
