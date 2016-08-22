@@ -1,5 +1,8 @@
 <div class='col-md-12 col-sm-12 col-xs-12 carrito' ng-show='showingC' style='position:relative; top:700px; left:0%; height:400px; overflow-y:scroll; padding:0%'>
 
+	<!-- BOTON OCULTAR CARRITO -->
+	<a class='col-md-1 col-sm-1 col-xs-1 cursor' style='position:absolute; z-index:10;left:0%;' ng-click='cart()'>hide</a>
+
 	<div class='col-md-12 col-sm-12 col-xs-12'>
 
 		<h2 class='col-md-12 col-sm-12 col-xs-12 font1' style='font-size:3em;'>Your shopping cart</h2>
@@ -82,13 +85,12 @@
 		</div>
 
 		<!-- BOTON -->
-		<div class='col-md-6 col-sm-6 col-xs-12'>
+		<div class='col-md-2 col-sm-3 col-xs-5'>
 			<button class='col-md-12 col-sm-12 col-xs-12' ng-click="handler.validateForm()">Send information</button>
 		</div>
 		<!-- INFO DESCRIPTIVA -->
 		<p class='col-md-11 col-sm-11 col-xs-11'>We will contact you as soon as posible!</p>
-		<!-- BOTON OCULTAR CARRITO -->
-		<a class='col-md-1 col-sm-1 col-xs-1 cursor' ng-click='cart()'>hide</a>
+
 
 	</div>
 
