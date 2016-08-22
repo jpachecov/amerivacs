@@ -1481,10 +1481,13 @@ font-size: 1.2em;
 
 .boxclose{
     cursor:pointer;
-    background-color: #da262d;
+/*    background-color: #da262d;*/
+    background-color: #ed1248;
     margin: 0%;
 }
-
+.red1{
+	color: #ed1248;
+}
 .carrito-boton{
 	padding-left: 4%;
 	padding-right: 5%;
