@@ -1221,6 +1221,14 @@ font-size: 1.2em;
 	background-image: url(../img/selector/background_002.png);
 	background-size: cover;
 }
+.selector-4{
+	background-image: url(../img/selector/background_002.png);
+	background-size: cover;
+}
+.selector-5{
+	background-image: url(../img/selector/background_002.png);
+	background-size: cover;
+}
 
 .box-sel{
 	border: solid 5px #243c74;
