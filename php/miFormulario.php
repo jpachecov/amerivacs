@@ -65,12 +65,40 @@ function validateEmail($email){
 */
 
 
-$to = "la.parte.imaginaria@gmail.com";
-$subject = "My subject";
-$txt = "Hello world!";
-$headers = "From: webmaster@example.com" . "\r\n" .
-"CC: somebodyelse@example.com";
+$postdata = file_get_contents("php://input");
+$data = json_decode($postdata);
+$name = $data->name;
+$mail = $data->mail;
+$phone = $data->phone;
+$message = $data->message;
 
-mail($to,$subject,$txt,$headers);
+
+/*
+$body = "<html><body>";
+$body.= '<h2 style="color:blue;font-family: sans-serif"> Hello Mr. Tadlock! These are the message details: </h2>';
+$body.= '<p style="font-family: sans-serif"><span style="font-family: sans-serif">Name:</span>'. $name .'</p>';
+$body.= '<p style="font-family: sans-serif"><span style="font-family: sans-serif">Phone:</span>'. $phone .'</p>';
+$body.= '<p style="font-family: sans-serif"><span style="font-family: sans-serif">Email:</span>'. $mail .'</p>';
+$body.= '<p style="font-family: sans-serif"><span style="font-family: sans-serif">Message:</span>'. $message .'</p>';
+$body.= "</body></html>"
+*/
+
+$to = "la.parte.imaginaria@gmail.com";
+$subject = "New message from website.";
+$txt ="Hello world! This is a test mail. \n";
+$txt.="Name: ".$name . "\n";
+$txt.='Mail: '.  $mail . "\n";
+$txt.='Phone: '. $phone . "\n";
+$txt.='Message'. $message . "\n";
+$headers = "From: contact@amerivacs.com";
+
+if(mail($to,$subject,$txt,$headers)){
+    echo '0';
+} else {
+    echo '-1';
+}
+
+
+//echo $name . " \n " . $mail . " \n " . $phone . " \n " . $message;
 
 ?>

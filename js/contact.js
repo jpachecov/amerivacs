@@ -6,14 +6,13 @@ app.directive('match', function($parse) {
       scope.$watch(function() {        
         return $parse(attrs.match)(scope) === ctrl.$modelValue;
       }, function(currentValue) {
-        ctrl.$setValidity('mismatch', currentValue);
+ 		ctrl.$setValidity('mismatch', currentValue);
       });
     }
   };
 });
 
 app.controller('contacto', function($scope,$sce, $http, $location) {
-	console.log('Contcto');
 	$scope.name = '';
 	$scope.mail = '';
 	$scope.cmail = '';
@@ -22,15 +21,44 @@ app.controller('contacto', function($scope,$sce, $http, $location) {
 	$scope.buttonstate = 'disabled';
 	$scope.errorConfirm = false;
 	$scope.sendmail = function(){
-		console.log('JEEEAN');
 		if($scope.mail === $scope.cmail){
-			console.log('soon iguales')
 			$scope.errorConfirm = false;
+
+
+
+			var request = $http({
+		    method: "POST",
+		    url: "/NEW/php/miFormulario.php",
+		    data: {
+		    	'name':$scope.name,
+		    	'mail':$scope.mail,
+		    	'phone':$scope.phone,
+		    	'message':$scope.message,
+		    },
+			});
+
+
+			request.success(function(data){
+				console.log(data);
+			});
+
+			$scope.resetfields();
+			alert('Thank you!');
+
 		} else {
 			$scope.errorConfirm = true;
-			console.log('son diferentes');
 		}
-		console.log('sendmail');
+
+	}
+	$scope.resetfields = function(){
+
+		$scope.name = '';
+		$scope.mail = '';
+		$scope.cmail = '';
+		$scope.phone = '';
+		$scope.message  = '';
+		$scope.buttonstate = 'disabled';
+		$scope.errorConfirm = false;
 
 	}
 	$scope.changeButton = function(){
