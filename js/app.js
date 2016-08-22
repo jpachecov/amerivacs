@@ -213,6 +213,519 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 
 	$scope.searchText;
 	$scope.searchText_2;
+
+	$scope.OPTIONS = [
+		{
+			'name':'BAS-',
+			'desc':'Upper and Lower Heating Elements',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$275',
+				},
+				{
+					'size': '25"',
+					'price': '$375',
+				},
+				{
+					'size': '30"',
+					'price': '*$700',
+				},
+				{
+					'size': '35"',
+					'price': '*$900',
+				}
+
+			],
+		},
+		{
+			'name':'SS-',
+			'desc':'Stainless Steel Upgrade',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$500',
+				},
+				{
+					'size': '25"',
+					'price': '$550',
+				},
+				{
+					'size': '30"',
+					'price': '$600',
+				},
+				{
+					'size': '35"',
+					'price': '$650',
+				},
+				{
+					'size': '50"',
+					'price': '$800',
+				},
+			],
+		},
+		{
+			'name':'CE',
+			'desc':'CE certification*',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$700',
+				},
+				{
+					'size': '25"',
+					'price': '$750',
+				},
+				{
+					'size': '30"',
+					'price': '$800',
+				},
+				{
+					'size': '35"',
+					'price': '$850',
+				},
+				{
+					'size': '50"',
+					'price': '$1,000',
+				},
+			],
+		},
+		{
+			'name':'VF',
+			'desc':'Vacuum Filter',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$100',
+				},
+				{
+					'size': '25"',
+					'price': '$100',
+				},
+				{
+					'size': '30"',
+					'price': '$100',
+				},
+				{
+					'size': '35"',
+					'price': '$100',
+				},
+				{
+					'size': '50"',
+					'price': '$100',
+				},
+			],
+		},
+		{
+			'name':'VR',
+			'desc':'Vacuum Regulator',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$50',
+				},
+				{
+					'size': '25"',
+					'price': '$50',
+				},
+				{
+					'size': '30"',
+					'price': '$50',
+				},
+				{
+					'size': '35"',
+					'price': '$50',
+				},
+				{
+					'size': '50"',
+					'price': '$50',
+				},			
+			],
+		},
+		{
+			'name':'220PX',
+			'desc':'220 Volt A.C. 50-60 Hz conversion',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$350',
+				},
+				{
+					'size': '25"',
+					'price': '$350',
+				},
+				{
+					'size': '30"',
+					'price': '$350',
+				},
+				{
+					'size': '35"',
+					'price': '$350',
+				},
+				{
+					'size': '50"',
+					'price': '$350',
+				},
+			],
+		},
+		{
+			'name':'DN',
+			'desc':'Dual Nozzle (w/dual vac pumps)(AVS-AVN only)',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$765',
+				},
+				{
+					'size': '25"',
+					'price': '$765',
+				},
+				{
+					'size': '30"',
+					'price': '$765',
+				},
+				{
+					'size': '35"',
+					'price': '$765',
+				},
+			],
+		},
+		{
+			'name':'TRAY',
+			'desc':'Work Tray – 20” x 12"',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$75',
+				},
+				{
+					'size': '25"',
+					'price': '$75',
+				},
+				{
+					'size': '30"',
+					'price': '$75',
+				},
+				{
+					'size': '35"',
+					'price': '$75',
+				},
+			],
+		},
+		{
+			'name':'EC',
+			'desc':'Additional Vacuum or Gas cycle (AVN only)',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$250',
+				},
+				{
+					'size': '25"',
+					'price': '$250',
+				},
+				{
+					'size': '30"',
+					'price': '$250',
+				},
+				{
+					'size': '35"',
+					'price': '$250',
+				},
+				{
+					'size': '50"',
+					'price': '$250',
+				},
+			],
+		},
+		{
+			'name':'LPC',
+			'desc':'Low-pressure Bar Close',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$250',
+				},
+				{
+					'size': '25"',
+					'price': '$250',
+				},
+				{
+					'size': '30"',
+					'price': '$250',
+				},
+				{
+					'size': '35"',
+					'price': '$250',
+				},
+				{
+					'size': '50"',
+					'price': 'Included',
+				},
+			],
+		},
+		{
+			'name':'AF',
+			'desc':'Coalescing Air Filter (not for CAV)',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$195',
+				},
+				{
+					'size': '25"',
+					'price': '$195',
+				},
+				{
+					'size': '30"',
+					'price': '$195',
+				},
+				{
+					'size': '35"',
+					'price': '$195',
+				},
+				{
+					'size': '50"',
+					'price': '$195',
+				},
+			],
+		},
+		{
+			'name':'TC',
+			'desc':'Digital Temperature Control',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$1,995',
+				},
+				{
+					'size': '25"',
+					'price': '$1,995',
+				},
+				{
+					'size': '30"',
+					'price': '$1,995',
+				},
+				{
+					'size': '35"',
+					'price': '$1,995',
+				},
+				{
+					'size': '50"',
+					'price': '$1,995',
+				},
+			],
+		},
+		{
+			'name':'PE',
+			'desc':'Ported Exhaust**',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$220',
+				},
+				{
+					'size': '25"',
+					'price': '$220',
+				},
+				{
+					'size': '30"',
+					'price': '$220',
+				},
+				{
+					'size': '35"',
+					'price': '$220',
+				},
+				{
+					'size': '50"',
+					'price': '$220',
+				},
+			],
+		},
+		{
+			'name':'STAND',
+			'desc':'Multi-Position Stand (AVS and up to AVN-35) **',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$985',
+				},
+				{
+					'size': '25"',
+					'price': '$985',
+				},
+				{
+					'size': '30"',
+					'price': '$985',
+				},
+				{
+					'size': '35"',
+					'price': '$985',
+				},
+				{
+					'size': '50"',
+					'price': 'Not available',
+				},
+			],
+		}
+	];
+
+	$scope.PARTS = [
+		{
+			'name':'E-',
+			'desc':'1/4" Sealing Element',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$19',
+				},
+				{
+					'size': '25"',
+					'price': '$22',
+				},
+				{
+					'size': '30"',
+					'price': '$26',
+				},
+				{
+					'size': '35"',
+					'price': '$31',
+				},
+				{
+					'size': '50"',
+					'price': '$39',
+				},
+			],
+		},
+		{
+			'name':'T-',
+			'desc':'Teflon Set',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$15',
+				},
+				{
+					'size': '25"',
+					'price': '$18',
+				},
+				{
+					'size': '30"',
+					'price': '$21',
+				},
+				{
+					'size': '35"',
+					'price': '$24',
+				},
+				{
+					'size': '50"',
+					'price': '$31',
+				},
+			],
+		},
+		{
+			'name':'PBK-',
+			'desc':'Pressure Bar Kit',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$18',
+				},
+				{
+					'size': '25"',
+					'price': '$21',
+				},
+				{
+					'size': '30"',
+					'price': '$24',
+				},
+				{
+					'size': '35"',
+					'price': '$28',
+				},
+				{
+					'size': '50"',
+					'price': '$36',
+				},
+			],
+		},
+		{
+			'name':'SBK-',
+			'desc':'Seal Bar Kit (All of the above parts)',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$47',
+				},
+				{
+					'size': '25"',
+					'price': '$55',
+				},
+				{
+					'size': '30"',
+					'price': '$65',
+				},
+				{
+					'size': '35"',
+					'price': '$75',
+				},
+				{
+					'size': '50"',
+					'price': '$89',
+				},
+			],
+		},
+		{
+			'name':'GR-',
+			'desc':'AVN Gray Rubber Set',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$10',
+				},
+				{
+					'size': '25"',
+					'price': '$12',
+				},
+				{
+					'size': '30"',
+					'price': '$14',
+				},
+				{
+					'size': '35"',
+					'price': '$16',
+				},
+				{
+					'size': '50"',
+					'price': '$20',
+				},
+			],
+		},
+		{
+			'name':'SEAL BAR',
+			'desc':'Additional Seal Bar',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$275',
+				},
+			],
+		},
+		{
+			'name':'VSS',
+			'desc':'Vacuum Selector Switch, per position',
+			'sizes':[
+				{
+					'size': '20"',
+					'price': '$145',
+				},
+			],
+		},
+
+
+	];
+
+
 	$scope.productos = 
 	[
 		{
@@ -1613,7 +2126,7 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 
 			// Obtemeos las partes
 			$scope.producto = {'name':'PARTS','subtitulo':'Replacement Parts'};
-
+/*
 			var request = $http({
 		    method: "POST",
 		    url: "/NEW/php/parts.php",
@@ -1632,6 +2145,9 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 				$scope.partes = data['modelos'];
 
 			});
+*/
+
+
 		} else {
 
 		if(name == 'OPTIONS'){
@@ -1644,6 +2160,8 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 			// Obtemeos las partes
 			$scope.producto = {'name':'OPTIONS','subtitulo':'Accesories for vacuum sealers'};//= $scope.parts;
 
+
+/*
 			var request = $http({
 		    method: "POST",
 		    url: "/NEW/php/options.php",
@@ -1660,7 +2178,7 @@ app.controller('controlador', function($scope,$sce, $http, $location) {
 				$scope.opciones = data['modelos'];
 
 			});
-
+*/
 
 		} else {
 
