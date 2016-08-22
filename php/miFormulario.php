@@ -1,4 +1,5 @@
 <?php
+/*
 $para      = 'la.parte.imaginaria@gmail.com';
 $titulo    = '[Mensaje de pagina web]';
 $mensaje   = $_POST['mensaje'];
@@ -61,5 +62,15 @@ function validateEmail($email){
     // SI rellenado, SI email valido
     return true;
 }
+*/
+
+
+$to = "la.parte.imaginaria@gmail.com";
+$subject = "My subject";
+$txt = "Hello world!";
+$headers = "From: webmaster@example.com" . "\r\n" .
+"CC: somebodyelse@example.com";
+
+mail($to,$subject,$txt,$headers);
 
 ?>
