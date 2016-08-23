@@ -622,7 +622,9 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 			$scope.isOptions = false;
 
 			// Obtemeos las partes
+			$scope.producto = {};
 			$scope.producto = {'name':'PARTS','subtitulo':'Replacement Parts'};
+
 /*
 			var request = $http({
 		    method: "POST",
@@ -655,7 +657,10 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 			$scope.isOptions = true;
 
 			// Obtemeos las partes
+			$scope.producto = {};
 			$scope.producto = {'name':'OPTIONS','subtitulo':'Accesories for vacuum sealers'};//= $scope.parts;
+
+			
 
 
 /*
@@ -681,14 +686,15 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 
 			for(var i = 0; i < $scope.productos.length; i++){
 				if($scope.productos[i]['name'] == name){
-
+					$scope.producto = {};
 					$scope.producto = $scope.productos[i];
 					//$scope.producto['specs'] = $scope.productos[i]['specs'];
 				}
 			}
 
 			$scope.producto['src'] = 'img/products/imagen_'+name+'_000.png';
-			
+			console.log($scope.producto);
+
 			$scope.isVacuum = true;
 			$scope.isOptions = false;
 			$scope.isParts = false;
