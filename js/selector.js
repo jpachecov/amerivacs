@@ -93,6 +93,7 @@ app.controller('selector-controller', function($scope,$location, $rootScope){
 	$scope.begin = function(){
 		angular.element('.selector-1').hide();
 		angular.element('.selector-2').show();
+		angular.element('.selector-2').addClass('actual');
 
 	}
 	$scope.reset = function(){
@@ -107,6 +108,7 @@ app.controller('selector-controller', function($scope,$location, $rootScope){
 
 		if($scope.ANS.length == 1){
 			angular.element('.selector-2').hide();
+			angular.element('.selector-2').removeClass('actual');
 			angular.element('.selector-3').show();
 			angular.element('.selector-3').addClass('actual');
 			return;	
