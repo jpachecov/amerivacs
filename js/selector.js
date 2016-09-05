@@ -97,8 +97,10 @@ app.controller('selector-controller', function($scope,$location, $rootScope){
 	}
 	$scope.reset = function(){
 		$scope.ANS = [];
-		angular.element('.final').hide();
+		angular.element('.actual').hide();
 		angular.element('.selector-1').show();
+		angular.element('.actual').removeClass('actual');
+		console.log('reset');
 	};
 	$scope.addAns = function(ans){
 		$scope.ANS.push(ans);
@@ -106,21 +108,28 @@ app.controller('selector-controller', function($scope,$location, $rootScope){
 		if($scope.ANS.length == 1){
 			angular.element('.selector-2').hide();
 			angular.element('.selector-3').show();
+			angular.element('.selector-3').addClass('actual');
 			return;	
 		}
 		if($scope.ANS.length == 2 && $scope.ANS[0] < 3){
 			angular.element('.selector-3').hide();
+			angular.element('.selector-3').removeClass('actual');
 			angular.element('.selector-4').show();
+			angular.element('.selector-4').addClass('actual');
 			return;	
 		}
 		if($scope.ANS.length == 3 && $scope.ANS[0] < 3){
 			if($scope.ANS[2] == 'no'){
 				angular.element('.selector-4').hide();
+				angular.element('.selector-4').removeClass('actual');
 				angular.element('.selector-5').show();
+				angular.element('.selector-5').addClass('actual');
 
 			} else {
 				angular.element('.selector-4').hide();
+				angular.element('.selector-4').removeClass('actual');
 				angular.element('.final').show();
+				angular.element('.final').addClass('actual');
 				$scope.seleccionado.id = $scope.answer($scope.ANS);
 				$scope.selectP();
 			}
@@ -128,7 +137,9 @@ app.controller('selector-controller', function($scope,$location, $rootScope){
 		}
 		if($scope.ANS.length == 4 && $scope.ANS[0] < 3){
 			angular.element('.selector-5').hide();
+			angular.element('.selector-5').removeClass('actual');
 			angular.element('.final').show();
+			angular.element('.final').addClass('actual');
 			$scope.seleccionado.id = $scope.answer($scope.ANS);
 			$scope.selectP();
 			return;	
@@ -136,7 +147,9 @@ app.controller('selector-controller', function($scope,$location, $rootScope){
 
 		if($scope.ANS.length == 2 && $scope.ANS[0] >= 3){
 			angular.element('.selector-3').hide();
+			angular.element('.selector-3').removeClass('actual');
 			angular.element('.final').show();
+			angular.element('.final').addClass('actual');
 			console.log($scope.ANS);
 			console.log($scope.answer($scope.ANS));
 			$scope.seleccionado.id = $scope.answer($scope.ANS);

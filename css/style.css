@@ -1523,3 +1523,11 @@ font-size: 1.2em;
 .form_client *{
 	display: block;
 }
+
+.reset{
+margin-top: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 0px;
+    border-radius: 0px;
+}
