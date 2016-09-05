@@ -16,7 +16,7 @@ app.controller('selector-controller', function($scope,$location, $rootScope){
 				},
 			},
 			'yes':{
-				'yes':'AVS-20',
+				'yes':'AVN-20',
 				'no':{
 					'yes':'AVN-20',
 					'no':'CAVN-20',
