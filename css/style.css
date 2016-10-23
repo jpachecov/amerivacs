@@ -242,7 +242,8 @@ font-family: 'menu', sans-serif;
 	width: 100%;
 	background-image: url(../img/contact/image_000.png);
 	background-size: cover;
-	height: 640px;
+	background-position: 50% 0;
+	height: 720px;
 }
 
 
@@ -337,9 +338,15 @@ textarea{
 	border: solid 1px;
 	background-color: #0A1346;
 	cursor: pointer;
+	margin-bottom: 0;
 }
 
-
+.privacy {
+	display: block;
+	float: left;
+	margin: 0px;
+	text-align: center;
+}
 
 #color_text{
 
