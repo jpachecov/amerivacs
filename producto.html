@@ -1,7 +1,31 @@
 <div class='container nopadding' style='margin:0%; width:100%'>
 	<div class='lista-productos col-md-12 col-xs-12 col-sm-12 nopadding'>
-	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' ng-repeat='x in productos' id='{{x.name}}' ng-click='getProduct(x.name)'>
-	      <span>{{x.name}}</span>
+	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' id='AVN' ng-click='getProduct("AVN")'>
+	      <span>AVN</span>
+	    </div>
+	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' id='AVS' ng-click='getProduct("AVS")'>
+	      <span>AVS</span>
+	    </div>
+	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' id='CAVN' ng-click='getProduct("CAVN")'>
+	      <span>CAVN</span>
+	    </div>
+	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' id='CAVS' ng-click='getProduct("CAVS")'>
+	      <span>CAVS</span>
+	    </div>
+	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' id='AVC' ng-click='getProduct("AVC")'>
+	      <span>AVC</span>
+	    </div>
+	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' id='AVCG' ng-click='getProduct("AVCG")'>
+	      <span>AVCG</span>
+	    </div>
+	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' id='AVP' ng-click='getProduct("AVP")'>
+	      <span>AVP</span>
+	    </div>
+	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' id='PARTS' ng-click='getProduct("PARTS")'>
+	      <span>PARTS</span>
+	    </div>
+	    <div class='producto-menu col-md-1 col-xs-3 col-sm-2 bor-d' id='OPTIONS' ng-click='getProduct("OPTIONS")'>
+	      <span>OPTIONS</span>
 	    </div>
 	</div>
 </div>
@@ -16,27 +40,29 @@
 					<span>{{producto.subtitulo}}</span>
 				</div>				
 			</div>
-			<div class='col-md-5 col-sm-6 col-xs-12' style='text-align:right; margin-top:5%; margin-bottom:5%' ng-show='isVacuum'>
-				<img src="img/BOTON-1_000.png" class='col-md-6 col-sm-7 col-xs-8 cursor' ng-click='toCompare(producto.name)'>
-				<img src="img/BOTON-2_000.png" class='col-md-6 col-sm-7 col-xs-8 cursor' ng-click="showCartButtonn()">
+			<div class='col-md-5 col-sm-12 col-xs-12' style='text-align:right; margin-top:5%; margin-bottom:5%' ng-show='isVacuum'>
+
+				<div class='col-md-6 col-sm-6 col-xs-10 nopadding' style='margin-bottom:10px;'>
+					<img src="img/BOTON-1_000.png" class='col-md-12 col-sm-12 col-xs-12 cursor' ng-click='toCompare(producto.name)'>
+				</div>
+
+				<div class='col-md-6 col-sm-6 col-xs-10 nopadding'>
+					<img src="img/BOTON-2_000.png" class='col-md-12 col-sm-12 col-xs-12 cursor' ng-click="showCartButtonn()">
+				</div>
 			</div>
 
 		</div>
-		<div class='col-md-7 col-sm-12 col-xs-12 nopadding' ng-show='isVacuum'>
-
-				
+		<div class='col-md-7 col-sm-12 col-xs-12 nopadding' ng-show='isVacuum'>		
 			<!-- texto del producto -->
 			<div class='justif col-md-12 col-sm-12 col-xs-12' ng-show='isVacuum'>
 				<p ng-bind-html='producto.parrafo'></p>
-				<span>All AmeriVacS <strong>AVN Vacuum Sealers</strong> include:</span>
 				<ul class='list col-md-8'>
-					<li ng-repeat='x in amerivacs_includes'>{{x}}</li>
+					<li ng-repeat='x in producto.warranty'>{{x}}</li>
 				</ul>
 
 			</div>	
-
-
 		</div>
+
 		<!-- imagenes y botonres -->
 		<div class='col-md-5 col-sm-12 col-xs-12'>
 
@@ -46,16 +72,16 @@
 					<span class='tab-name'>Pricing</span>
 				</div>
 				<div class='col-md-12 nopadding rengl'>
-					<span class='col-md-3 col-sm-3 col-xs-3 nopadding blue-c mb-2'>Model</span>
-					<span class='col-md-3 col-sm-3 col-xs-3 nopadding blue-c mb-2'>Seal size</span>
-					<span class='col-md-3 col-sm-3 col-xs-3 nopadding blue-c mb-2'>Price</span>
+					<span class='col-md-3 col-sm-3 col-xs-4 nopadding blue-c mb-2'>Model</span>
+					<span class='col-md-3 col-sm-3 col-xs-4 nopadding blue-c mb-2'>Seal size</span>
+					<span class='col-md-3 col-sm-3 col-xs-4 nopadding blue-c mb-2'>Price</span>
 				</div>
 				<div class='col-md-12 col-sm-12 col-xs-12 ren rengl nopadding' ng-repeat='x in producto.models'>
-					<span class='col-md-3 col-sm-3 col-xs-3 nopadding'><strong>{{x.id}}</strong></span>
-					<span class='col-md-3 col-sm-3 col-xs-3 nopadding'>{{x.size}}</span>
-					<span class='col-md-2 col-sm-2 col-xs-2 nopadding'>{{x.price}}</span>
+					<span class='col-md-3 col-sm-3 col-xs-4 nopadding'><strong>{{x.id}}</strong></span>
+					<span class='col-md-3 col-sm-3 col-xs-4 nopadding'>{{x.size}}</span>
+					<span class='col-md-2 col-sm-2 col-xs-4 nopadding'>{{x.price}}</span>
 					<!-- BOTON DE AGREGAR AL CARRITO-->
-					<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-4 carrito-boton cursor' ng-click='handler.addItem(x.id, x.size, x.price)' ng-show='showCartButton'></img>
+					<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-8 carrito-boton cursor' style='float:right;' ng-click='handler.addItem(x.id, x.size, x.price)' ng-show='showCartButton'></img>
 				</div>
 			</div>
 
@@ -69,27 +95,26 @@
 		<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
 			<span class='tab-name'>Specifications</span>
 		</div>
-		<div class='ren2 col-md-5 nopadding' ng-repeat='sp in producto.specs'>
-			<div class='col-md-6 nopadding'>
+		<div class='col-md-6 nopadding' style='margin:0%;' ng-repeat='sp in producto.specs'>
+			<div class='col-md-6 col-sm-6 col-xs-12 nopadding ren6'>
 				<span><strong>{{sp.spec}}</strong></span>
 			</div>
-			<div class='col-md-6 txt-r'>
+			<div class='col-md-5 col-sm-5 col-xs-12 txt-r ren6'>
 				<span>{{sp.val}}</span>
 			</div>					
 		</div>
 	</div>
 
-<!--
 	<div class='col-md-12 tabla-p' style='display:table' ng-show="isVacuum">
 		<div class='col-md-12 nopadding'>
-			<div class='col-md-12 mb-2 nopadding'>
+			<div class='col-md-12 mb-2 nopadding' style='margin-top:1%; margin-bottom:2%;'>
 				<span class='tab-name'>Options</span>
 			</div>
-			<div class='col-md-12 ren2 nopadding'>
-				<div class='col-md-1 col-xs-12 nopadding'>
-					<span class='blue-c'>Option</span>
+			<div class='col-md-12 nopadding' style='margin-bottom:10px;'>
+				<div class='col-md-1 col-xs-4 nopadding'>
+					<span class='blue-c col-xs-12'>Option</span>
 				</div>			
-				<div class='col-md-5 col-xs-2 col-sm-6 col-xs-12 bord-l' style='margin-bottom:3%; text-align:center;'>
+				<div class='col-md-5 col-sm-6 col-xs-8 bord-l' style='text-align:center;'>
 					<span class='blue-c'>Info</span>
 				</div>				
 				<div class='col-md-1 col-sm-2 col-xs-2 blue-c bord-l' ng-repeat='x in producto.options[0]'>
@@ -98,10 +123,10 @@
 			</div>
 		</div>
 		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t rengl' ng-repeat='op in producto.options[1]'>
-			<div class='col-md-2 col-sm-4 col-xs-4 nopadding'>
+			<div class='col-md-2 col-sm-4 col-xs-3 nopadding'>
 				<span><strong>{{op.op}}</strong></span>
 			</div>
-			<div class='col-md-4 col-sm-4 col-xs-3'>
+			<div class='col-md-4 col-sm-4 col-xs-9 nopadding'>
 				<span>{{op.des}}</span>
 			</div>
 			<div class='col-md-1 col-xs-2' ng-repeat='y in op.prices'>
@@ -110,31 +135,15 @@
 		</div>
 	
 	</div>
--->
-<div class=='col-md-12 col-sm-12 col-xs-12' ng-show='isVacuum'>
-	<table ng-show='isAVN'>
-		<tr ng-repeat='op in options_AVN'>
-			<td colspan="" rowspan="">{{op.name}}</td>
-			<td colspan="" rowspan="">{{op.desc}}</td>
-			<td colspan="" rowspan="" ng-repeat='p in op.prices'>{{op.price}}</td>
-		</tr>
-	</table>
-	<table ng-show='isCAVS'>
-		<tr ng-repeat='op in options_CAVS'>
-			<td colspan="" rowspan="">{{op.name}}</td>
-			<td colspan="" rowspan="">{{op.desc}}</td>
-			<td colspan="" rowspan="" ng-repeat='p in op.prices'>{{op.price}}</td>
-		</tr>
-	</table>
 
-	<table ng-show='isAVG'>
-		<tr ng-repeat='op in options_AVG'>
-			<td colspan="" rowspan="">{{op.name}}</td>
-			<td colspan="" rowspan="">{{op.desc}}</td>
-			<td colspan="" rowspan="" ng-repeat='p in op.price'>{{p.price}}</td>
-		</tr>
-	</table>
+<div class='col-md-12 col-sm-12 col-xs-12 nopadding' ng-show='isVacuum'>
+	<span class='col-md-11 col-sm-11 col-xs-11' style='margin-top:20px; text-align:right;'>N.A Not available</span>
+	<span class='col-md-11 col-sm-11 col-xs-11' style='text-align:right;'>* 220 Volt A.C. conversion included.</span>
+	<span class='col-md-11 col-sm-11 col-xs-11' style='text-align:right;'>** $15 Handling fee per Stand.</span>
+
 </div>
+
+<!--
 	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isParts">
 		
 		<label class='search col-md-3 col-sm-3-col-xs-3'>Search: <input ng-model="searchText_2"></label>
@@ -173,6 +182,100 @@
 		</div>
 		
 	</div>
+-->
+
+
+	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isParts">
+		
+		<label class='search col-md-3 col-sm-3-col-xs-3'>Search: <input ng-model="searchText_2"></label>
+		<div class='col-md-12 nopadding rengl'>
+
+			<div class='col-md-3 col-sm-3 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name'>Part</span>
+			</div>
+
+			<div class='col-md-2 col-sm-2 col-xs-2 mb-2 nopadding'>
+				<span class='tab-name'>Info</span>
+			</div>
+
+			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name' style ='padding-left:5%'>Size</span>
+			</div>
+			<div class='col-md-2 col-sm-2 col-xs-2 mb-2 nopadding'>
+				<span class='tab-name'>Price</span>
+			</div>		
+		</div>
+
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t reenglon rengl' ng-repeat='part in PARTS | filter: searchText_2'>
+			
+			<div class='col-md-12 col-sm-12 col-xs-12 nopadding' ng-repeat='size in part.sizes'>
+
+				<div class='col-md-2 col-sm-2 col-xs-2 nopadding'>
+					<span><strong>{{part.name}}</strong></span>
+				</div>
+				<div class='col-md-3 col-sm-3 col-xs-3'>
+					<span class='col-md-12 col-sm-12 col-xs-12'>{{part.desc}}</span>
+				</div>
+
+				<div class='col-md-4 col-sm-4 col-xs-4 nopadding'>
+					<div class='col-md-6 col-sm-6 col-xs-6 nopadding'>
+						<span class='col-md-12 col-sm-12 col-xs-12'>{{size.size}}</span>
+					</div>
+					<div class='col-md-6 col-sm-6 col-xs-6 nopadding'>
+						<span class='col-md-12 col-sm-12 col-xs-12'>{{size.price}}</span>
+					</div>	
+				</div>
+
+				<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-3 carrito-boton-1 cursor' ng-click='handler.addItem(part.name, size.size, size.price)' ng-show="showCartButton"></img>
+
+
+			</div>
+			
+		</div>
+		
+	</div>
+
+
+
+<!--
+	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isOptions">
+		<label class='search col-md-3 col-sm-3-col-xs-3'>Search: <input ng-model="searchText"></label>
+		<div class='col-md-12 nopadding rengl'>
+
+			<div class='col-md-3 col-sm-3 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name'>Option</span>
+			</div>
+
+			<div class='col-md-2 col-sm-4 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name'>Info</span>
+			</div>
+
+			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name' style ='padding-left:5%'>Size</span>
+			</div>
+			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
+				<span class='tab-name'>Price</span>
+			</div>		
+		</div>
+
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t rengl' ng-repeat='part in opciones | filter:searchText '>
+			<div class='col-md-2 col-sm-2 col-xs-3 nopadding'>
+				<span><strong>{{part.id}}</strong></span>
+			</div>
+			<div class='col-md-3 col-sm-3 col-xs-4'>
+				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.subti}}</span>
+			</div>
+			<div class='col-md-2 col-sm-2 col-xs-2'>
+				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.size}}</span>
+			</div>
+			<div class='col-md-2 col-sm-2 col-xs-3'>
+				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.price}}</span>
+			</div>
+			<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-8 carrito-boton-1 cursor' style='float:right' ng-click='handler.addItem(part.id, part.size, part.price)' ng-show='showCartButton'></img>			
+		</div>
+		
+	</div>
+-->
 
 	<div class='partes col-md-12 col-sm-12 col-xs-12 tabla-p' style='display:table' ng-show="isOptions">
 		<label class='search col-md-3 col-sm-3-col-xs-3'>Search: <input ng-model="searchText"></label>
@@ -182,11 +285,11 @@
 				<span class='tab-name'>Option</span>
 			</div>
 
-			<div class='col-md-2 col-sm-4 col-xs-2 mb-2 nopadding'>
+			<div class='col-md-2 col-sm-4 col-xs-3 mb-2 nopadding'>
 				<span class='tab-name'>Info</span>
 			</div>
 
-			<div class='col-md-2 col-sm-2 col-xs-2 mb-2 nopadding'>
+			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
 				<span class='tab-name' style ='padding-left:5%'>Size</span>
 			</div>
 			<div class='col-md-2 col-sm-2 col-xs-3 mb-2 nopadding'>
@@ -194,26 +297,30 @@
 			</div>		
 		</div>
 
-		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t rengl' ng-repeat='part in opciones | filter:searchText '>
-			<div class='col-md-2 col-sm-2 col-xs-2 nopadding'>
-				<span><strong>{{part.id}}</strong></span>
+		<div class='col-md-12 col-sm-12 col-xs-12 nopadding bord-t rengl' ng-repeat='part in OPTIONS | filter:searchText '>
+			
+			<div class='col-md-12 col-sm-12 col-xs-12 nopadding' ng-repeat='size in part.sizes'>
+
+				<div class='col-md-2 col-sm-2 col-xs-3 nopadding'>
+					<span><strong>{{part.name}}</strong></span>
+				</div>
+				<div class='col-md-3 col-sm-3 col-xs-4'>
+					<span class='col-md-12 col-sm-12 col-xs-12'>{{part.desc}}</span>
+				</div>
+				<div class='col-md-2 col-sm-2 col-xs-2'>
+					<span class='col-md-12 col-sm-12 col-xs-12'>{{size.size}}</span>
+				</div>
+				<div class='col-md-2 col-sm-2 col-xs-3'>
+					<span class='col-md-12 col-sm-12 col-xs-12'>{{size.price}}</span>
+				</div>
+				<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-8 carrito-boton-1 cursor' style='float:right' ng-click='handler.addItem(part.name, size.size, size.price)' ng-show='showCartButton'></img>
+
 			</div>
-			<div class='col-md-3 col-sm-3 col-xs-2'>
-				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.subti}}</span>
-			</div>
-			<div class='col-md-2 col-sm-2 col-xs-3'>
-				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.size}}</span>
-			</div>
-			<div class='col-md-2 col-sm-2 col-xs-2'>
-				<span class='col-md-12 col-sm-12 col-xs-12'>{{part.price}}</span>
-			</div>
-			<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-3 carrito-boton-1 cursor' ng-click='handler.addItem(part.id, part.size, part.price)' ng-show='showCartButton'></img>			
+				
+
 		</div>
 		
 	</div>
-
-
-
 
 
 

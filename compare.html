@@ -1,229 +1,235 @@
-<div ng-controller='compare'>
+<div ng-controller='compare' ng-init='init()'>
 
-<div class='col-md-12 col-sm-12 col-xs-12 compare'>
-	<!-- PAra la caja de texto -->
-	<div class='col-md-7 col-sm-12 col-xs-12 back-white' style='padding:4%;'>
-		<span class='col-md-12 col-sm-12 col-xs-12 blue-c font1 '>COMPARE</span>
-		<p class='col-md-12 col-sm-12 col-xs-12 justif'>
-			Select two AmeriVacS products to compare their characteristics,
-			specifications and prices. Use the bar below to select the products you
-			want to compare, then you can easily buy it by clicking on the “Add to
-			shoopping cart” button. <br><br>
-			Find the best AmeriVacS for you!	
-		</p>
-	</div>
-</div>
-
-<div class='col-md-6 col-sm-6 col-xs-12 nopadding bor-d'>
-	
-	<!-- OPCIONES -->
-	<div class='nopadding' style='margin:0%'>
-
-			<div class='lista-productos menucito1 col-md-12 col-xs-12 col-sm-12 nopadding'>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1AVN' ng-click='getProduct_1("AVN")'>
-			      <span>AVN</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1AVS' ng-click='getProduct_1("AVS")'>
-			      <span>AVS</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1CAVN' ng-click='getProduct_1("CAVN")'>
-			      <span>CAVN</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1CAVS' ng-click='getProduct_1("CAVS")'>
-			      <span>CAVS</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1AVC' ng-click='getProduct_1("AVC")'>
-			      <span>AVC</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1AVCG' ng-click='getProduct_1("AVCG")'>
-			      <span>AVCG</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1AVP' ng-click='getProduct_1("AVP")'>
-			      <span>AVP</span>
-			    </div>
-			</div>
-
-	</div>
-
-
-	<!-- CONTENEDOR DEN PRODUCTO -->
-	<div class=' col-md-12' style='padding:8%;' ng-show='selected_1'>
-		<div class='col-md-12 col-sm-12 nopadding'>
-			<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
-				<div class='col-md-12 col-sm-9 col-xs-12 nopadding'>
-					<div class='prod_name'>
-						<span>{{producto_1.name}}</span>
-					</div>
-					<div class='prod_des col-md-6'>
-						<span>{{producto_1.subtitulo}}</span>
-					</div>				
-				</div>
-
-			</div>
-			<div class='col-md-12 col-sm-12 col-xs-12 bor-b' style='padding-bottom:8%'>
-				<img src="{{producto_1.src}}" ng-src='' class="col-md-12 col-sm-12 col-xs-12">
-			</div>
-
-			<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
-
-				<div class='row'>
-					<p ng-bind-html='producto_1.parrafo' style='margin-top:5%; text-align:justify;'></p>
-
-					<!--  TABLE SPECIFICATIONS -->
-					<div class='col-md-12 col-xs-12 col-sm-12 tabla-p' ng-show='isVacuum' style='margin-top:5%'>
-						<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
-							<span class='tab-name'>Specifications</span>
-						</div>
-						<div class='ren2 col-md-12 col-sm-12 col-xs-12 nopadding' ng-repeat='sp in producto_1.specs'>
-							<div class='col-md-6 nopadding'>
-								<span><strong>{{sp.spec}}</strong></span>
-							</div>
-							<div class='col-md-6 txt-r'>
-								<span>{{sp.val}}</span>
-							</div>					
-						</div>
-					</div>
-
-					<!-- PRICING TABLE -->
-					<div class='pricing_table col-md-12 col-sm-10 col-xs-12 tabla-p' style='margin-top:4%;'>
-						<div class='col-md-12 nopadding mb-1'>
-							<span class='tab-name'>Pricing</span>
-						</div>
-						<div class='col-md-12 nopadding'>
-							<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Model</span>
-							<span class='col-md-4 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Seal size</span>
-							<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Price</span>
-						</div>
-						<div class='col-md-12 col-sm-12 col-xs-12 ren nopadding' ng-repeat='x in producto_1.models'>
-							<span class='col-md-2 col-sm-4 col-xs-3 nopadding'><strong>{{x.id}}</strong></span>
-							<span class='col-md-4 col-sm-4 col-xs-5 nopadding'>{{x.size}}</span>
-							<span class='col-md-2 col-sm-4 col-xs-3 nopadding'>{{x.price}}</span>
-							<!-- BOTON DE AGREGAR AL CARRITO-->
-							<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-4 carrito-boton cursor' ng-click='handler.addItem(x.id, x.size, x.price)'></img>
-						</div>
-						
-					</div>
-
-
-
-
-				</div>
-
-			</div>
-
+	<div class='col-md-12 col-sm-12 col-xs-12 compare'>
+		<!-- PAra la caja de texto -->
+		<div class='col-md-7 col-sm-12 col-xs-12 back-white' style='padding:4%;'>
+			<span class='col-md-12 col-sm-12 col-xs-12 blue-c font1 '>COMPARE</span>
+			<p class='col-md-12 col-sm-12 col-xs-12 justif'>
+				Select two AmeriVacS products to compare their characteristics,
+				specifications and prices. Use the bar below to select the products you
+				want to compare, then you can easily buy it by clicking on the “Add to
+				shoopping cart” button. <br><br>
+				Find the best AmeriVacS for you!	
+			</p>
 		</div>
 	</div>
 
-</div>
-<div class='col-md-6 col-sm-6 col-xs-12 nopadding'>
-	
-	<!-- OPCIONES -->
-	<div class='nopadding' style='margin:0%'>
-<!--
+	<!-- Producto 1 -->
+	<div class='col-md-6 col-sm-6 col-xs-12 nopadding bor-d'>
+		
+		<!-- OPCIONES -->
+		<div class='nopadding' style='margin:0%'>
+
+				<div class='lista-productos menucito1 col-md-12 col-xs-12 col-sm-12 nopadding'>
+				    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1AVN' ng-click='change1("AVN")'>
+				      <span>AVN</span>
+				    </div>
+				    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1AVS' ng-click='change1("AVS")'>
+				      <span>AVS</span>
+				    </div>
+				    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1CAVN' ng-click='change1("CAVN")'>
+				      <span>CAVN</span>
+				    </div>
+				    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1CAVS' ng-click='change1("CAVS")'>
+				      <span>CAVS</span>
+				    </div>
+				    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1AVC' ng-click='change1("AVC")'>
+				      <span>AVC</span>
+				    </div>
+				    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1AVCG' ng-click='change1("AVCG")'>
+				      <span>AVCG</span>
+				    </div>
+				    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='1AVP' ng-click='change1("AVP")'>
+				      <span>AVP</span>
+				    </div>
+				</div>
+
+		</div>
+
+
+		<!-- CONTENEDOR DEN PRODUCTO -->
+		<div class='fijo col-md-12' style='padding:8%;' ng-show='selected_1'>
+			<div class='col-md-12 col-sm-12 nopadding'>
+				<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
+					<div class='col-md-12 col-sm-9 col-xs-12 nopadding'>
+						<div class='prod_name'>
+							<span>{{producto_1.name}}</span>
+						</div>
+						<div class='prod_des col-md-6'>
+							<span>{{producto_1.subtitulo}}</span>
+						</div>				
+					</div>
+
+				</div>
+				<div class='col-md-12 col-sm-12 col-xs-12 bor-b' style='padding-bottom:8%'>
+					<img src="{{producto_1.src}}" ng-src='' class="col-md-12 col-sm-12 col-xs-12">
+				</div>
+
+				<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
+
+					<div class='row'>
+						<p ng-bind-html='producto_1.parrafo' style='margin-top:5%; text-align:justify;'></p>
+
+						<!--  TABLE SPECIFICATIONS -->
+						<div class='col-md-12 col-xs-12 col-sm-12 tabla-p' ng-show='isVacuum' style='margin-top:5%'>
+							<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
+								<span class='tab-name'>Specifications</span>
+							</div>
+							<div class='ren2 col-md-12 col-sm-12 col-xs-12 nopadding' ng-repeat='sp in producto_1.specs'>
+								<div class='col-md-6 nopadding'>
+									<span><strong>{{sp.spec}}</strong></span>
+								</div>
+								<div class='col-md-6 txt-r'>
+									<span>{{sp.val}}</span>
+								</div>					
+							</div>
+						</div>
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- PRICING TABLE -->
+		<div class='pricing_table col-md-12 col-sm-12 col-xs-12 tabla-p' style='margin-top:4%;'>
+			<div class='col-md-12 nopadding mb-1'>
+				<span class='tab-name'>Pricing</span>
+			</div>
+			<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
+				<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Model</span>
+				<span class='col-md-4 col-sm-4 hidden-xs nopadding blue-c mb-2'>Seal size</span>
+				<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Price</span>
+			</div>
+			<div class='col-md-12 col-sm-12 col-xs-12 ren nopadding' ng-repeat='x in producto_1.models'>
+				<span class='col-md-2 col-sm-3 col-xs-3 nopadding'><strong>{{x.id}}</strong></span>
+				<span class='col-md-4 col-sm-3 hidden-xs nopadding'>{{x.size}}</span>
+				<span class='col-md-2 col-sm-3 col-xs-3 nopadding'>{{x.price}}</span>
+				<!-- BOTON DE AGREGAR AL CARRITO-->
+				<div class='col-md-4 col-sm-3 col-xs-6 nopadding'>
+					<img src='img/BOTON-2_000.png' class='col-md-9 col-sm-12 col-xs-8 carrito-boton cursor'  style='float:right' ng-show='x.size !== undefined' ng-click='handler.addItem(x.id, x.size, x.price)'></img>
+				</div>
+				
+			</div>
+			
+		</div>
+
+
+	</div>
+
+	<!-- Producto 2 -->
+	<div class='col-md-6 col-sm-6 col-xs-12 nopadding'>
+		
+		<!-- OPCIONES -->
+		<div class='nopadding' style='margin:0%'>
+
 		<div class='lista-productos menucito2 col-md-12 col-xs-12 col-sm-12 nopadding'>
-		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d' ng-repeat='x in productos' id='{{x.name}}' ng-click='getProduct_2(x.name)'>
-		      <span>{{x.name}}</span>
+		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2AVN' ng-click='change2("AVN")'>
+		      <span>AVN</span>
 		    </div>
-
-		</div>-->
-
-			<div class='lista-productos menucito2 col-md-12 col-xs-12 col-sm-12 nopadding'>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2AVN' ng-click='getProduct_2("AVN")'>
-			      <span>AVN</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2AVS' ng-click='getProduct_2("AVS")'>
-			      <span>AVS</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2CAVN' ng-click='getProduct_2("CAVN")'>
-			      <span>CAVN</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2CAVS' ng-click='getProduct_2("CAVS")'>
-			      <span>CAVS</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2AVC' ng-click='getProduct_2("AVC")'>
-			      <span>AVC</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2AVCG' ng-click='getProduct_2("AVCG")'>
-			      <span>AVCG</span>
-			    </div>
-			    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2AVP' ng-click='getProduct_2("AVP")'>
-			      <span>AVP</span>
-			    </div>
-			</div>
-
-
-	</div>	
-
-	<!-- CONTENEDOR DE UN PRODUCTO -->
-	<div class=' col-md-12' style='padding:8%;' ng-show='selected_2'>
-		<div class='col-md-12 col-sm-12 nopadding'>
-			<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
-				<div class='col-md-12 col-sm-9 col-xs-12 nopadding'>
-					<div class='prod_name'>
-						<span>{{producto_2.name}}</span>
-					</div>
-					<div class='prod_des col-md-6'>
-						<span>{{producto_2.subtitulo}}</span>
-					</div>				
-				</div>
-
-			</div>
-			<div class='col-md-12 col-sm-12 col-xs-12 bor-b' style='padding-bottom:8%'>
-				<img src="{{producto_2.src}}" ng-src='' class="col-md-12 col-sm-12 col-xs-12">
-			</div>
-
-			<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
-
-				<div class='row'>
-
-					<p ng-bind-html='producto_2.parrafo' style='text-align:justify; margin-top:5%'></p>
-
-					<!--  TABLE SPECIFICATIONS -->
-					<div class='col-md-12 col-xs-12 col-sm-12 tabla-p' ng-show='isVacuum' style='margin-top:5%'>
-						<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
-							<span class='tab-name'>Specifications</span>
-						</div>
-						<div class='ren2 col-md-12 col-sm-12 col-xs-12 nopadding' ng-repeat='sp in producto_2.specs'>
-							<div class='col-md-6 nopadding'>
-								<span><strong>{{sp.spec}}</strong></span>
-							</div>
-							<div class='col-md-6 txt-r'>
-								<span>{{sp.val}}</span>
-							</div>					
-						</div>
-					</div>
-
-
-					<!-- PRICING TABLE -->
-					<div class='pricing_table col-md-12 col-sm-10 col-xs-12 tabla-p' style='margin-top:4%;'>
-						<div class='col-md-12 nopadding mb-1'>
-							<span class='tab-name'>Pricing</span>
-						</div>
-						<div class='col-md-12 nopadding'>
-							<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Model</span>
-							<span class='col-md-4 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Seal size</span>
-							<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Price</span>
-						</div>
-						<div class='col-md-12 col-sm-12 col-xs-12 ren nopadding' ng-repeat='x in producto_2.models'>
-							<span class='col-md-2 col-sm-4 col-xs-3 nopadding'><strong>{{x.id}}</strong></span>
-							<span class='col-md-4 col-sm-4 col-xs-5 nopadding'>{{x.size}}</span>
-							<span class='col-md-2 col-sm-4 col-xs-3 nopadding'>{{x.price}}</span>
-							<!-- BOTON DE AGREGAR AL CARRITO-->
-							<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-4 carrito-boton cursor' ng-click='handler.addItem(x.id, x.size, x.price)'></img>
-						</div>
-
-						
-					</div>
-
-				</div>
-
-
-			</div>
-
+		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2AVS' ng-click='change2("AVS")'>
+		      <span>AVS</span>
+		    </div>
+		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2CAVN' ng-click='change2("CAVN")'>
+		      <span>CAVN</span>
+		    </div>
+		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2CAVS' ng-click='change2("CAVS")'>
+		      <span>CAVS</span>
+		    </div>
+		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2AVC' ng-click='change2("AVC")'>
+		      <span>AVC</span>
+		    </div>
+		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2AVCG' ng-click='change2("AVCG")'>
+		      <span>AVCG</span>
+		    </div>
+		    <div class='producto-menu col-md-2 col-xs-3 col-sm-2 bor-d'  id='2AVP' ng-click='change2("AVP")'>
+		      <span>AVP</span>
+		    </div>
 		</div>
-	</div>
 
-</div>
+
+		</div>	
+
+		<!-- CONTENEDOR DE UN PRODUCTO -->
+		<div class='fijo col-md-12' style='padding:8%;' ng-show='selected_2'>
+			<div class='col-md-12 col-sm-12 nopadding'>
+				<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
+					<div class='col-md-12 col-sm-9 col-xs-12 nopadding'>
+						<div class='prod_name'>
+							<span>{{producto_2.name}}</span>
+						</div>
+						<div class='prod_des col-md-6'>
+							<span>{{producto_2.subtitulo}}</span>
+						</div>				
+					</div>
+
+				</div>
+				<div class='col-md-12 col-sm-12 col-xs-12 bor-b' style='padding-bottom:8%'>
+					<img src="{{producto_2.src}}" ng-src='' class="col-md-12 col-sm-12 col-xs-12">
+				</div>
+
+				<div class='col-md-12 col-sm-12 col-xs-12 nopadding'>
+
+					<div class='row'>
+
+						<p ng-bind-html='producto_2.parrafo' style='text-align:justify; margin-top:5%'></p>
+
+						<!--  TABLE SPECIFICATIONS -->
+						<div class='col-md-12 col-xs-12 col-sm-12 tabla-p' ng-show='isVacuum' style='margin-top:5%'>
+							<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
+								<span class='tab-name'>Specifications</span>
+							</div>
+							<div class='ren2 col-md-12 col-sm-12 col-xs-12 nopadding' ng-repeat='sp in producto_2.specs'>
+								<div class='col-md-6 nopadding'>
+									<span><strong>{{sp.spec}}</strong></span>
+								</div>
+								<div class='col-md-6 txt-r'>
+									<span>{{sp.val}}</span>
+								</div>					
+							</div>
+						</div>
+
+
+
+					</div>
+
+				</div>
+
+			</div>	
+				
+		</div>
+
+
+
+		<!-- PRICING TABLE -->
+		<div class='pricing_table col-md-12 col-sm-12 col-xs-12 tabla-p' style='margin-top:4%;'>
+			<div class='col-md-12 col-sm-12 col-xs-12 nopadding mb-1'>
+				<span class='tab-name'>Pricing</span>
+			</div>
+			<div class='col-md-12 col-sm-12 nopadding'>
+				<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Model</span>
+				<span class='col-md-4 col-sm-4 hidden-xs nopadding blue-c mb-2'>Seal size</span>
+				<span class='col-md-2 col-sm-4 col-xs-4 nopadding blue-c mb-2'>Price</span>
+			</div>
+			<div class='col-md-12 col-sm-12 col-xs-12 ren nopadding' ng-repeat='x in producto_2.models'>
+				<span class='col-md-2 col-sm-3 col-xs-3 nopadding'><strong>{{x.id}}</strong></span>
+				<span class='col-md-4 col-sm-3 hidden-xs nopadding'>{{x.size}}</span>
+				<span class='col-md-2 col-sm-3 col-xs-3 nopadding'>{{x.price}}</span>
+				<!-- BOTON DE AGREGAR AL CARRITO-->
+				<div class='col-md-4 col-sm-3 col-xs-6 nopadding'>
+					<img src='img/BOTON-2_000.png' class='col-md-9 col-sm-12 col-xs-8 nopadding carrito-boton cursor' style='float:right;' ng-show='x.size !== undefined' ng-click='handler.addItem(x.id, x.size, x.price)'></img>
+				</div>
+				
+			</div>
+
+			
+		</div>
+
+	</div>
 
 	
 </div>
