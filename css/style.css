@@ -470,17 +470,17 @@ ABOUT US
 }
 
 .bor-d{
-	border-right: solid 1px gray;
+	border-right: solid 1px rgb(143, 143, 143);
 	
 }
 
 .ren{
 	height: 40px;
-	border-bottom: solid 1px gray;
+	border-bottom: solid 1px rgb(209, 209, 209);
 }
 
 .ren2{
-border-bottom: solid 1px black;	
+	border-bottom: solid 1px rgb(143, 143, 143);	
 	margin-right: 5%;
 }
 .ren6{
@@ -1462,7 +1462,7 @@ font-size: 1.2em;
 .fijo{
 	height: 600px;
 	overflow-y: scroll;
-	border-bottom: solid 1px gray;
+	border-bottom: solid 1px rgb(209, 209, 209);
 }
 
 .botones:hover{

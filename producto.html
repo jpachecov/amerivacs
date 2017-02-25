@@ -47,7 +47,7 @@
 				</div>
 
 				<div class='col-md-6 col-sm-6 col-xs-10 nopadding'>
-					<a href="http://catalog.amerivacs.com/browseGroup.cfm">
+					<a href="http://catalog.amerivacs.com/browseGroup.cfm" target="_blank">
 						<img src="img/BOTON-2_000.png" class='col-md-12 col-sm-12 col-xs-12 cursor' ng-click="showCartButtonn()">
 
 					</a>
@@ -82,9 +82,19 @@
 				<div class='col-md-12 col-sm-12 col-xs-12 ren rengl nopadding' ng-repeat='x in producto.models'>
 					<span class='col-md-3 col-sm-3 col-xs-4 nopadding'><strong>{{x.id}}</strong></span>
 					<span class='col-md-3 col-sm-3 col-xs-4 nopadding'>{{x.size}}</span>
-					<span class='col-md-2 col-sm-2 col-xs-4 nopadding'>{{x.price}}</span>
+					<span class='col-md-2 col-sm-2.4 col-xs-4 nopadding'>{{x.price}}</span>
 					<!-- BOTON DE AGREGAR AL CARRITO-->
-					<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-8 carrito-boton cursor' style='float:right;' ng-click='handler.addItem(x.id, x.size, x.price)' ng-show='showCartButton'></img>
+					<a class="icon" href="http://catalog.amerivacs.com/browseGroup.cfm" target="_blank">
+					<!--
+						<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-8 carrito-boton cursor' style='float:right;' ng-click='handler.addItem(x.id, x.size, x.price)' ng-show='showCartButton'></img>
+
+						-->
+
+						<img src='img/BOTON-2_000.png' class='col-md-4 col-sm-3 col-xs-8 carrito-boton cursor' style='float:right;' ng-click='handler.addItem(x.id, x.size, x.price)' ></img>
+
+
+					</a>
+					
 				</div>
 			</div>
 
@@ -228,9 +238,10 @@
 						<span class='col-md-12 col-sm-12 col-xs-12'>{{size.price}}</span>
 					</div>	
 				</div>
-
+<!--
 				<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-3 carrito-boton-1 cursor' ng-click='handler.addItem(part.name, size.size, size.price)' ng-show="showCartButton"></img>
-
+-->
+				<img src='img/BOTON-2_000.png' class='col-md-2 col-sm-3 col-xs-3 carrito-boton-1 cursor' ng-click='handler.addItem(part.name, size.size, size.price)'></img>
 
 			</div>
 			
