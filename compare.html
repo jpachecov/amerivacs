@@ -111,7 +111,10 @@
 				<span class='col-md-2 col-sm-3 col-xs-3 nopadding'>{{x.price}}</span>
 				<!-- BOTON DE AGREGAR AL CARRITO-->
 				<div class='col-md-4 col-sm-3 col-xs-6 nopadding'>
-					<img src='img/BOTON-2_000.png' class='col-md-9 col-sm-12 col-xs-8 carrito-boton cursor'  style='float:right' ng-show='x.size !== undefined' ng-click='handler.addItem(x.id, x.size, x.price)'></img>
+					<a class="icon" href="http://catalog.amerivacs.com/browseGroup.cfm" target="_blank">
+						<img src='img/BOTON-2_000.png' class='col-md-9 col-sm-12 col-xs-8 carrito-boton cursor'  style='float:right' ng-show='x.size !== undefined' ng-click='handler.addItem(x.id, x.size, x.price)'></img>
+
+					</a>
 				</div>
 				
 			</div>
@@ -221,7 +224,11 @@
 				<span class='col-md-2 col-sm-3 col-xs-3 nopadding'>{{x.price}}</span>
 				<!-- BOTON DE AGREGAR AL CARRITO-->
 				<div class='col-md-4 col-sm-3 col-xs-6 nopadding'>
-					<img src='img/BOTON-2_000.png' class='col-md-9 col-sm-12 col-xs-8 nopadding carrito-boton cursor' style='float:right;' ng-show='x.size !== undefined' ng-click='handler.addItem(x.id, x.size, x.price)'></img>
+					<a class="icon" href="http://catalog.amerivacs.com/browseGroup.cfm" target="_blank"
+					>
+						<img src='img/BOTON-2_000.png' class='col-md-9 col-sm-12 col-xs-8 nopadding carrito-boton cursor' style='float:right;' ng-show='x.size !== undefined' ng-click='handler.addItem(x.id, x.size, x.price)'></img>
+
+					</a>
 				</div>
 				
 			</div>

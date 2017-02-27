@@ -775,6 +775,7 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 	}
 
 	$scope.showCart = function(){
+		/*
 		$scope.showingC = true;
 		$('.contenido-princi').addClass('bluur');
 		$('.carrito').velocity({
@@ -787,10 +788,12 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 
 
 			}
-		});		
+		});	
+*/
 	}
 
 	$scope.hideCart = function(){
+/*
 		$('.contenido-princi').removeClass('bluur');
 		$('.carrito').velocity({
 			translateX: 120 + '%',
@@ -801,7 +804,9 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 			complete: function(){
 				$scope.showingC = false;
 			}
-		});		
+
+		});	
+		*/	
 	}	
 	$scope.carrito_url = "cart.html";
 	$scope.cart =  function(){
