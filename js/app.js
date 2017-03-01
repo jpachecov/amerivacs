@@ -13,7 +13,12 @@ app.config(['$routeProvider', function($routeProvider){
     .when('/compare',{templateUrl: "compare.html"})
     .when('/selector',{templateUrl: "ciber_selector.html"})
     .otherwise({templateUrl:"404.html"});
+
 }]);
+
+app.config(function($locationProvider){
+	$locationProvider.html5Mode(true);
+});
 
 app.run(function($rootScope){
 
