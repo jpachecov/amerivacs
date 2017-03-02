@@ -4,17 +4,16 @@
 <html lang="en" ng-app='amerivacs'>
   <head>
     <meta charset="utf-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AmeriVacS</title>
 
-    <link rel="shortcut icon" type="image/png" href="img/logo_menu.png"/>
+    <link rel="shortcut icon" type="image/png" href="amerivacs/img/logo_menu.png"/>
 
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="css/style.css" rel="stylesheet">
-
-    <base href="/">
   </head>
   <body>
     <div ng-controller='controlador'>

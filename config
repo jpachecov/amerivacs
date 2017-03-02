@@ -1,0 +1,6 @@
+LoadModule rewrite_module /usr/lib/apache2/modules/mod_rewrite.so
+
+
+replace every occurrence of "AllowOverride None" with "AllowOverride all".
+a2enmod rewrite
+sudo service apache2 restart

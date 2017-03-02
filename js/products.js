@@ -834,27 +834,27 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 		switch(page){
 			case 'home':				
 				$scope.currentPage = "home.html";
-				$location.path('/home');
+				$location.path('/amerivacs/home');
 				break;
 
 
 			case 'about_us':
 				$scope.currentPage = "about_us.html";
-				$location.path('/about');
+				$location.path('/amerivacs/about');
 				break;
 			case 'contact':
 				$scope.currentPage = "contact.html";
-				$location.path('/contact');
+				$location.path('/amerivacs/contact');
 				break;
 			case 'products':
 				$scope.currentPage = "productos.html";
-				$location.path('/products');
+				$location.path('/amerivacs/products');
 				//$scope.showMenu();
 
 				break;
 			case 'all-products':
 				$scope.currentPage = 'producto.html';
-				$location.path('/product');
+				$location.path('/amerivacs/product');
 
 				setTimeout(function(){
 					$scope.getProduct('AVN');
@@ -865,7 +865,7 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 				break;
 			case 'compare':
 				$scope.currentPage = 'compare.html';
-				$location.path('/compare');
+				$location.path('/amerivacs/compare');
 				//$('#' + compara.A).addClass('seleccion');
 				//$('#' + compara.B).addClass('seleccion');
 
@@ -879,7 +879,7 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 				break;
 			case 'selector':
 				$scope.currentPage = 'ciber_selector.html'
-				$location.path('/selector');
+				$location.path('/amerivacs/selector');
 				break;
 
 		}
