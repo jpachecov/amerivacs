@@ -21,58 +21,53 @@
 
 
       <div class='container container-fluid'>
-        <div class=' header col-md-12 col-sm-12 col-xs-12'>
+        <header class=' header col-md-12 col-sm-12 col-xs-12'>
 
-          <div class='col-md-12 col-sm-12 col-xs-12 nopadding' style='background-color:white; z-index:5;'>
+          <ul class='menu col-md-12 col-sm-12 col-xs-12 nopadding' style='background-color:white; z-index:5;'>
+            <li class="col-md-12 col-sm-12 col-xs-12">
+               <a class='logo_container col-md-3 col-sm-7 col-xs-9' href="/amerivacs/home">
+                <img class='logo_up' src="img/home/logo_000.png" alt="AmeriVacS">
+               </a>     
+            </li>
+            <li class='col-sm-1 col-xs-1' style="padding:8px 0 8px 0">
+              <a class="icon" href="http://catalog.amerivacs.com/browseGroup.cfm" target="_blank">
+                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class='col-xs-2 col-sm-2 col-md-1'>
+              <a href="/amerivacs/contact">Contact</a> 
+            </li>
+            <li class='raya-derecha col-xs-3 col-sm-3 col-md-1' ng-mouseover="showMenu()" ng-mouseleave="hideMenu()">
+              <a href="/amerivacs/products">Products<spana class='trian'>&#x25BC</span> </a>  
+            </li>
+            <li class='raya-derecha col-xs-3 col-sm-3 col-md-1'>
+              <a href="/amerivacs/about">About us</a>  
+            </li>
+            <li class='raya-derecha col-xs-2 col-sm-3 col-md-1'>
+              <a href="/amerivacs/home">Home</a>  
+            </li>
 
-            <div class='logo_container col-md-3 col-sm-7 col-xs-9'>
-               <img class='logo_up' src="img/home/logo_000.png" alt="">     
+          <li class='col-md-12 col-sm-12 col-xs-12' style='position:absolute; top:210px; height:110px; overflow:hidden; padding:0px'>
+
+            <div class='col-md-12 col-sm-12 col-xs-12 show-menu' style='position:absolute; z-index:2; top:-3px;'>
+              <ul class='col-md-3 col-xs-12 col-sm-12' ng-mouseover="showMenu()" ng-mouseleave="hideMenu()" style='padding:0%; float:right;'>
+                <li class='hover-2 boton col-md-9 col-sm-6 col-xs-6  r-bottom back-white2 nopadding txt-c' style='float:left'>
+                  <a class='font1' href="/amerivacs/compare">Compare</a>
+                </li>
+                <li class='hover-2 boton col-md-9 col-sm-6 col-xs-6 back-white2 nopadding txt-c' style='float:left'>
+                  <a class='font1' href="/amerivacs/selector">Cyber Selector</a>
+                </li>      
+              </ul>
             </div>
 
-            <div class='menu col-sm-12 col-md-12 col-xs-12'>
-              <div class='col-sm-1 col-xs-1'>
-<!--                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" ng-click="cart()"></i> -->
-                <a class="icon" href="http://catalog.amerivacs.com/browseGroup.cfm" target="_blank">
-                  
-                  <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
-                </a>
-                
-              </div>
-              <div class='col-xs-2 col-sm-2 col-md-1' style='padding:0.3% 1% 0.3% 1%;'>
-                <span ng-click="loadPage('contact')">Contact</span> 
-              </div>
-              <div class='raya-derecha col-xs-3 col-sm-3 col-md-1' ng-mouseover="showMenu()" ng-mouseleave="hideMenu()">
-                <span ng-click="loadPage('products')">Products<span class='trian'>&#x25BC</span> </span>  
-              </div>
-              <div class='raya-derecha col-xs-3 col-sm-3 col-md-1'>
-                <span ng-click="loadPage('about_us')">About us</span>  
-              </div>
-              <div class='raya-derecha col-xs-2 col-sm-3 col-md-1'>
-                <span ng-click="loadPage('home')">Home</span>  
-              </div>
-            </div>
-            
+          </li>
 
-          </div>
+          </ul>
 
           <!-- Columna para los botones -->
 
-          <div class='col-md-12 col-sm-12 col-xs-12' style='position:relative'>
 
-            <div class='col-md-12 col-sm-12 col-xs-12 show-menu' style='position:absolute; z-index:2;'>
-              <div class='col-md-3 col-xs-12 col-sm-12' ng-mouseover="showMenu()" ng-mouseleave="hideMenu()" style='padding:0%; float:right;'>
-                <div class='hover-2 boton col-md-9 col-sm-6 col-xs-6  r-bottom back-white2 nopadding txt-c' style='float:left' ng-click='loadPage("compare")'>
-                  <span class='font1'>Compare</span>
-                </div>
-                <div class='hover-2 boton col-md-9 col-sm-6 col-xs-6 back-white2 nopadding txt-c' style='float:left'  ng-click='loadPage("selector")'>
-                  <span class='font1'>Cyber Selector</span>
-                </div>      
-              </div>
-            </div>
-
-          </div>
-
-        </div>
+        </header>
       </div>
 
             <!-- Carrito de compras -->
