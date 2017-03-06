@@ -4,14 +4,14 @@ var app = angular.module('amerivacs', ['ngSanitize','ngAnimate','ngRoute']);
 // Rutas para la aplicacion
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
-    .when('/amerivacs/',{templateUrl: "home.html"})
-    .when('/amerivacs/home',{templateUrl: "home.html"})
-    .when('/amerivacs/about', {templateUrl:"about_us.html"})
-    .when('/amerivacs/products', {templateUrl:"productos.html"})
-    .when('/amerivacs/product',{templateUrl: "producto.html"})
-    .when('/amerivacs/contact',{templateUrl: "contact.html"})
-    .when('/amerivacs/compare',{templateUrl: "compare.html"})
-    .when('/amerivacs/selector',{templateUrl: "ciber_selector.html"})
+    .when('/',{templateUrl: "home.html"})
+    .when('/home',{templateUrl: "home.html"})
+    .when('/about', {templateUrl:"about_us.html"})
+    .when('/products', {templateUrl:"productos.html"})
+    .when('/product',{templateUrl: "producto.html"})
+    .when('/contact',{templateUrl: "contact.html"})
+    .when('/compare',{templateUrl: "compare.html"})
+    .when('/selector',{templateUrl: "ciber_selector.html"})
     .otherwise({templateUrl:"compare.html"});
 
 }]);
@@ -150,7 +150,7 @@ app.run(function($rootScope){
 				{
 					'size': '50"',
 					'price': '$50',
-				},			
+				},
 			],
 		},
 		{
@@ -537,7 +537,7 @@ app.run(function($rootScope){
 	];
 
 
-	$rootScope.productos = 
+	$rootScope.productos =
 	[
 		{
 			'name':'AVN',
@@ -562,7 +562,7 @@ app.run(function($rootScope){
 			  		The AVN is also featured in five seal-lengths (20\", 25\", 30\", 35\" and 50\") and \
 			   		can be configure to meet CE certification requirements. \
 			   		<br><br> \
-			   		All AmeriVaCs <strong>AVN Vacuum Sealers </strong> include:'],		
+			   		All AmeriVaCs <strong>AVN Vacuum Sealers </strong> include:'],
 			'models':
 				[
 					{'id':'AVN-20','size':'20\” x 1/4\”','price':'$2,500.00'},
@@ -599,7 +599,7 @@ app.run(function($rootScope){
 											'25"':'$375',
 											'30"':'*$700',
 											'35"':'*$900',
-											'50"':'N.A',																														
+											'50"':'N.A',
 												}
 					},
 					{'op':'SS','des':'Stainless Steel Upgrade','prices':{
@@ -607,7 +607,7 @@ app.run(function($rootScope){
 											'25"':'$550',
 											'30"':'$600',
 											'35"':'$650',
-											'50"':'$800',																														
+											'50"':'$800',
 												}
 					},
 					{'op':'CE','des':'CE certification*','prices':{
@@ -615,7 +615,7 @@ app.run(function($rootScope){
 											'25"':'$750',
 											'30"':'$800',
 											'35"':'$850',
-											'50"':'$1,000',																														
+											'50"':'$1,000',
 												}
 					},
 					{'op':'VF','des':'Vacuum Filter','prices':{
@@ -623,7 +623,7 @@ app.run(function($rootScope){
 											'25"':'$100',
 											'30"':'$100',
 											'35"':'$100',
-											'50"':'$100',																														
+											'50"':'$100',
 												}
 					},
 					{'op':'VR','des':'Vacuum Regulator','prices':{
@@ -631,7 +631,7 @@ app.run(function($rootScope){
 											'25"':'$50',
 											'30"':'$50',
 											'35"':'$50',
-											'50"':'$50',																														
+											'50"':'$50',
 												}
 					},
 					{'op':'220PX','des':'220 Volt A.C. 50-60 Hz conversion','prices':{
@@ -639,7 +639,7 @@ app.run(function($rootScope){
 											'25"':'$350',
 											'30"':'$350',
 											'35"':'$350',
-											'50"':'$350',																														
+											'50"':'$350',
 												}
 					},
 					{'op':'DN','des':'Dual Nozzle (w/dual vac pumps)','prices':{
@@ -647,7 +647,7 @@ app.run(function($rootScope){
 											'25"':'$765',
 											'30"':'$765',
 											'35"':'$765',
-											'50"':'included',																														
+											'50"':'included',
 												}
 					},
 					{'op':'TRAY','des':'Work Tray – 20” x 12”','prices':{
@@ -655,7 +655,7 @@ app.run(function($rootScope){
 											'25"':'$75',
 											'30"':'$75',
 											'35"':'$75',
-											'50"':'N.A',																														
+											'50"':'N.A',
 												}
 					},
 					{'op':'EC','des':'Additional Vacuum or Gas cycle','prices':{
@@ -663,7 +663,7 @@ app.run(function($rootScope){
 											'25"':'$250',
 											'30"':'$250',
 											'35"':'$250',
-											'50"':'$250',																														
+											'50"':'$250',
 												}
 					},
 					{'op':'LPC','des':'Low-pressure Bar Close','prices':{
@@ -671,7 +671,7 @@ app.run(function($rootScope){
 											'25"':'$250',
 											'30"':'$250',
 											'35"':'$250',
-											'50"':'included',																														
+											'50"':'included',
 												}
 					},
 					{'op':'AF','des':'Coalescing Air Filter','prices':{
@@ -679,7 +679,7 @@ app.run(function($rootScope){
 											'25"':'$195',
 											'30"':'$195',
 											'35"':'$195',
-											'50"':'$195',																														
+											'50"':'$195',
 												}
 					},
 					{'op':'TC','des':'Digital Temperature Control','prices':{
@@ -687,7 +687,7 @@ app.run(function($rootScope){
 											'25"':'$1,995',
 											'30"':'$1,995',
 											'35"':'$1,995',
-											'50"':'$1,995',																														
+											'50"':'$1,995',
 												}
 					},
 					{'op':'PE','des':'Ported Exhaust**','prices':{
@@ -695,7 +695,7 @@ app.run(function($rootScope){
 											'25"':'$220',
 											'30"':'$220',
 											'35"':'$220',
-											'50"':'$220',																														
+											'50"':'$220',
 												}
 					},
 					{'op':'STAND','des':'Multi-Position Stand**','prices':{
@@ -703,7 +703,7 @@ app.run(function($rootScope){
 											'25"':'$985',
 											'30"':'$985',
 											'35"':'$985',
-											'50"':'N.A',																														
+											'50"':'N.A',
 												}
 					},
 				]]
@@ -713,13 +713,13 @@ app.run(function($rootScope){
 			'name':'AVS',
 			'subtitulo':'RETRACTABLE NOZZLE VACUUM SEALER',
 			'parrafo':
-				[	
+				[
 				'Offered in our <strong>most popular 20” seal length </strong>, the <strong>AVS</strong> combines \
 				 the same quality and design integrity exhibited in the <strong>AVN</strong> without \
 				 the gas-flush feature.  <strong>The AVS is the choice sealer for the widest \
 				 range of our clientele</strong>, from medical and electronics device manu-facturer,\
 				 to food industry retailers, to pharmaceutical and aerospace corporations.'
-				],		
+				],
 			'models':
 				[
 					{
@@ -781,12 +781,12 @@ app.run(function($rootScope){
 			'options':
 				[['20"'],[
 					{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
-											'20"':'$275',																														
+											'20"':'$275',
 												}
 					},
 					{'op':'SS','des':'Stainless Steel Upgrade','prices':{
 											'20"':'$500',
-																														
+
 												}
 					},
 					{'op':'CE','des':'CE certification*','prices':{
@@ -794,15 +794,15 @@ app.run(function($rootScope){
 												}
 					},
 					{'op':'VF','des':'Vacuum Filter','prices':{
-											'20"':'$100',																														
+											'20"':'$100',
 												}
 					},
 					{'op':'VR','des':'Vacuum Regulator','prices':{
-											'20"':'$50',																														
+											'20"':'$50',
 												}
 					},
 					{'op':'220PX','des':'220 Volt A.C. 50-60 Hz conversion','prices':{
-											'20"':'$350',																														
+											'20"':'$350',
 												}
 					},
 					{'op':'DN','des':'Dual Nozzle (w/dual vac pumps)','prices':{
@@ -810,7 +810,7 @@ app.run(function($rootScope){
 												}
 					},
 					{'op':'TRAY','des':'Work Tray – 20” x 12”','prices':{
-											'20"':'$75',																														
+											'20"':'$75',
 												}
 					},
 					{'op':'LPC','des':'Low-pressure Bar Close','prices':{
@@ -818,7 +818,7 @@ app.run(function($rootScope){
 												}
 					},
 					{'op':'AF','des':'Coalescing Air Filter','prices':{
-											'20"':'$195',																														
+											'20"':'$195',
 												}
 					},
 					{'op':'TC','des':'Digital Temperature Control','prices':{
@@ -840,7 +840,7 @@ app.run(function($rootScope){
 			'name':'CAVN',
 			'subtitulo':'Self-Contained Retractable Nozzle Vacuum Sealer with Gas Purge',
 			'parrafo':
-				[	
+				[
 				'Expanding the abilities of the AVN model, <strong>the CAVN eliminates the need for additional equipment.</strong> \
 				Completely self-contained, the CAVN is ready to perform out of the box, providing greater flexibility \
 				for placement locations within your facility. We’ve simplified our design with the same high quality \
@@ -863,7 +863,7 @@ app.run(function($rootScope){
 
 
 
-				],		
+				],
 			'models':
 				[
 					{
@@ -930,37 +930,37 @@ app.run(function($rootScope){
 				[['20"','30"'],[
 					{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
 											'20"':'$275',
-											'30"':'*$700',																														
+											'30"':'*$700',
 												}
 					},
 					{'op':'SS','des':'Stainless Steel Upgrade','prices':{
 											'20"':'$500',
-											'30"':'$600',																														
+											'30"':'$600',
 												}
 					},
 					{'op':'CE','des':'CE certification*','prices':{
 											'20"':'$700',
-											'30"':'$800',																														
+											'30"':'$800',
 												}
 					},
 					{'op':'VF','des':'Vacuum Filter','prices':{
 											'20"':'$100',
-											'30"':'$100',																														
+											'30"':'$100',
 												}
 					},
 					{'op':'VR','des':'Vacuum Regulator','prices':{
 											'20"':'$50',
-											'30"':'$50',																														
+											'30"':'$50',
 												}
 					},
 					{'op':'220PX','des':'220 Volt A.C. 50-60 Hz conversion','prices':{
 											'20"':'$350',
-											'30"':'$350',																														
+											'30"':'$350',
 												}
 					},
 					{'op':'TRAY','des':'Work Tray – 20” x 12”','prices':{
 											'20"':'$75',
-											'30"':'$75',																														
+											'30"':'$75',
 												}
 					},
 					{'op':'LPC','des':'Low-pressure Bar Close','prices':{
@@ -970,12 +970,12 @@ app.run(function($rootScope){
 					},
 					{'op':'TC','des':'Digital Temperature Control','prices':{
 											'20"':'$1,995',
-											'30"':'$1,995',																														
+											'30"':'$1,995',
 												}
 					},
 					{'op':'PE','des':'Ported Exhaust**','prices':{
 											'20"':'$220',
-											'30"':'$220',																														
+											'30"':'$220',
 												}
 					},
 				]]
@@ -985,7 +985,7 @@ app.run(function($rootScope){
 			'name':'CAVS',
 			'subtitulo':'RETRACTABLE NOZZLE VACUUM SEALER WITH GAS PURGE',
 			'parrafo':
-				[	
+				[
 				'Expanding the abilities of the AVS model, the <strong>CAVS eliminates the need for additional equipment.</strong>  \
 				Completely self-contained, the <strong>CAVS is ready to perform out of the box</strong>, while reducing equipment \
 				requirements and providing greater flexibility of placement locations within your facility. We’ve \
@@ -1007,7 +1007,7 @@ app.run(function($rootScope){
 				    <strong>The CAV Series Vacuum Sealers are hand-assembled at our facility using \
 				    only superior grade components.</strong> Available in 20” and 30” and can be custom configured \
 				    to meet CE Certifi-cation requirements.'
-				],		
+				],
 			'models':
 				[
 					{
@@ -1074,37 +1074,37 @@ app.run(function($rootScope){
 				[['20"','30"'],[
 					{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
 											'20"':'$275',
-											'30"':'*$700',																														
+											'30"':'*$700',
 												}
 					},
 					{'op':'SS','des':'Stainless Steel Upgrade','prices':{
 											'20"':'$500',
-											'30"':'$600',																														
+											'30"':'$600',
 												}
 					},
 					{'op':'CE','des':'CE certification*','prices':{
 											'20"':'$700',
-											'30"':'$800',																														
+											'30"':'$800',
 												}
 					},
 					{'op':'VF','des':'Vacuum Filter','prices':{
 											'20"':'$100',
-											'30"':'$100',																														
+											'30"':'$100',
 												}
 					},
 					{'op':'VR','des':'Vacuum Regulator','prices':{
 											'20"':'$50',
-											'30"':'$50',																														
+											'30"':'$50',
 												}
 					},
 					{'op':'220PX','des':'220 Volt A.C. 50-60 Hz conversion','prices':{
 											'20"':'$350',
-											'30"':'$350',																														
+											'30"':'$350',
 												}
 					},
 					{'op':'TRAY','des':'Work Tray – 20” x 12”','prices':{
 											'20"':'$75',
-											'30"':'$75',																														
+											'30"':'$75',
 												}
 					},
 					{'op':'LPC','des':'Low-pressure Bar Close','prices':{
@@ -1114,22 +1114,22 @@ app.run(function($rootScope){
 					},
 					{'op':'TC','des':'Digital Temperature Control','prices':{
 											'20"':'$1,995',
-											'30"':'$1,995',																														
+											'30"':'$1,995',
 												}
 					},
 					{'op':'PE','des':'Ported Exhaust**','prices':{
 											'20"':'$220',
-											'30"':'$220',																														
+											'30"':'$220',
 												}
 					},
 				]]
-		},	
+		},
 
 		{
 			'name':'AVC',
 			'subtitulo':'CHAMBER VACUUM SEALER',
 			'parrafo':
-				[	
+				[
 				'The solution for your packaging program, the AVC is hand-assembled using top-grade \
 				materials and components. The AVC is compressed-air driven, eliminating any concern \
 				regarding noise, vibration, and heat generation. Unlike electro-mechanically driven \
@@ -1144,7 +1144,7 @@ app.run(function($rootScope){
 				<br><br>\
 				One button touch sealing, preset vacuum controls and a large <strong> 22"x22"x4" </strong> stainless\
 				 steel vacuum chamber best define this no nonsense workhorse.'
-				],		
+				],
 			'models':
 				[
 					{
@@ -1205,23 +1205,23 @@ app.run(function($rootScope){
 			'options':
 				[['20"'],[
 					{'op':'220PX','des':'220 Volt A.C. 50-60 Hz conversion','prices':{
-									'20"':'$350',																													
+									'20"':'$350',
 										}
 					},
 					{'op':'TC','des':'Digital Temperature Control','prices':{
-									'20"':'$350',																													
+									'20"':'$350',
 										}
 					},
 					{'op':'PE','des':'Ported Exhaust','prices':{
-									'20"':'$350',																													
+									'20"':'$350',
 										}
 					},
 					{'op':'SEAL BAR','des':'Additional Seal Bar','prices':{
-											'20"':'$275',																														
+											'20"':'$275',
 												}
 					},
 					{'op':'VSS','des':'Vacuum Selector Switch, per position','prices':{
-											'20"':'$145',																														
+											'20"':'$145',
 												}
 					},
 				]]
@@ -1231,7 +1231,7 @@ app.run(function($rootScope){
 			'name':'AVCG',
 			'subtitulo':'CHAMBER VACUUM SEALER WITH GAS PURGE',
 			'parrafo':
-				[	
+				[
 				'The AVCG combined the same quality and design integrity exhibited in the AVC, \
 				but with the gas-flush feature. Just press and hold the start button to close the lid. \
 				Once closed, the AVCG will pull an initial vacuum followed by the insertion of your \
@@ -1240,7 +1240,7 @@ app.run(function($rootScope){
 				<br><br> \
 				  <strong>The AVCG is so versatile, you can adjust the level of vacuum that \
 				  your product needs</strong>.  No need to worry about adjusting vacuum timers for every package.'
-				],		
+				],
 			'models':
 				[
 					{
@@ -1304,23 +1304,23 @@ app.run(function($rootScope){
 				[['20"'],[
 
 					{'op':'220PX','des':'220 Volt A.C. 50-60 Hz conversion','prices':{
-									'20"':'$350',																													
+									'20"':'$350',
 										}
 					},
 					{'op':'TC','des':'Digital Temperature Control','prices':{
-									'20"':'$350',																													
+									'20"':'$350',
 										}
 					},
 					{'op':'PE','des':'Ported Exhaust','prices':{
-									'20"':'$350',																													
+									'20"':'$350',
 										}
 					},
 					{'op':'SEAL BAR','des':'Additional Seal Bar','prices':{
-											'20"':'$275',																													
+											'20"':'$275',
 												}
 					},
 					{'op':'VSS','des':'Vacuum Selector Switch, per position','prices':{
-											'20"':'$145',																														
+											'20"':'$145',
 												}
 					},
 				]]
@@ -1330,7 +1330,7 @@ app.run(function($rootScope){
 			'name':'AVP',
 			'subtitulo':'PNEUMATIC IMPULSE SEALER',
 			'parrafo':
-				[	
+				[
 				'The AVP series was designed for heavy-duty applications. The most evident feature \
 				of the AVP is its lack of visible controls. Form-follows-function providing an \
 				expansive clear work-surface to hold product to be sealed. \
@@ -1343,7 +1343,7 @@ app.run(function($rootScope){
 				<br><br> \
 				The pressure bar is powder-coated aluminum. Made of professional grade component, \
 				the AVP is still lightweight enough (29 lbs) to be move effortlessly throughout your facility.'
-				],		
+				],
 			'models':
 				[
 					{
@@ -1405,15 +1405,15 @@ app.run(function($rootScope){
 			'options':
 				[['20"'],[
 					{'op':'BAS','des':'Upper and Lower Heating Elements','prices':{
-											'20"':'$275',																														
+											'20"':'$275',
 												}
 					},
 					{'op':'CE','des':'CE certification*','prices':{
-											'20"':'$700',																														
+											'20"':'$700',
 												}
 					},
 					{'op':'TRAY','des':'Work Tray – 20” x 12”','prices':{
-											'20"':'$75',																														
+											'20"':'$75',
 												}
 					},
 					{'op':'LPC','des':'Low-pressure Bar Close','prices':{
@@ -1422,16 +1422,16 @@ app.run(function($rootScope){
 					},
 
 					{'op':'AF','des':'Coalescing Air Filter','prices':{
-											'20"':'$1,995',																														
+											'20"':'$1,995',
 												}
 					},
 
 					{'op':'TC','des':'Digital Temperature Control','prices':{
-											'20"':'$1,995',																														
+											'20"':'$1,995',
 												}
 					},
 					{'op':'PE','des':'Ported Exhaust','prices':{
-											'20"':'$220',																														
+											'20"':'$220',
 												}
 					},
 				]]
@@ -1442,7 +1442,7 @@ app.run(function($rootScope){
 			'name':'PARTS',
 			'subtitulo':'REPLACEMENT PARTS',
 			'parrafo':
-				[	
+				[
 				'The <strong>AVP series was designed for heavy-duty applications</strong>. The most evident feature of the <strong>AVP</strong> is\
 				 its lack of visible controls. Form follows function providing an expansive clear work surface \
 				 to hold product ready to be sealed. \
@@ -1463,7 +1463,7 @@ app.run(function($rootScope){
 											'25"':'$22.00',
 											'30"':'$26.00',
 											'35"':'$31.00',
-											'50"':'$39.00',																														
+											'50"':'$39.00',
 												}
 					},
 					{'op':'T-','des':'Teflon Set','prices':{
@@ -1471,7 +1471,7 @@ app.run(function($rootScope){
 											'25"':'$8.00',
 											'30"':'$1.00',
 											'35"':'$24.00',
-											'50"':'$31.00',																														
+											'50"':'$31.00',
 												}
 					},
 					{'op':'PBK-','des':'Pressure Bar Kit','prices':{
@@ -1479,7 +1479,7 @@ app.run(function($rootScope){
 											'25"':'$21.00',
 											'30"':'$24.00',
 											'35"':'$28.00',
-											'50"':'$36.00',																													
+											'50"':'$36.00',
 												}
 					},
 					{'op':'SBK-','des':'Seal Bar Kit (All of the above parts)','prices':{
@@ -1487,7 +1487,7 @@ app.run(function($rootScope){
 											'25"':'$55.00',
 											'30"':'$65.00',
 											'35"':'$75.00',
-											'50"':'$89.00',																													
+											'50"':'$89.00',
 												}
 					},
 					{'op':'GR-','des':'AVN Gray Rubber Set','prices':{
@@ -1495,7 +1495,7 @@ app.run(function($rootScope){
 											'25"':'$2.00',
 											'30"':'$4.00',
 											'35"':'$16.00',
-											'50"':'$20.00',																														
+											'50"':'$20.00',
 												}
 					},
 
