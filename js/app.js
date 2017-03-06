@@ -4,12 +4,12 @@ var app = angular.module('amerivacs', ['ngSanitize','ngAnimate','ngRoute']);
 // Rutas para la aplicacion
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
-    .when('/',{templateUrl: "home.html"})
-    .when('/home',{templateUrl: "home.html"})
+    .when('/',{templateUrl: "inicio.html"})
+    .when('/home',{templateUrl: "inicio.html"})
     .when('/about', {templateUrl:"about_us.html"})
     .when('/products', {templateUrl:"productos.html"})
     .when('/product',{templateUrl: "producto.html"})
-    .when('/contact',{templateUrl: "contact.html"})
+    .when('/contact',{templateUrl: "contacto.html"})
     .when('/compare',{templateUrl: "compare.html"})
     .when('/selector',{templateUrl: "ciber_selector.html"})
     .otherwise({templateUrl:"compare.html"});

@@ -211,7 +211,7 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 
 							
 
-
+	
 	$scope.garantias = [
 		{'nombre':'SAFETY',
 		'descrip':'<strong>Our sealers</strong> simply will not seal or heat until \
@@ -834,27 +834,27 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 		switch(page){
 			case 'home':				
 				$scope.currentPage = "home.html";
-				$location.path('/amerivacs/home');
+				$location.path('/home');
 				break;
 
 
 			case 'about_us':
 				$scope.currentPage = "about_us.html";
-				$location.path('/amerivacs/about');
+				$location.path('/about');
 				break;
 			case 'contact':
-				$scope.currentPage = "contact.html";
-				$location.path('/amerivacs/contact');
+				$scope.currentPage = "contacto.html";
+				$location.path('/contact');
 				break;
 			case 'products':
 				$scope.currentPage = "productos.html";
-				$location.path('/amerivacs/products');
+				$location.path('/products');
 				//$scope.showMenu();
 
 				break;
 			case 'all-products':
 				$scope.currentPage = 'producto.html';
-				$location.path('/amerivacs/product');
+				$location.path('/product');
 
 				setTimeout(function(){
 					$scope.getProduct('AVN');
@@ -896,5 +896,7 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 		$('#AVN').addClass('seleccion');
 	}, 300);
 
+
+$scope.getProduct('AVN');
 
 });
