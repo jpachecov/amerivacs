@@ -207,7 +207,7 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 	};
 
 	$scope.isVacuum = true;
-	$scope.currentPage = "home.html";
+	$scope.currentPage = "inicio.html";
 
 							
 
@@ -833,7 +833,7 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 
 		switch(page){
 			case 'home':				
-				$scope.currentPage = "home.html";
+				$scope.currentPage = "inicio.html";
 				$location.path('/home');
 				break;
 
