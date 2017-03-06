@@ -25,7 +25,7 @@
 
           <ul class='menu col-md-12 col-sm-12 col-xs-12 nopadding' style='background-color:white; z-index:5;'>
             <li class="col-md-12 col-sm-12 col-xs-12">
-               <a class='logo_container col-md-3 col-sm-7 col-xs-9' href="/amerivacs/home">
+               <a class='logo_container col-md-3 col-sm-7 col-xs-9' href="/home">
                 <img class='logo_up' src="img/home/logo_000.png" alt="AmeriVacS">
                </a>     
             </li>
@@ -35,16 +35,16 @@
               </a>
             </li>
             <li class='col-xs-2 col-sm-2 col-md-1'>
-              <a href="/amerivacs/contact">Contact</a> 
+              <a href="/contact">Contact</a> 
             </li>
             <li class='raya-derecha col-xs-3 col-sm-3 col-md-1' ng-mouseover="showMenu()" ng-mouseleave="hideMenu()">
-              <a href="/amerivacs/products">Products<spana class='trian'>&#x25BC</span> </a>  
+              <a href="/products">Products<spana class='trian'>&#x25BC</span> </a>  
             </li>
             <li class='raya-derecha col-xs-3 col-sm-3 col-md-1'>
-              <a href="/amerivacs/about">About us</a>  
+              <a href="/about">About us</a>  
             </li>
             <li class='raya-derecha col-xs-2 col-sm-3 col-md-1'>
-              <a href="/amerivacs/home">Home</a>  
+              <a href="/home">Home</a>  
             </li>
 
           <li class='col-md-12 col-sm-12 col-xs-12' style='position:absolute; top:210px; height:110px; overflow:hidden; padding:0px'>
@@ -52,10 +52,10 @@
             <div class='col-md-12 col-sm-12 col-xs-12 show-menu' style='position:absolute; z-index:2; top:-3px;'>
               <ul class='col-md-3 col-xs-12 col-sm-12' ng-mouseover="showMenu()" ng-mouseleave="hideMenu()" style='padding:0%; float:right;'>
                 <li class='hover-2 boton col-md-9 col-sm-6 col-xs-6  r-bottom back-white2 nopadding txt-c' style='float:left'>
-                  <a class='font1' href="/amerivacs/compare">Compare</a>
+                  <a class='font1' href="/compare">Compare</a>
                 </li>
                 <li class='hover-2 boton col-md-9 col-sm-6 col-xs-6 back-white2 nopadding txt-c' style='float:left'>
-                  <a class='font1' href="/amerivacs/selector">Cyber Selector</a>
+                  <a class='font1' href="/selector">Cyber Selector</a>
                 </li>      
               </ul>
             </div>
