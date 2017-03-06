@@ -864,7 +864,7 @@ app.controller('controlador', function($scope,$sce, $http, $location, $rootScope
 
 				break;
 			case 'compare':
-				$scope.currentPage = 'compare.html';
+				$scope.currentPage = 'compara.html';
 				$location.path('/amerivacs/compare');
 				//$('#' + compara.A).addClass('seleccion');
 				//$('#' + compara.B).addClass('seleccion');

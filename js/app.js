@@ -10,9 +10,9 @@ app.config(['$routeProvider', function($routeProvider){
     .when('/products', {templateUrl:"productos.html"})
     .when('/product',{templateUrl: "producto.html"})
     .when('/contact',{templateUrl: "contacto.html"})
-    .when('/compare',{templateUrl: "compare.html"})
+    .when('/compare',{templateUrl: "compara.html"})
     .when('/selector',{templateUrl: "ciber_selector.html"})
-    .otherwise({templateUrl:"compare.html"});
+    .otherwise({templateUrl:"compara.html"});
 
 }]);
 
