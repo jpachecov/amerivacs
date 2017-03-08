@@ -28,7 +28,7 @@ app.controller('contacto', function($scope,$sce, $http, $location) {
 
 			var request = $http({
 		    method: "POST",
-		    url: "/NEW/php/miFormulario.php",
+		    url: "/php/miFormulario.php",
 		    data: {
 		    	'name':$scope.name,
 		    	'mail':$scope.mail,
