@@ -47,10 +47,17 @@
               <a href="/home">Home</a>  
             </li>
 
-          <li class='col-md-12 col-sm-12 col-xs-12' style='position:absolute; top:210px; height:110px; overflow:hidden; padding:0px'>
 
-            <div class='col-md-12 col-sm-12 col-xs-12 show-menu' style='position:absolute; z-index:2; top:-3px;'>
-              <ul class='col-md-3 col-xs-12 col-sm-12' ng-mouseover="showMenu()" ng-mouseleave="hideMenu()" style='padding:0%; float:right;'>
+
+          </ul>
+          <li class='col-md-12 col-sm-12 col-xs-12' style='position:absolute; bottom:0px; height:110px; overflow:hidden; padding:0px'>
+
+
+
+          </li>
+          <!-- Columna para los botones -->
+            <div class='col-md-12 col-sm-12 col-xs-12 show-menu' style='position:relative; z-index:4;'>
+              <ul class='col-md-3 col-xs-12 col-sm-12' style="position:absolute; bottom:-70px; right:0px" ng-mouseover="showMenu()" ng-mouseleave="hideMenu()" style='padding:0%; float:right;'>
                 <li class='hover-2 boton col-md-9 col-sm-6 col-xs-6  r-bottom back-white2 nopadding txt-c' style='float:left'>
                   <a class='font1' href="/compare">Compare</a>
                 </li>
@@ -59,13 +66,6 @@
                 </li>      
               </ul>
             </div>
-
-          </li>
-
-          </ul>
-
-          <!-- Columna para los botones -->
-
 
         </header>
       </div>

@@ -1519,7 +1519,16 @@ font-size: 1.2em;
 	transform: translateY(-80px);
 }
 
-
+.show-menu ul {
+	list-style: none;
+}
+.show-menu ul li:before {
+	content: none;
+}
+.show-menu ul li a {
+	text-decoration: none;
+	color: black;
+}
 
 
 

@@ -83,10 +83,10 @@ $body.= '<p style="font-family: sans-serif"><span style="font-family: sans-serif
 $body.= "</body></html>"
 */
 
-$to = "peter@amerivacs.com";
-$subject = "New message from website.";
-$txt ="Hello, Mr. Tadlock. This is the new message: \n";
-$txt.="Name: ".$name . "\n";
+$to = "sales@amerivacs.com";
+$subject = "Hello AmeriVacS Sales";
+$txt ="This is the new message: \n";
+$txt.="From: ".$name . "\n";
 $txt.='Mail: '.  $mail . "\n";
 $txt.='Phone: '. $phone . "\n";
 $txt.='Message: '. $message . "\n";
